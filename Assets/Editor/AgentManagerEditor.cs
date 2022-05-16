@@ -13,8 +13,7 @@ public class AgentManagerEditor : Editor
         if (GUILayout.Button("GenerateAndShow"))
         {
             agentManager.playerAgentObject = Utility.RandomGenerator.GenerateRandomAgent(agentManager.agentPrefab, agentManager.transform);
-            AgentDisplay playerAgentDisplay = agentManager.playerAgentObject.GetComponent<AgentDisplay>();
-            //agentManager.playerAgentDisplay.gridPrefab = agentManager.currentGridPrefab;
+            AgentDisplay playerAgentDisplay = agentManager.playerAgentObject.GetComponent<AgentDisplay>();  
             playerAgentDisplay.InitializeMap(agentManager.playerAgentObject.GetComponent<AgentBase>().agentData, agentManager.playerAgentObject.transform);
             playerAgentDisplay.UpdateMap(agentManager.playerAgentObject.GetComponent<AgentBase>().agentData);
         }
