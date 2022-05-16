@@ -237,9 +237,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10f967e0798f6d64295ac3b8431853fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AgentPrefab: {fileID: 3923762329428534077, guid: 88ecb7be6115b574da02f056caf321d6, type: 3}
-  grid: {fileID: 4399223902694463028, guid: 7cc5d70f395f0d145b4bd78fc346c145, type: 3}
-  currentAgent: {fileID: 0}
+  agentPrefab: {fileID: 3923762329428534077, guid: 88ecb7be6115b574da02f056caf321d6, type: 3}
+  currentGridPrefab: {fileID: 4399223902694463028, guid: 7cc5d70f395f0d145b4bd78fc346c145, type: 3}
+  playerAgent: {fileID: 0}
+  playerAgentDisplay: {fileID: 0}
 --- !u!4 &987353709
 Transform:
   m_ObjectHideFlags: 0

@@ -11,8 +11,11 @@ public class SkillEditor : Editor
         base.OnInspectorGUI();
 
         Skill skill = (Skill)target;
-        if (GUILayout.Button("Damage")) {
-            skill.RectDamageInEditor(skill.targetAgent);
+        if (GUILayout.Button("Damage"))
+        {
+            skill.RectDamageToAgent();
         }
     }
+
+
 }

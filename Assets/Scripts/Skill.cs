@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Skill : MonoBehaviour
 {
-    #region test
+    #region EditorParam
     public int centerX, centerY;
+
     public int damageWidth, damageHeight;
+
     public AgentBase targetAgent;
     #endregion
 
@@ -15,35 +17,27 @@ public class Skill : MonoBehaviour
         int damageWidth, int damageHeight,
         int targetAgentMapWidth, int targetAgentMapHeight)
     {
+        int[,] result = new int[targetAgentMapWidth, targetAgentMapHeight];
 
-        int[,] result;
-        result = new int[targetAgentMapWidth, targetAgentMapHeight];
         for (int i = centerX - damageWidth / 2; i <= centerX + damageWidth / 2; i++)
         {
             for (int j = centerY - damageHeight / 2; j <= centerY + damageHeight / 2; j++)
             {
                 if (i >= 0 && i < targetAgentMapWidth && j >= 0 && j < targetAgentMapHeight)
                 {
-                    result[i, j] = 1;
+                    result[i, j] = -10;
                 }
             }
         }
         return result;
     }
 
-    public void RectDamageInEditor(AgentBase target)
+    public void RectDamageToAgent()
     {
-        target.ChangeHP(GenerateRectHPChangeMap(centerX, centerY, damageWidth, damageHeight, target.agentData.bodyMap.GetLength(0), target.agentData.bodyMap.GetLength(1)));
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
+        int[,] rectChangeMap = GenerateRectHPChangeMap(centerX, centerY,
+                    damageWidth, damageHeight,
+                    targetAgent.agentData.bodyMap.GetLength(0), targetAgent.agentData.bodyMap.GetLength(1));
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        targetAgent.ChangeHP(rectChangeMap);
     }
 }
