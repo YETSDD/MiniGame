@@ -11,17 +11,27 @@ public class CharacterConfig : ScriptableObject
 
 	public PixelData[,] bodyMap;//TODO: ÐòÁÐ»¯´¢´æ
 
-	public void SetBodyMap( int length, int width )
+	public void SetBodyMap( int width, int height )
 	{
-		if( length > 0 && width > 0 )
+		if( width > 0 && height > 0 )
 		{
-			bodyMap = new PixelData[length, width];
+			bodyMap = new PixelData[width, height];
+			for( int i = 0; i < width; i++ ) {
+				for( int j = 0; j < height; j++ ) {
+					bodyMap[i, j] = new PixelData(10);
+				}
+			}
 		}
+		
 	}
 
 	public bool isInitialized()
 	{
 		return bodyMap != null && modules != null;
+	}
+
+	public void InitializeBodyMap() { 
+		
 	}
 	public void GenerateRandomMapData()
 	{
