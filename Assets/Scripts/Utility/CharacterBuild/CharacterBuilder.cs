@@ -75,6 +75,7 @@ public class CharacterBuilder : MonoBehaviour
 		{
 			var pixelData = _pixelsMap[gameObjects[i]];
 			pixelData.moduleRef = currentModule;
+			gameObjects[i].GetComponent<PixelObject>().pixelData.moduleRef = currentModule;
 		}
 	}
 
