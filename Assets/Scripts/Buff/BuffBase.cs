@@ -13,9 +13,10 @@ public class BuffBase : MonoBehaviour
 
     public EffectRange range = EffectRange.part;
 
-    public virtual void AddToAgent(AgentBase target) { 
-    
+    public virtual void AddToCharacter(CharacterBase target)
+    {
     }
+
     public virtual void OnBuffStart()
     {
     }

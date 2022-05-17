@@ -18,17 +18,17 @@ public class PixelData
 
     public ElementType elementType = ElementType.None;
 
-    public Module moduleRef;
+    public ModuleData moduleRef;
 
     public float damageFactor = 1.0f;
 
-    public PixelData(float healthPoint, Module module = null)
+    public PixelData(float healthPoint, ModuleData module = null)
     {
         this.currentHealthPoint = healthPoint;
         this.moduleRef = module;
     }
 
-    public void ChangeHP(float amount)
+    public void ChangeHealthPoint(float amount)
     {
         float finalChangeAmount = amount < 0 ? amount * damageFactor : amount;
         currentHealthPoint = currentHealthPoint + finalChangeAmount >= 0 ? currentHealthPoint + finalChangeAmount : 0;

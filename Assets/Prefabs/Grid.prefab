@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6240584752029060437}
   - component: {fileID: 6427078562345301823}
   - component: {fileID: 8222754170764259241}
+  - component: {fileID: 1611781741899666258}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -98,3 +99,15 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1611781741899666258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4399223902694463028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b736d91cc5782f244bb2cb6a0145250e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

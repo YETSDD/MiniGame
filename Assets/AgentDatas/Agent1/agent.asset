@@ -9,18 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5322f0033bc51074188bb77c1b3690ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 5973756241562ad43bf29dccd0241f4d, type: 3}
   m_Name: agent
   m_EditorClassIdentifier: 
-  modules:
-  - {fileID: 11400000, guid: b7f7eb2738b66a04e9a6362b7d5e7f87, type: 2}
-  - {fileID: 11400000, guid: 3c803afb326d301429645517947bafbd, type: 2}
-  data:
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 0
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 0
+  modules: []

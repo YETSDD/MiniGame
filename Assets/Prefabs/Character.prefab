@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3584558312020668172}
   - component: {fileID: 3089694613193718356}
   m_Layer: 0
-  m_Name: Agent
+  m_Name: Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30a3ad4f3c8d9b242b1e616dc715c58c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentData: {fileID: 0}
+  characterDisplay: {fileID: 3089694613193718356}
 --- !u!114 &3089694613193718356
 MonoBehaviour:
   m_ObjectHideFlags: 0

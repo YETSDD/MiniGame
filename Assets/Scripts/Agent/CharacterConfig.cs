@@ -1,14 +1,15 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-[CreateAssetMenu(fileName = "agent", menuName = "AgentData/Agent")]
-public class AgentData : ScriptableObject
+
+[CreateAssetMenu(fileName = "character", menuName = "CharacterData/Character")]
+public class CharacterConfig : ScriptableObject
 {
-    public Module[] modules;
+    public ModuleData[] modules;
     
-    public PixelData[,] bodyMap;//TODO: Switch to PixelData[]
+    public PixelData[,] bodyMap;
 
     public void SetBodyMap(int length, int width)
     {

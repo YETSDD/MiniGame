@@ -13,7 +13,7 @@ public class SkillEditor : Editor
         Skill skill = (Skill)target;
         if (GUILayout.Button("Damage"))
         {
-            skill.RectDamageToAgent();
+            skill.DealRectDamageToCharacter(skill.targetCharacter,-10);
         }
     }
 

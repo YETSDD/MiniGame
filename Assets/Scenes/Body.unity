@@ -237,10 +237,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10f967e0798f6d64295ac3b8431853fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentPrefab: {fileID: 3923762329428534077, guid: 88ecb7be6115b574da02f056caf321d6, type: 3}
-  currentGridPrefab: {fileID: 4399223902694463028, guid: 7cc5d70f395f0d145b4bd78fc346c145, type: 3}
-  playerAgent: {fileID: 0}
-  playerAgentDisplay: {fileID: 0}
+  characterPrefab: {fileID: 3923762329428534077, guid: 88ecb7be6115b574da02f056caf321d6, type: 3}
+  playerCharacterObject: {fileID: 0}
 --- !u!4 &987353709
 Transform:
   m_ObjectHideFlags: 0
@@ -249,7 +247,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 987353707}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 358.77, y: 217.68143, z: 0}
+  m_LocalPosition: {x: 363.15, y: 217.68143, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -268,11 +266,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6766d07cdb34dc848b9517e555067ed1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  centerX: 8
-  centerY: 0
+  cornerX: 0
+  cornerY: 0
   damageWidth: 0
   damageHeight: 0
-  targetAgent: {fileID: 0}
+  targetCharacter: {fileID: 0}
 --- !u!1 &1628226947
 GameObject:
   m_ObjectHideFlags: 0
