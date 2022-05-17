@@ -73,7 +73,7 @@ public class CharacterBuilder : MonoBehaviour
 		gameObjects = Selection.gameObjects;
 		for( int i = 0; i < gameObjects.Length; i++ )
 		{
-			var pixelData = _pixelsMap[gameObjects[i]];
+			PixelData pixelData = _pixelsMap[gameObjects[i]];
 			pixelData.moduleRef = currentModule;
 			gameObjects[i].GetComponent<PixelObject>().pixelData.moduleRef = currentModule;
 		}
