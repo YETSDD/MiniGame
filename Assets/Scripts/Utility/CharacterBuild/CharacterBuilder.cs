@@ -70,8 +70,7 @@ public class CharacterBuilder : MonoBehaviour
 		gameObjects = Selection.gameObjects;
 		for( int i = 0; i < gameObjects.Length; i++ )
 		{
-			_pixelsMap[gameObjects[i]].moduleRef 
-				= currentModule;
+			_pixelsMap[gameObjects[i]].moduleRef = currentModule;
 		}
 	}
 
