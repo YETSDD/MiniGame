@@ -19,7 +19,9 @@ public class CharacterBuilder : MonoBehaviour
 
 	public List<GameObject> gameObjectsOfPixel = new List<GameObject>();
 
+	public ModuleConfig currentModule;
 
+	public GameObject[] selectedGameObjects;
 
 	private Dictionary<GameObject, PixelData> _pixelsMap = new Dictionary<GameObject, PixelData>();
 
@@ -50,7 +52,7 @@ public class CharacterBuilder : MonoBehaviour
 			{
 				GameObject gameObject = Instantiate( pixelPrefab, new Vector3( i * pixelWidth, j * pixelHeight, 0 ), Quaternion.identity, transform );
 				gameObjectsOfPixel.Add( gameObject );
-				_pixelsMap.Add(gameObject, pixelDatas[i, j]);
+				_pixelsMap.Add( gameObject, pixelDatas[i, j] );
 			}
 		}
 	}
@@ -65,17 +67,15 @@ public class CharacterBuilder : MonoBehaviour
 
 	}
 
-	public ModuleConfig currentModule;
-
-	public GameObject[] gameObjects;
 	public void BindPixelToModule()
 	{
-		gameObjects = Selection.gameObjects;
-		for( int i = 0; i < gameObjects.Length; i++ )
+		selectedGameObjects = Selection.gameObjects;
+		for( int i = 0; i < selectedGameObjects.Length; i++ )
 		{
-			PixelData pixelData = _pixelsMap[gameObjects[i]];
+			PixelData pixelData = _pixelsMap[selectedGameObjects[i]];
 			pixelData.moduleRef = currentModule;
-			gameObjects[i].GetComponent<PixelObject>().pixelData.moduleRef = currentModule;
+
+			selectedGameObjects[i].GetComponent<PixelObject>().pixelData.moduleRef = currentModule;
 		}
 	}
 
