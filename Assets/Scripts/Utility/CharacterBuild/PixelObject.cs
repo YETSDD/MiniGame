@@ -2,10 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class ModuleData
+public class PixelObject : MonoBehaviour
 {
-	public ModuleConfig config;
-
-	List<BuffBase> buffs;
+	public PixelData pixelData;
 }

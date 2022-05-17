@@ -4,33 +4,33 @@ using UnityEngine;
 
 public enum ElementType
 {
-    None = 0,
-    Air = 1,
-    Earth = 2,
-    Fire = 3,
-    Water = 4
+	None = 0,
+	Air = 1,
+	Earth = 2,
+	Fire = 3,
+	Water = 4
 }
 
 [System.Serializable]
 public class PixelData
 {
-    public float currentHealthPoint;
+	public float currentHealthPoint;
 
-    public ElementType elementType = ElementType.None;
+	public ElementType elementType = ElementType.None;
 
-    public ModuleData moduleRef;
+	public ModuleConfig moduleRef;
 
-    public float damageFactor = 1.0f;
+	public float damageFactor = 1.0f;
 
-    public PixelData(float healthPoint, ModuleData module = null)
-    {
-        this.currentHealthPoint = healthPoint;
-        this.moduleRef = module;
-    }
+	public PixelData( float healthPoint, ModuleConfig module = null )
+	{
+		this.currentHealthPoint = healthPoint;
+		this.moduleRef = module;
+	}
 
-    public void ChangeHealthPoint(float amount)
-    {
-        float finalChangeAmount = amount < 0 ? amount * damageFactor : amount;
-        currentHealthPoint = currentHealthPoint + finalChangeAmount >= 0 ? currentHealthPoint + finalChangeAmount : 0;
-    }
+	public void ChangeHealthPoint( float amount )
+	{
+		float finalChangeAmount = amount < 0 ? amount * damageFactor : amount;
+		currentHealthPoint = currentHealthPoint + finalChangeAmount >= 0 ? currentHealthPoint + finalChangeAmount : 0;
+	}
 }
