@@ -12,5 +12,4 @@ public class CharacterManager : MonoBehaviour
 
 	public CharacterControllerBase playerCharacter;
 
-
 }
