@@ -53,9 +53,9 @@ public class CharacterBuilder : MonoBehaviour
 			for( int y = 0; y < height; y++ )
 			{
 				GameObject gameObject = Instantiate( pixelPrefab, new Vector3( x * pixelWidth, y * pixelHeight, 0 ), Quaternion.identity, transform );
-				gameObject.GetComponent<PixelObject>().pixelData.LoadPixelData( characterConfig.bodyMap_1D[x * width + y] );
+				gameObject.GetComponent<PixelObject>().pixelData.LoadPixelData( characterConfig.bodyMap[x, y] );
 				gameObjectsOfPixel.Add( gameObject );
-				_mapBetweenGameObjectAndPixelData.Add( gameObject, characterConfig.bodyMap_1D[x * width + y] );
+				_mapBetweenGameObjectAndPixelData.Add( gameObject, characterConfig.bodyMap[x, y] );
 			}
 		}
 	}
@@ -71,10 +71,17 @@ public class CharacterBuilder : MonoBehaviour
 
 	public void BindPixelToModule()
 	{
+		if( currentModule == null )
+		{
+			throw new System.Exception( "currentModule Not Selected" );
+		}
 		selectedGameObjects = Selection.gameObjects;
+		currentModule.ownPixels.Clear();
 		for( int i = 0; i < selectedGameObjects.Length; i++ )
 		{
 			selectedGameObjects[i].GetComponent<PixelObject>().pixelData.moduleRef = currentModule;
+
+			currentModule.ownPixels.Add( _mapBetweenGameObjectAndPixelData[selectedGameObjects[i]] );
 		}
 	}
 
@@ -97,7 +104,6 @@ public class CharacterBuilder : MonoBehaviour
 		{
 			PixelData pixelData = gameObject.GetComponent<PixelObject>().pixelData;
 			_mapBetweenGameObjectAndPixelData[gameObject].LoadPixelData( pixelData );
-
 		}
 	}
 

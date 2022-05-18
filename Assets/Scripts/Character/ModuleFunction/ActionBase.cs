@@ -11,7 +11,7 @@ public class ActionBase : MonoBehaviour
 [System.Serializable]
 public struct ActionLimit
 {
-	public float remainHealthPointPercentage;
+	public float remainHealthPoint;
 
 	public int activePixels;
 }

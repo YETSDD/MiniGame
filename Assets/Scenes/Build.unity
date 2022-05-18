@@ -250,7 +250,7 @@ MonoBehaviour:
   height: 10
   characterConfig: {fileID: 11400000, guid: 9a693fe12e53aa64ead8f325c11ee321, type: 2}
   pixelPrefab: {fileID: 8922477529360109501, guid: e835239ddd2277d42b7886bb8b01471a, type: 3}
-  currentModule: {fileID: 0}
+  currentModule: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
   selectedGameObjects: []
   modules:
   - {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}

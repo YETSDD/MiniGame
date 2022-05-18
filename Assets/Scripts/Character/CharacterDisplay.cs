@@ -53,7 +53,7 @@ public class CharacterDisplay : MonoBehaviour
 	{
 		if( _grids == null )
 		{
-			return;
+			throw new System.Exception( "_grids not initialized" );
 		}
 
 		int width = src.width;
@@ -74,8 +74,8 @@ public class CharacterDisplay : MonoBehaviour
 
 public enum DisplayMode
 {
-	Normal = 0,
-	BlackAndWhite = 1, //血条展示
-	ElementColor = 2 //血条+元素展示
+	Normal,
+	BlackAndWhite, //血条展示
+	ElementColor //血条+元素展示
 
 }

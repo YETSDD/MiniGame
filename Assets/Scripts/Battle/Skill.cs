@@ -13,10 +13,11 @@ public class Skill : MonoBehaviour
 
 	public CharacterControllerBase targetCharacter;
 
+	public float basicDamageAmount;
 	#endregion
 #endif
 
-	public void DealRectDamageToCharacter( CharacterControllerBase target, int damageAmount )
+	public void DealRectDamageToCharacter( CharacterControllerBase target, float damageAmount )
 	{
 		DamageBase damage = new DamageBase( target.character.width, target.character.height );
 		Vector2Int damagePosition = new Vector2Int( cornerX, cornerY );

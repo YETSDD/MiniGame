@@ -9,7 +9,7 @@ public class BattleManager : MonoBehaviour
 
 public enum RoundStage
 {
-    Prepare,
-    Act,
-    Settle
+	Prepare,
+	Act,
+	Settle
 }

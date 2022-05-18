@@ -18,7 +18,7 @@ public class DamageBase
 
 	#region Uniform Damage
 
-	public float[,] GenerateRectHealthPointChangeMap( RectInt rect, int damageAmount )
+	public float[,] GenerateRectHealthPointChangeMap( RectInt rect, float damageAmount )
 	{
 		float[,] result = new float[_mapWidth, _mapHeight];
 

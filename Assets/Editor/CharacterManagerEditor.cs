@@ -10,20 +10,21 @@ public class CharacterManagerEditor : Editor
 
 		CharacterManager characterManager = (CharacterManager)target;
 
+		CharacterControllerBase player = characterManager.playerCharacter;
 		if( GUILayout.Button( "GenerateRandomCharacterAndShow" ) )
 		{
-			characterManager.playerCharacter = Utility.Generator.GenerateRandomCharacterData( characterManager.characterPrefab, characterManager.transform );
-			CharacterDisplay playerCharacterDisplay = characterManager.playerCharacter.characterDisplay;
-			playerCharacterDisplay.InitializeMap( characterManager.playerCharacter.character, characterManager.playerCharacter.transform );
-			playerCharacterDisplay.UpdateMap( characterManager.playerCharacter.character );
+			player = Utility.Generator.GenerateRandomCharacterData( characterManager.characterPrefab, characterManager.transform );
+			CharacterDisplay playerCharacterDisplay = player.characterDisplay;
+			playerCharacterDisplay.InitializeMap( player.character, player.transform );
+			playerCharacterDisplay.UpdateMap( player.character );
 		}
 
 		if( GUILayout.Button( "GenerateCharacterByConfigAndShow" ) )
 		{
-			characterManager.playerCharacter = Utility.Generator.GenerateCharacterDataByConfig( characterManager.characterPrefab, characterManager.transform, characterManager.playerCharacterConfig );
-			CharacterDisplay playerCharacterDisplay = characterManager.playerCharacter.characterDisplay;
-			playerCharacterDisplay.InitializeMap( characterManager.playerCharacter.character, characterManager.playerCharacter.transform );
-			playerCharacterDisplay.UpdateMap( characterManager.playerCharacter.character );
+			player = Utility.Generator.GenerateCharacterDataByConfig( characterManager.characterPrefab, characterManager.transform, characterManager.playerCharacterConfig );
+			CharacterDisplay playerCharacterDisplay = player.characterDisplay;
+			playerCharacterDisplay.InitializeMap( player.character, player.transform );
+			playerCharacterDisplay.UpdateMap( player.character );
 		}
 
 		if( GUILayout.Button( "DestroyCharacter" ) )

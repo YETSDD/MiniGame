@@ -237,6 +237,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10f967e0798f6d64295ac3b8431853fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCharacterConfig: {fileID: 11400000, guid: 9a693fe12e53aa64ead8f325c11ee321, type: 2}
   characterPrefab: {fileID: 3584558312020668172, guid: 88ecb7be6115b574da02f056caf321d6, type: 3}
   playerCharacter: {fileID: 0}
 --- !u!4 &987353709
@@ -271,6 +272,7 @@ MonoBehaviour:
   damageWidth: 0
   damageHeight: 0
   targetCharacter: {fileID: 0}
+  basicDamageAmount: 0
 --- !u!1 &1628226947
 GameObject:
   m_ObjectHideFlags: 0

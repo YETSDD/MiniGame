@@ -4,14 +4,14 @@ using UnityEngine;
 
 public enum EffectRange
 {
-	part,
-	global
+	Part,
+	Global
 }
 public class BuffBase : MonoBehaviour
 {
 	public int remainRounds;
 
-	public EffectRange range = EffectRange.part;
+	public EffectRange range = EffectRange.Part;
 
 	public virtual void AddToCharacter( CharacterControllerBase target )
 	{
