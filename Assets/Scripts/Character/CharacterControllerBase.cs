@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent( typeof( CharacterDisplay ) )]
-public class CharacterBase : MonoBehaviour
+public class CharacterControllerBase : MonoBehaviour
 {
-	public CharacterData characterData;
+	public Character character;
 
 	public CharacterDisplay characterDisplay;
 
-	public delegate void CharacterDelegate( CharacterData characterData );
+	public delegate void CharacterDelegate( Character characterData );
 
 	public CharacterDelegate OnCharacterDataChanged;
 
@@ -38,24 +38,25 @@ public class CharacterBase : MonoBehaviour
 
 	private void HandleBuffs( RoundStage stage )
 	{
-		ModuleData[] modules = characterData.modules;
+		Module[] modules = character.modules;
 		for( int i = 0; i < modules.Length; i++ )
 		{
 			HandleBuff( modules[i], stage );
 		}
 	}
 
-	private void HandleBuff( ModuleData module, RoundStage stage )
+	private void HandleBuff( Module module, RoundStage stage )
 	{
 	}
+
 	public void ChangeHealthPoint( float[,] healthPointChangeMap )
 	{
-		if( characterData == null )
+		if( character == null )
 		{
 			return;
 		}
 
-		if( healthPointChangeMap.GetLength( 0 ) != characterData.bodyMap.GetLength( 0 ) || healthPointChangeMap.GetLength( 1 ) != characterData.bodyMap.GetLength( 1 ) )
+		if( healthPointChangeMap.GetLength( 0 ) != character.bodyMap.GetLength( 0 ) || healthPointChangeMap.GetLength( 1 ) != character.bodyMap.GetLength( 1 ) )
 		{
 			return;
 		}
@@ -64,9 +65,9 @@ public class CharacterBase : MonoBehaviour
 		{
 			for( int j = 0; j < healthPointChangeMap.GetLength( 1 ); j++ )
 			{
-				characterData.bodyMap[i, j].ChangeHealthPoint( healthPointChangeMap[i, j] );
+				character.bodyMap[i, j].ChangeHealthPoint( healthPointChangeMap[i, j] );
 
-				OnCharacterDataChanged.Invoke( characterData );
+				OnCharacterDataChanged.Invoke( character );
 			}
 		}
 	}
@@ -75,7 +76,7 @@ public class CharacterBase : MonoBehaviour
 
 	#region View
 
-	public void UpdateDisplay( CharacterData data )
+	public void UpdateDisplay( Character data )
 	{
 		if( characterDisplay != null )
 		{

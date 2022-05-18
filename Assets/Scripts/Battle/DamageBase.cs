@@ -16,23 +16,25 @@ public class DamageBase
 		_mapHeight = height;
 	}
 
-	#region Uniform  Damage
-	public float[,] GenerateRectHealthPointChangeMap(RectInt rect, int damageAmount)
-	{
-		float[,] result = new float[_mapWidth,_mapHeight];
+	#region Uniform Damage
 
-		for( int i = rect.xMin ; i < rect.xMax; i++ )
+	public float[,] GenerateRectHealthPointChangeMap( RectInt rect, int damageAmount )
+	{
+		float[,] result = new float[_mapWidth, _mapHeight];
+
+		for( int x = rect.xMin; x < rect.xMax; x++ )
 		{
-			for( int j = rect.yMin; j < rect.yMax; j++ )
+			for( int y = rect.yMin; y < rect.yMax; y++ )
 			{
-				if( i >= 0 && i < _mapWidth && j >= 0 && j < _mapHeight )
+				if( x >= 0 && x < _mapWidth && y >= 0 && y < _mapHeight )
 				{
-					result[i, j] = damageAmount;
+					result[x, y] = damageAmount;
 				}
 			}
 		}
 		return result;
 	}
+
 	#endregion
 
 }

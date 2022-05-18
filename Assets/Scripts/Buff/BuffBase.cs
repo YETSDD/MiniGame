@@ -4,29 +4,29 @@ using UnityEngine;
 
 public enum EffectRange
 {
-    part = 0,
-    global = 1
+	part,
+	global
 }
 public class BuffBase : MonoBehaviour
 {
-    public int remainRounds;
+	public int remainRounds;
 
-    public EffectRange range = EffectRange.part;
+	public EffectRange range = EffectRange.part;
 
-    public virtual void AddToCharacter(CharacterBase target)
-    {
-    }
+	public virtual void AddToCharacter( CharacterControllerBase target )
+	{
+	}
 
-    public virtual void OnBuffStart()
-    {
-    }
+	public virtual void OnBuffStart()
+	{
+	}
 
-    public virtual void OnBuffUpdate()
-    {
-    }
+	public virtual void OnBuffUpdate()
+	{
+	}
 
-    public virtual void OnBuffDestroy()
-    {
-    }
+	public virtual void OnBuffDestroy()
+	{
+	}
 
 }

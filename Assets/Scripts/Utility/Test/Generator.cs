@@ -6,25 +6,29 @@ namespace Utility
 {
 	public static class Generator
 	{
-		public static GameObject GenerateRandomCharacterData( GameObject characterPrefab, Transform parent )
+		public static CharacterControllerBase GenerateRandomCharacterData( CharacterControllerBase characterPrefab, Transform parent )
 		{
-			GameObject result = Object.Instantiate( characterPrefab, parent );
+			int minWidth = 10, maxWidth = 30;
+			int minHeight = 20, maxHeight = 30;
+			int minHealthPoint = 1, maxHealthPoint = 100;
 
-			CharacterBase rand = result.GetComponent<CharacterBase>();
-			rand.characterData = new CharacterData();
-			rand.characterData.SetBodyMap( Random.Range( 10, 30 ), Random.Range( 20, 30 ) );
-			rand.characterData.GenerateRandomMapData();
+			CharacterControllerBase result = GameObject.Instantiate( characterPrefab, parent );
 
-			Debug.Log( "size:" + rand.characterData.bodyMap.GetLength( 0 ) + "," + rand.characterData.bodyMap.GetLength( 1 ) );
+			result.character = new Character();
+			result.character.SetBodyMap( Random.Range( minWidth, maxWidth ), Random.Range( minHeight, maxHeight ) );
+			result.character.GenerateRandomMapData( minHealthPoint, maxHealthPoint );
+
+			Debug.Log( "size:" + result.character.width + "," + result.character.height );
 
 			return result;
 		}
 
-		public static GameObject GenerateCharacterDataByConfig( GameObject characterPrefab, Transform parent, CharacterConfig config )
+		public static CharacterControllerBase GenerateCharacterDataByConfig( CharacterControllerBase characterPrefab, Transform parent, CharacterConfig config )
 		{
-			GameObject result = Object.Instantiate( characterPrefab, parent );
+			CharacterControllerBase result = GameObject.Instantiate( characterPrefab, parent );
 
-			//TODO : generate by config
+			result.character = new Character( config.width, config.height );
+			result.character.InitializeByConfig( config );
 
 			return result;
 		}

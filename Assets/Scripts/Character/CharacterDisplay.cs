@@ -1,12 +1,10 @@
 using UnityEngine;
 
-
-
 public class CharacterDisplay : MonoBehaviour
 {
 	public DisplayMode displayMode = DisplayMode.ElementColor;
 
-	public GameObject gridPrefab;
+	public GridData gridPrefab;
 
 	public const float gridLength = 1.1f;
 
@@ -14,18 +12,19 @@ public class CharacterDisplay : MonoBehaviour
 
 	private GridData[,] _grids;
 
-	public void InitializeMap( CharacterData src, Transform root, DisplayMode mode = DisplayMode.ElementColor )
+	public void InitializeMap( Character src, Transform root )
 	{
-		PixelData[,] map = src.bodyMap;
-		_grids = new GridData[src.bodyMap.GetLength( 0 ), src.bodyMap.GetLength( 1 )];
+		int width = src.width;
+		int height = src.height;
+		_grids = new GridData[width, height];
 
-		for( int i = 0; i < map.GetLength( 0 ); i++ )
+		for( int x = 0; x < width; x++ )
 		{
-			for( int j = 0; j < map.GetLength( 1 ); j++ )
+			for( int y = 0; y < height; y++ )
 			{
-				GameObject obj = Instantiate( gridPrefab, new Vector3( i * gridWidth, j * gridLength, 0 ), Quaternion.identity, root );
+				GridData grid = Instantiate( gridPrefab, new Vector3( x * gridWidth, y * gridLength, 0 ), Quaternion.identity, root );
 
-				_grids[i, j] = obj.GetComponent<GridData>();
+				_grids[x, y] = grid;
 			}
 		}
 	}
@@ -50,23 +49,24 @@ public class CharacterDisplay : MonoBehaviour
 		return color;
 	}
 
-	public void UpdateMap( CharacterData src, DisplayMode mode = DisplayMode.ElementColor )
+	public void UpdateMap( Character src, DisplayMode mode = DisplayMode.ElementColor )
 	{
 		if( _grids == null )
 		{
 			return;
 		}
 
-		PixelData[,] map = src.bodyMap;
+		int width = src.width;
+		int height = src.height;
 
-		for( int i = 0; i < map.GetLength( 0 ); i++ )
+		for( int x = 0; x < width; x++ )
 		{
-			for( int j = 0; j < map.GetLength( 1 ); j++ )
+			for( int y = 0; y < height; y++ )
 			{
-				float healthPoint = src.bodyMap[i, j].currentHealthPoint;
+				float healthPoint = src.bodyMap[x, y].currentHealthPoint;
 				Color color = GetPixelColor( healthPoint, mode );
 
-				_grids[i, j].GetComponent<Renderer>().material.color = color;
+				_grids[x, y].color = color;
 			}
 		}
 	}

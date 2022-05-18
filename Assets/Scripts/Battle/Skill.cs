@@ -4,18 +4,26 @@ using UnityEngine;
 
 public class Skill : MonoBehaviour
 {
-	#region EditorParam
+#if UNITY_EDITOR
+	#region EditorParams
+
 	public int cornerX, cornerY;
 
 	public int damageWidth, damageHeight;
 
-	public CharacterBase targetCharacter;
-	#endregion
+	public CharacterControllerBase targetCharacter;
 
-	public void DealRectDamageToCharacter( CharacterBase target, int damageAmount )
+	#endregion
+#endif
+
+	public void DealRectDamageToCharacter( CharacterControllerBase target, int damageAmount )
 	{
-		DamageBase damage = new DamageBase( target.characterData.bodyMap.GetLength( 0 ), target.characterData.bodyMap.GetLength( 1 ) );
-		float[,] rectHealthPointChangeMap = damage.GenerateRectHealthPointChangeMap( new RectInt( new Vector2Int( cornerX, cornerY ), new Vector2Int( damageWidth, damageHeight ) ), damageAmount );
+		DamageBase damage = new DamageBase( target.character.width, target.character.height );
+		Vector2Int damagePosition = new Vector2Int( cornerX, cornerY );
+		Vector2Int damageSize = new Vector2Int( damageWidth, damageHeight );
+		RectInt damageRange = new RectInt( damagePosition, damageSize );
+
+		float[,] rectHealthPointChangeMap = damage.GenerateRectHealthPointChangeMap( damageRange, damageAmount );
 		target.ChangeHealthPoint( rectHealthPointChangeMap );
 	}
 }

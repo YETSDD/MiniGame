@@ -13,14 +13,14 @@ public class CharacterBuilderEditor : Editor
 
 		CharacterBuilder characterBuilder = (CharacterBuilder)target;
 
-		if( GUILayout.Button( "LoadDataFromConfig" ) )
-		{
-			characterBuilder.LoadDataFromConfig();
-		}
-
 		if( GUILayout.Button( "InitializeConfig" ) )
 		{
 			characterBuilder.InitializeConfig();
+		}
+
+		if( GUILayout.Button( "LoadDataFromConfig" ) )
+		{
+			characterBuilder.LoadDataFromConfig();
 		}
 
 		if( GUILayout.Button( "BindSelectedPixel" ) )
@@ -33,7 +33,12 @@ public class CharacterBuilderEditor : Editor
 			characterBuilder.ShowBindedPixelOfModule( characterBuilder.currentModule );
 		}
 
-		if( GUILayout.Button( "Clear" ) )
+		if( GUILayout.Button( "SaveDataToConfig" ) )
+		{
+			characterBuilder.SaveConfig();
+		}
+
+		if( GUILayout.Button( "ClearCache" ) )
 		{
 			characterBuilder.ClearCache();
 		}
