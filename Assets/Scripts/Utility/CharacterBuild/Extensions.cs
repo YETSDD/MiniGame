@@ -33,6 +33,7 @@ namespace Utility
 			int width = array_2D.GetLength( 0 );
 			int height = array_2D.GetLength( 1 );
 			T[] array_1D = new T[width * height];
+
 			for( int x = 0; x < width; x++ )
 			{
 				for( int y = 0; y < height; y++ )
@@ -40,6 +41,7 @@ namespace Utility
 					array_1D[x * width + y] = array_2D[x, y];
 				}
 			}
+
 			arrayToSerialize.width = width;
 			arrayToSerialize.height = height;
 			arrayToSerialize.array = array_1D;
