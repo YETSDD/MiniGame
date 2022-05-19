@@ -10,10 +10,12 @@ public class CharacterManagerEditor : Editor
 
 		CharacterManager characterManager = (CharacterManager)target;
 
-		CharacterControllerBase player = characterManager.playerCharacter;
+
 		if( GUILayout.Button( "GenerateRandomCharacterAndShow" ) )
 		{
-			player = Utility.Generator.GenerateRandomCharacterData( characterManager.characterPrefab, characterManager.transform );
+			CharacterControllerBase player = Utility.Generator.GenerateRandomCharacterData( characterManager.characterPrefab, characterManager.transform );
+			characterManager.playerCharacter = player;
+
 			CharacterDisplay playerCharacterDisplay = player.characterDisplay;
 			playerCharacterDisplay.InitializeMap( player.character, player.transform );
 			playerCharacterDisplay.UpdateMap( player.character );
@@ -21,7 +23,9 @@ public class CharacterManagerEditor : Editor
 
 		if( GUILayout.Button( "GenerateCharacterByConfigAndShow" ) )
 		{
-			player = Utility.Generator.GenerateCharacterDataByConfig( characterManager.characterPrefab, characterManager.transform, characterManager.playerCharacterConfig );
+			CharacterControllerBase player = Utility.Generator.GenerateCharacterDataByConfig( characterManager.characterPrefab, characterManager.transform, characterManager.playerCharacterConfig );
+			characterManager.playerCharacter = player;
+
 			CharacterDisplay playerCharacterDisplay = player.characterDisplay;
 			playerCharacterDisplay.InitializeMap( player.character, player.transform );
 			playerCharacterDisplay.UpdateMap( player.character );

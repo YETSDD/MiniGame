@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c971a2e067d7a349ac12c91437090da, type: 3}
+  m_Name: SlimeBody
+  m_EditorClassIdentifier: 
+  moduleName: "\u53F2\u83B1\u59C6\u7684\u5916\u56F4\u90E8\u5206"
+  ownPixels:
+  - currentHealthPoint: 10
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0
+  - currentHealthPoint: 10
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0
+  - currentHealthPoint: 10
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0
+  defaultSkillSet: {fileID: 11400000, guid: 62b610c6b3865644db4462d1c4abec1b, type: 2}
+  skillSetPool:
+  - {fileID: 11400000, guid: 62b610c6b3865644db4462d1c4abec1b, type: 2}
+  - {fileID: 11400000, guid: f6bed58973328f844b1393eefe7a1534, type: 2}

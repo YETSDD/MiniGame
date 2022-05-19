@@ -9,40 +9,62 @@ public class Module
 
 	public List<BuffBase> buffs;
 
-	public ModificationBase modification;
+	public SkillSet skillSet;
 
-	public List<ActionBase> availableActions = new List<ActionBase>();
+	public List<SkillBase> availableSkills = new List<SkillBase>();
 
-	public List<ActionBase> unavailableActions = new List<ActionBase>();
+	public List<SkillBase> unavailableSkills = new List<SkillBase>();
 
-	public Module( ModuleConfig config, ModificationBase modification = null )
+	public Module( ModuleConfig config )
 	{
 		this.config = config;
-		this.modification = modification;
-		EvaluateAvailableActions();
+		this.skillSet = config.defaultSkillSet;
+		EvaluateAvailableSkills();
 	}
 
-	public void EvaluateAvailableActions()
+	public Module( ModuleConfig config, SkillSet skillSet)
 	{
-		if( modification != null )
+		this.config = config;
+		this.skillSet = skillSet;
+		EvaluateAvailableSkills();
+	}
+
+	public void SetRandomSkillSet() {
+		this.skillSet = Utility.Extensions.GetRandomElement( config.skillSetPool );
+	}
+
+	public void EvaluateAvailableSkills()
+	{
+		if( skillSet != null )
 		{
-			foreach( ActionBase action in modification.ownActions )
+			foreach( SkillBase skill in skillSet.ownSkills )
 			{
-				if( JudgeIfActive( action ) )
+				if( JudgeIfActive( skill ) )
 				{
-					availableActions.Add( action );
+					availableSkills.Add( skill );
 				}
 				else
 				{
-					unavailableActions.Add( action );
+					unavailableSkills.Add( skill );
 				}
 			}
 		}
 	}
 
-	public bool JudgeIfActive( ActionBase action )
+	public bool JudgeIfActive( SkillBase skill )
 	{
-		//TODO: evaluate active pixels and total healthpoint percentage of this module
-		return true;
+		float totalHealthPoint = 0;
+		int activePixels = 0;
+		foreach( PixelData pixel in config.ownPixels )
+		{
+			totalHealthPoint += pixel.currentHealthPoint;
+			if( pixel.currentHealthPoint > 0 )
+			{
+				activePixels++;
+			}
+		}
+
+		SkillLimit limit = skill.limit;
+		return totalHealthPoint > limit.remainHealthPoint && activePixels > limit.activePixels;
 	}
 }

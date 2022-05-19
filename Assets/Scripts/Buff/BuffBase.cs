@@ -2,11 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum EffectRange
-{
-	Part,
-	Global
-}
+
 public class BuffBase : MonoBehaviour
 {
 	public int remainRounds;

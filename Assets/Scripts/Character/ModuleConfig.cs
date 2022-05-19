@@ -6,4 +6,10 @@ using UnityEngine;
 public class ModuleConfig : ScriptableObject
 {
 	public string moduleName;
+
+	public List<PixelData> ownPixels = new List<PixelData>();
+
+	public SkillSet defaultSkillSet;
+
+	public List<SkillSet> skillSetPool;
 }

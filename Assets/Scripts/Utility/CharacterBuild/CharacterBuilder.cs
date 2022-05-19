@@ -73,10 +73,12 @@ public class CharacterBuilder : MonoBehaviour
 	{
 		if( currentModule == null )
 		{
-			throw new System.Exception( "currentModule Not Selected" );
+			throw new System.Exception( "CurrentModule Not Selected" );
 		}
+
 		selectedGameObjects = Selection.gameObjects;
 		currentModule.ownPixels.Clear();
+
 		for( int i = 0; i < selectedGameObjects.Length; i++ )
 		{
 			selectedGameObjects[i].GetComponent<PixelObject>().pixelData.moduleRef = currentModule;
@@ -88,6 +90,7 @@ public class CharacterBuilder : MonoBehaviour
 	public void ShowBindedPixelOfModule( ModuleConfig module )
 	{
 		List<GameObject> objectsToBeSelected = new List<GameObject>();
+
 		for( int i = 0; i < gameObjectsOfPixel.Count; i++ )
 		{
 			if( _mapBetweenGameObjectAndPixelData[gameObjectsOfPixel[i]].moduleRef == module )
@@ -95,6 +98,7 @@ public class CharacterBuilder : MonoBehaviour
 				objectsToBeSelected.Add( gameObjectsOfPixel[i] );
 			}
 		}
+
 		Selection.objects = objectsToBeSelected.ToArray();
 	}
 
@@ -110,12 +114,14 @@ public class CharacterBuilder : MonoBehaviour
 	public void ClearCache()
 	{
 		_mapBetweenGameObjectAndPixelData.Clear();
+
 		while( gameObjectsOfPixel.Count > 0 )
 		{
 			GameObject gameObject = gameObjectsOfPixel[gameObjectsOfPixel.Count - 1];
 			gameObjectsOfPixel.RemoveAt( gameObjectsOfPixel.Count - 1 );
 			Destroy( gameObject );
 		}
+
 		gameObjectsOfPixel.Clear();
 	}
 }

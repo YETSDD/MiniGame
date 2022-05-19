@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum ElementType
-{
+{//TODO: Redesign element type
 	None,
 	Air,
 	Earth,

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5973756241562ad43bf29dccd0241f4d, type: 3}
+  m_Name: Slime
+  m_EditorClassIdentifier: 
+  modules:
+  - {fileID: 11400000, guid: fe1140d5bf00b7d478796ffac46000a5, type: 2}
+  - {fileID: 11400000, guid: e5668d438b76822428de0a6ae10e17d5, type: 2}
+  bodyMap_1D:
+  - currentHealthPoint: 10
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: e5668d438b76822428de0a6ae10e17d5, type: 2}
+    damageFactor: 0
+  - currentHealthPoint: 10
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: e5668d438b76822428de0a6ae10e17d5, type: 2}
+    damageFactor: 0
+  - currentHealthPoint: 50
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: fe1140d5bf00b7d478796ffac46000a5, type: 2}
+    damageFactor: 0
+  - currentHealthPoint: 10
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: e5668d438b76822428de0a6ae10e17d5, type: 2}
+    damageFactor: 0
+  width: 2
+  height: 2

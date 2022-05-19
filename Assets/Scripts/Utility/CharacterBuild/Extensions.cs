@@ -47,5 +47,16 @@ namespace Utility
 			arrayToSerialize.array = array_1D;
 			return arrayToSerialize;
 		}
+
+		public static T GetRandomElement<T>( List<T> list )
+		{
+			if( list.Count == 0 )
+			{
+				throw new System.Exception( "Empty List" );
+			}
+
+			int index = Random.Range( 0, list.Count );
+			return list[index];
+		}
 	}
 }

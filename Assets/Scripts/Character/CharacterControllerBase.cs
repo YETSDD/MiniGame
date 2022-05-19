@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 [RequireComponent( typeof( CharacterDisplay ) )]
 public class CharacterControllerBase : MonoBehaviour
 {
@@ -72,16 +73,34 @@ public class CharacterControllerBase : MonoBehaviour
 		}
 	}
 
+	public List<SkillBase> GetAllActiveSkills()
+	{
+		List<SkillBase> result = new List<SkillBase>();
+
+		if( character.basicSkill != null )
+		{
+			result.Add( character.basicSkill );
+		}
+		foreach( Module module in character.modules )
+		{
+			module.availableSkills.AddRange( module.availableSkills );
+		}
+
+		return result;
+	}
+
 	#endregion
 
 	#region View
 
 	public void UpdateDisplay( Character data )
 	{
-		if( characterDisplay != null )
+		if( characterDisplay == null )
 		{
-			characterDisplay.UpdateMap( data );
+			throw new System.Exception( "Null CharacterDisplay" );
 		}
+
+		characterDisplay.UpdateMap( data );
 	}
 
 	#endregion

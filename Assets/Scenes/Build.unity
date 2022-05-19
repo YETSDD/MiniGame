@@ -248,10 +248,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 10
   height: 10
-  characterConfig: {fileID: 11400000, guid: 9a693fe12e53aa64ead8f325c11ee321, type: 2}
+  characterConfig: {fileID: 11400000, guid: 553a1738be2d23844b3dd6631158b4d6, type: 2}
   pixelPrefab: {fileID: 8922477529360109501, guid: e835239ddd2277d42b7886bb8b01471a, type: 3}
-  currentModule: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-  selectedGameObjects: []
+  currentModule: {fileID: 0}
+  selectedGameObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   modules:
   - {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
   - {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}

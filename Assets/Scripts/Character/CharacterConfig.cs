@@ -9,11 +9,13 @@ public class CharacterConfig : ScriptableObject, ISerializationCallbackReceiver
 {
 	public List<ModuleConfig> modules;
 
-	public PixelData[] bodyMap_1D; 
+	public PixelData[] bodyMap_1D;
 
 	public PixelData[,] bodyMap;
 
 	public int width, height;
+
+	public List<SkillBase> talentSkillPool;
 
 	public bool isInitialized => bodyMap != null && modules != null;
 
@@ -21,7 +23,7 @@ public class CharacterConfig : ScriptableObject, ISerializationCallbackReceiver
 	{
 		if( width < 0 || height < 0 )
 		{
-			throw new System.Exception( "width or height" );
+			throw new System.Exception( "Invalid Width or Height" );
 		}
 
 		bodyMap = new PixelData[width, height];
@@ -41,7 +43,7 @@ public class CharacterConfig : ScriptableObject, ISerializationCallbackReceiver
 		{
 			for( int y = 0; y < height; y++ )
 			{
-				bodyMap_1D[ x * width + y ] = bodyMap[x, y];
+				bodyMap_1D[x * width + y] = bodyMap[x, y];
 			}
 		}
 	}
@@ -53,7 +55,7 @@ public class CharacterConfig : ScriptableObject, ISerializationCallbackReceiver
 		{
 			for( int y = 0; y < height; y++ )
 			{
-				bodyMap[x, y] = bodyMap_1D[ x * width + y ];
+				bodyMap[x, y] = bodyMap_1D[x * width + y];
 			}
 		}
 	}

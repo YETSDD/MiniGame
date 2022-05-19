@@ -22,7 +22,8 @@ public class CharacterDisplay : MonoBehaviour
 		{
 			for( int y = 0; y < height; y++ )
 			{
-				GridData grid = Instantiate( gridPrefab, new Vector3( x * gridWidth, y * gridLength, 0 ), Quaternion.identity, root );
+				GridData grid = Instantiate( gridPrefab, root );
+				grid.transform.localPosition = new Vector3( x * gridWidth, y * gridLength, 0 );
 
 				_grids[x, y] = grid;
 			}
@@ -53,7 +54,7 @@ public class CharacterDisplay : MonoBehaviour
 	{
 		if( _grids == null )
 		{
-			throw new System.Exception( "_grids not initialized" );
+			throw new System.Exception( "_grids Not Initialized" );
 		}
 
 		int width = src.width;
