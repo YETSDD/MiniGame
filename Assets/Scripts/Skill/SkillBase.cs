@@ -16,6 +16,11 @@ public class SkillBase : MonoBehaviour
 			throw new System.Exception( "Amount Not Initialized" );
 		}
 	}
+
+	public virtual void RandomSet( CharacterControllerBase target, float amount )
+	{
+		this.amount = amount;
+	}
 }
 
 [System.Serializable]

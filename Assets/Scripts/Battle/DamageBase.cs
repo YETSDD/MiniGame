@@ -40,10 +40,9 @@ public class DamageBase
 		float[,] result = new float[_mapWidth, _mapHeight];
 
 		//TODO: Calculate effected pixels
-		throw new System.Exception("Not Implement");
-		
-		return result;
+		throw new System.Exception( "Not Implement" );
 	}
+
 	#endregion
 
 

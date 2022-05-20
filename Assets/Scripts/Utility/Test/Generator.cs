@@ -32,6 +32,29 @@ namespace Utility
 
 			return result;
 		}
+
+		public static CharacterControllerBase GenerateMonster( CharacterControllerBase characterPrefab, Transform parent, CharacterConfig config )
+		{
+			CharacterControllerBase result = GameObject.Instantiate( characterPrefab, parent );
+
+			result.character = new Character( config.width, config.height );
+			result.character.InitializeByConfig( config );
+			//TODO: random skill set and AI
+
+			return result;
+		}
+
+		public static CharacterControllerBase GeneratePlayer( CharacterControllerBase characterPrefab, Transform parent, CharacterConfig config )
+		{
+			CharacterControllerBase result = GameObject.Instantiate( characterPrefab, parent );
+
+			result.character = new Character( config.width, config.height );
+			result.character.InitializeByConfig( config );
+			//TODO: choose skill set
+
+			return result;
+		}
+
 	}
 }
 

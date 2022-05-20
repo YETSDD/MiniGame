@@ -6,6 +6,7 @@ public class Heal : SkillBase
 {
 	public EffectRange range = EffectRange.Global;
 
+	[HideInInspector]
 	public Module targetModule;
 
 	public override void ReleaseSkillToCharacter( CharacterControllerBase target )
@@ -42,6 +43,8 @@ public class Heal : SkillBase
 				}
 			}
 		}
+
+		target.ChangeHealthPoint( damage.healthPointChangeMap );
 	}
 
 	private void HealModule( CharacterControllerBase target )
@@ -66,5 +69,7 @@ public class Heal : SkillBase
 				}
 			}
 		}
+
+		target.ChangeHealthPoint( damage.healthPointChangeMap );
 	}
 }

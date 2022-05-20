@@ -15,6 +15,8 @@ public class Character
 
 	public SkillBase basicSkill; //TODO: Player choose talent skills.
 
+	public List<SkillBase> allAvailableSkills = new List<SkillBase>();
+
 	public Character()
 	{
 	}
@@ -61,6 +63,7 @@ public class Character
 	{
 		LoadModuleFromConfig( config );
 		LoadMapDataFromConfig( config );
+		InitializeAvailableSkills();
 	}
 
 	private void LoadModuleFromConfig( CharacterConfig config )
@@ -88,6 +91,20 @@ public class Character
 			{
 				bodyMap[x, y].LoadPixelData( config.bodyMap[x, y] );
 			}
+		}
+	}
+
+	private void InitializeAvailableSkills()
+	{
+		allAvailableSkills.Clear();
+		if( basicSkill != null )
+		{
+			allAvailableSkills.Add( basicSkill );
+		}
+
+		foreach( Module module in modules )
+		{
+			allAvailableSkills.AddRange( module.availableSkills );
 		}
 	}
 }

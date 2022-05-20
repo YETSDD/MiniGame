@@ -10,13 +10,14 @@ public class CharacterControllerBase : MonoBehaviour
 
 	public CharacterDisplay characterDisplay;
 
-	public delegate void CharacterDelegate( Character characterData );
+	public delegate void CharacterDelegate();
 
 	public CharacterDelegate OnCharacterDataChanged;
 
 	private void Awake()
 	{
 		OnCharacterDataChanged = UpdateDisplay;
+		OnCharacterDataChanged += UpdateAvailableSkills;
 		characterDisplay = GetComponent<CharacterDisplay>();
 	}
 
@@ -39,6 +40,7 @@ public class CharacterControllerBase : MonoBehaviour
 
 	private void HandleBuffs( RoundStage stage )
 	{
+		//TODO: handle global buff
 		Module[] modules = character.modules;
 		for( int i = 0; i < modules.Length; i++ )
 		{
@@ -48,6 +50,7 @@ public class CharacterControllerBase : MonoBehaviour
 
 	private void HandleBuff( Module module, RoundStage stage )
 	{
+		//TODO: handle part buff
 	}
 
 	public void ChangeHealthPoint( float[,] healthPointChangeMap )
@@ -67,40 +70,41 @@ public class CharacterControllerBase : MonoBehaviour
 			for( int j = 0; j < healthPointChangeMap.GetLength( 1 ); j++ )
 			{
 				character.bodyMap[i, j].ChangeHealthPoint( healthPointChangeMap[i, j] );
-
-				OnCharacterDataChanged.Invoke( character );
 			}
 		}
+		OnCharacterDataChanged.Invoke();
 	}
 
-	public List<SkillBase> GetAllActiveSkills()
+	private void UpdateAvailableSkills()
 	{
-		List<SkillBase> result = new List<SkillBase>();
+		List<SkillBase> availableSkills = character.allAvailableSkills;
+		availableSkills.Clear();
 
 		if( character.basicSkill != null )
 		{
-			result.Add( character.basicSkill );
-		}
-		foreach( Module module in character.modules )
-		{
-			module.availableSkills.AddRange( module.availableSkills );
+			availableSkills.Add( character.basicSkill );
 		}
 
-		return result;
+		foreach( Module module in character.modules )
+		{
+			availableSkills.AddRange( module.availableSkills );
+		}
 	}
+
+
 
 	#endregion
 
 	#region View
 
-	public void UpdateDisplay( Character data )
+	public void UpdateDisplay()
 	{
 		if( characterDisplay == null )
 		{
 			throw new System.Exception( "Null CharacterDisplay" );
 		}
 
-		characterDisplay.UpdateMap( data );
+		characterDisplay.UpdateMap( character );
 	}
 
 	#endregion

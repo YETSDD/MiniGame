@@ -20,6 +20,14 @@ public class BattleTest : MonoBehaviour
 
 	public Transform rightCharacterTransform;
 
+	public BehaviourControllerBase leftBehaviourController;
+
+	public BehaviourControllerBase rightBehaviourController;
+
+	public BehaviourControllerBase currentController;
+
+	public const float interval = 1.0f;
+
 	private void Awake()
 	{
 		instance = this;
@@ -31,7 +39,20 @@ public class BattleTest : MonoBehaviour
 		rightCharacter = GenerateCharater( rightCharacterConfig, rightCharacterTransform );
 		ShowCharater( leftCharacter );
 		ShowCharater( rightCharacter );
+
+		leftBehaviourController = leftCharacter.gameObject.AddComponent<AIController>();
+		AIController left = leftCharacter.gameObject.GetComponent<AIController>();
+		left.self = leftCharacter;
+		left.target = rightCharacter;
+
+		rightBehaviourController = rightCharacter.gameObject.AddComponent<AIController>();
+		AIController right = rightCharacter.gameObject.GetComponent<AIController>();
+		right.self = rightCharacter;
+		right.target = leftCharacter;
+
+		RoundLoop();
 	}
+
 
 	private CharacterControllerBase GenerateCharater( CharacterConfig config, Transform transform )
 	{
@@ -50,6 +71,36 @@ public class BattleTest : MonoBehaviour
 		playerCharacterDisplay.InitializeMap( src.character, src.transform );
 		playerCharacterDisplay.UpdateMap( src.character );
 	}
+
+	private void RoundLoop()
+	{
+		currentController = leftBehaviourController;
+
+		//TODO: Loop Coroutine
+
+	}
+
+	public IEnumerator Loop()
+	{
+		yield return new WaitForSeconds( interval );
+	}
+
+	private void SwitchController()
+	{
+		if( currentController == leftBehaviourController )
+		{
+			currentController = rightBehaviourController;
+		}
+		else if( currentController == rightBehaviourController )
+		{
+			currentController = leftBehaviourController;
+		}
+		else
+		{
+			throw new System.Exception( "Currnet Controller Not Selected" );
+		}
+	}
+
 	public void BattleEnd()
 	{
 
