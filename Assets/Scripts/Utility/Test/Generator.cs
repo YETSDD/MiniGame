@@ -14,8 +14,7 @@ namespace Utility
 
 			CharacterControllerBase result = GameObject.Instantiate( characterPrefab, parent );
 
-			result.character = new Character();
-			result.character.SetBodyMap( Random.Range( minWidth, maxWidth ), Random.Range( minHeight, maxHeight ) );
+			result.character = new Character( Random.Range( minWidth, maxWidth ), Random.Range( minHeight, maxHeight ) );
 			result.character.GenerateRandomMapData( minHealthPoint, maxHealthPoint );
 
 			Debug.Log( "size:" + result.character.width + "," + result.character.height );
