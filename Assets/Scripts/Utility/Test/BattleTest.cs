@@ -28,6 +28,8 @@ public class BattleTest : MonoBehaviour
 
 	public const float interval = 1.0f;
 
+
+
 	private void Awake()
 	{
 		instance = this;
@@ -40,13 +42,13 @@ public class BattleTest : MonoBehaviour
 		ShowCharater( leftCharacter );
 		ShowCharater( rightCharacter );
 
-		leftBehaviourController = leftCharacter.gameObject.AddComponent<AIController>();
-		AIController left = leftCharacter.gameObject.GetComponent<AIController>();
+		AIController left = leftCharacter.gameObject.AddComponent<AIController>();
+		leftBehaviourController = left;
 		left.self = leftCharacter;
 		left.target = rightCharacter;
 
-		rightBehaviourController = rightCharacter.gameObject.AddComponent<AIController>();
-		AIController right = rightCharacter.gameObject.GetComponent<AIController>();
+		AIController right = rightCharacter.gameObject.AddComponent<AIController>();
+		rightBehaviourController = right;
 		right.self = rightCharacter;
 		right.target = leftCharacter;
 
@@ -56,44 +58,47 @@ public class BattleTest : MonoBehaviour
 
 	private CharacterControllerBase GenerateCharater( CharacterConfig config, Transform transform )
 	{
-
 		CharacterControllerBase result = Instantiate( characterPrefab, transform );
-		Character character = new Character();
-		character.InitializeByConfig( config );
+		Character character = new Character( config );
 		result.character = character;
 
 		return result;
 	}
 
-	private void ShowCharater( CharacterControllerBase src )
+	private void ShowCharater( CharacterControllerBase source )
 	{
-		CharacterDisplay playerCharacterDisplay = src.characterDisplay;
-		playerCharacterDisplay.InitializeMap( src.character, src.transform );
-		playerCharacterDisplay.UpdateMap( src.character );
+		CharacterDisplay playerCharacterDisplay = source.characterDisplay;
+		playerCharacterDisplay.InitializeMap( source.character, source.transform );
+		playerCharacterDisplay.UpdateMap( source.character );
 	}
 
 	private void RoundLoop()
 	{
 		currentController = leftBehaviourController;
-
-		//TODO: Loop Coroutine
+		currentController.TransisteState( CharacterStateType.Prepare );
 
 	}
 
 	public IEnumerator Loop()
 	{
 		yield return new WaitForSeconds( interval );
+
+		currentController.TransisteState( CharacterStateType.Prepare );
+		SwitchController();
+		StartCoroutine( Loop() );
 	}
 
-	private void SwitchController()
+	public void SwitchController()
 	{
 		if( currentController == leftBehaviourController )
 		{
 			currentController = rightBehaviourController;
+			currentController.TransisteState( CharacterStateType.Prepare );
 		}
 		else if( currentController == rightBehaviourController )
 		{
 			currentController = leftBehaviourController;
+			currentController.TransisteState( CharacterStateType.Prepare );
 		}
 		else
 		{

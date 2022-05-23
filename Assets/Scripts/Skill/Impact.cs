@@ -8,9 +8,9 @@ public class Impact : SkillBase
 
 	public int damageWidth, damageHeight;
 
-	public override void ReleaseSkillToCharacter( CharacterControllerBase target )
+	public override void UseSkill( CharacterControllerBase target )
 	{
-		base.ReleaseSkillToCharacter( target );
+		base.UseSkill( target );
 		DealRectDamageToCharacter( target, amount );
 	}
 

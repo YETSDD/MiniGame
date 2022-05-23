@@ -12,10 +12,10 @@ public class CharacterDisplay : MonoBehaviour
 
 	private GridData[,] _grids;
 
-	public void InitializeMap( Character src, Transform root )
+	public void InitializeMap( Character source, Transform root )
 	{
-		int width = src.width;
-		int height = src.height;
+		int width = source.width;
+		int height = source.height;
 		_grids = new GridData[width, height];
 
 		for( int x = 0; x < width; x++ )
@@ -50,21 +50,21 @@ public class CharacterDisplay : MonoBehaviour
 		return color;
 	}
 
-	public void UpdateMap( Character src, DisplayMode mode = DisplayMode.ElementColor )
+	public void UpdateMap( Character source, DisplayMode mode = DisplayMode.ElementColor )
 	{
 		if( _grids == null )
 		{
 			throw new System.Exception( "_grids Not Initialized" );
 		}
 
-		int width = src.width;
-		int height = src.height;
+		int width = source.width;
+		int height = source.height;
 
 		for( int x = 0; x < width; x++ )
 		{
 			for( int y = 0; y < height; y++ )
 			{
-				float healthPoint = src.bodyMap[x, y].currentHealthPoint;
+				float healthPoint = source.bodyMap[x, y].currentHealthPoint;
 				Color color = GetPixelColor( healthPoint, mode );
 
 				_grids[x, y].color = color;

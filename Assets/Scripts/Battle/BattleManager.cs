@@ -5,11 +5,15 @@ using UnityEngine;
 public class BattleManager : MonoBehaviour
 {
 
+
+	public BehaviourControllerBase currentController;
+
+	private void ShowCharater( CharacterControllerBase source )
+	{
+		CharacterDisplay playerCharacterDisplay = source.characterDisplay;
+		playerCharacterDisplay.InitializeMap( source.character, source.transform );
+		playerCharacterDisplay.UpdateMap( source.character );
+	}
 }
 
-public enum RoundStage
-{
-	Prepare,
-	Act,
-	Settle
-}
+

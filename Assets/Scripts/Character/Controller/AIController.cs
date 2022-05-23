@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Utility;
 
 public class AIController : BehaviourControllerBase
 {
@@ -22,34 +23,30 @@ public class AIController : BehaviourControllerBase
 			throw new System.Exception( "Target of Monster Not Selected" );
 		}
 
-		Prepare();
-		self.OnRoundPrepare();
-		Act();
-		self.OnRoundAct();
-		Settle();
-		self.OnRoundSettle();
+		//Prepare();
+		//self.OnRoundPrepare();
+		//Act();
+		//self.OnRoundAct();
+		//Settle();
+		//self.OnRoundSettle();
 	}
 
 	public override void Prepare()
 	{
+		Debug.Log( "Prepare" );
 		SelectSkill();
 	}
 
-	/// <summary>
-	/// 释放技能
-	/// </summary>
 	public override void Act()
 	{
+		Debug.Log( "Act" );
 		StartCoroutine( PlayAnimation() );
-		ReleaseSkill();
+		UseSkill();
 	}
 
-	/// <summary>
-	/// 特殊动作
-	/// </summary>
 	public override void Settle()
 	{
-		Debug.Log( "这里是一些特殊动作" );
+		Debug.Log( "Settle" );
 	}
 
 	protected virtual void SelectSkill()
@@ -57,21 +54,21 @@ public class AIController : BehaviourControllerBase
 		RandomSelect();
 	}
 
-	protected virtual void ReleaseSkill()
+	protected virtual void UseSkill()
 	{
-		RandomRelease();
+		RandomUse();
 	}
 
 	private void RandomSelect()
 	{
 		//TODO: default empty skill
-		_skillToRelease = Utility.Extensions.GetRandomElement( self.character.allAvailableSkills );
+		_skillToRelease = self.character.allAvailableSkills.GetRandomElement();
 	}
 
-	private void RandomRelease()
+	private void RandomUse()
 	{
 		_skillToRelease.RandomSet( target, defaultSkillPower );
-		_skillToRelease.ReleaseSkillToCharacter( target );
+		_skillToRelease.UseSkill( target );
 	}
 
 	public virtual IEnumerator PlayAnimation()

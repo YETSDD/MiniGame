@@ -25,20 +25,20 @@ public class CharacterControllerBase : MonoBehaviour
 
 	public void OnRoundPrepare()
 	{
-		HandleBuffs( RoundStage.Prepare );
+		HandleBuffs( CharacterStateType.Prepare );
 	}
 
 	public void OnRoundAct()
 	{
-		HandleBuffs( RoundStage.Act );
+		HandleBuffs( CharacterStateType.Act );
 	}
 
 	public void OnRoundSettle()
 	{
-		HandleBuffs( RoundStage.Settle );
+		HandleBuffs( CharacterStateType.Settle );
 	}
 
-	private void HandleBuffs( RoundStage stage )
+	private void HandleBuffs( CharacterStateType stage )
 	{
 		//TODO: handle global buff
 		Module[] modules = character.modules;
@@ -48,7 +48,7 @@ public class CharacterControllerBase : MonoBehaviour
 		}
 	}
 
-	private void HandleBuff( Module module, RoundStage stage )
+	private void HandleBuff( Module module, CharacterStateType stage )
 	{
 		//TODO: handle part buff
 	}

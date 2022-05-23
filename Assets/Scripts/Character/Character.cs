@@ -26,6 +26,11 @@ public class Character
 		SetBodyMap( width, height );
 	}
 
+	public Character( CharacterConfig config )
+	{
+		InitializeByConfig( config );
+	}
+
 	public void SetBodyMap( int width, int height )
 	{
 		if( width <= 0 || height <= 0 )

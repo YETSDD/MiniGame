@@ -48,7 +48,7 @@ namespace Utility
 			return arrayToSerialize;
 		}
 
-		public static T GetRandomElement<T>( List<T> list )
+		public static T GetRandomElement<T>(this List<T> list )
 		{
 			if( list.Count == 0 )
 			{

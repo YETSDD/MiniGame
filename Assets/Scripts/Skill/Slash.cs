@@ -8,9 +8,9 @@ public class Slash : SkillBase
 
 	public int endX, endY;
 
-	public override void ReleaseSkillToCharacter( CharacterControllerBase target )
+	public override void UseSkill( CharacterControllerBase target )
 	{
-		base.ReleaseSkillToCharacter( target );
+		base.UseSkill( target );
 
 		DealLineDamageToCharacter( target, amount );
 	}
