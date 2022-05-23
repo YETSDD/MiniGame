@@ -30,12 +30,12 @@ public class SelectPanel : PanelBase
 
 	private void OnEnable()
 	{
-
+		Character player = CharacterManager.instance.player.character;
 	}
 
 	private void OnDisable()
 	{
-		
+
 	}
 
 

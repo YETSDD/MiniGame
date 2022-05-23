@@ -22,31 +22,34 @@ public class Module
 		EvaluateAvailableSkills();
 	}
 
-	public Module( ModuleConfig config, SkillSet skillSet)
+	public Module( ModuleConfig config, SkillSet skillSet )
 	{
 		this.config = config;
 		this.skillSet = skillSet;
 		EvaluateAvailableSkills();
 	}
 
-	public void SetRandomSkillSet() {
+	public void SetRandomSkillSet()
+	{
 		this.skillSet = Utility.Extensions.GetRandomElement( config.skillSetPool );
 	}
 
 	public void EvaluateAvailableSkills()
 	{
-		if( skillSet != null )
+		if( skillSet == null )
 		{
-			foreach( SkillBase skill in skillSet.ownSkills )
+			throw new System.Exception( "Empty Skill Set" );
+		}
+
+		foreach( SkillBase skill in skillSet.ownSkills )
+		{
+			if( JudgeIfActive( skill ) )
 			{
-				if( JudgeIfActive( skill ) )
-				{
-					availableSkills.Add( skill );
-				}
-				else
-				{
-					unavailableSkills.Add( skill );
-				}
+				availableSkills.Add( skill );
+			}
+			else
+			{
+				unavailableSkills.Add( skill );
 			}
 		}
 	}

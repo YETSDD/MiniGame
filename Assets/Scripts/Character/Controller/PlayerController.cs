@@ -8,8 +8,6 @@ public class PlayerController : BehaviourControllerBase
 
 	public CharacterConfig defaultPlayerConfig;
 
-	public CharacterController self;
-
 	private void Awake()
 	{
 		instance = this;
