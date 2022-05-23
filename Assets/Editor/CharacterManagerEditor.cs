@@ -14,7 +14,7 @@ public class CharacterManagerEditor : Editor
 		if( GUILayout.Button( "GenerateRandomCharacterAndShow" ) )
 		{
 			CharacterControllerBase player = Utility.Generator.GenerateRandomCharacterData( characterManager.characterPrefab, characterManager.transform );
-			characterManager.playerCharacter = player;
+			characterManager.player = player;
 
 			CharacterDisplay playerCharacterDisplay = player.characterDisplay;
 			playerCharacterDisplay.InitializeMap( player.character, player.transform );
@@ -24,7 +24,7 @@ public class CharacterManagerEditor : Editor
 		if( GUILayout.Button( "GenerateCharacterByConfigAndShow" ) )
 		{
 			CharacterControllerBase player = Utility.Generator.GenerateCharacterDataByConfig( characterManager.characterPrefab, characterManager.transform, characterManager.playerCharacterConfig );
-			characterManager.playerCharacter = player;
+			characterManager.player = player;
 
 			CharacterDisplay playerCharacterDisplay = player.characterDisplay;
 			playerCharacterDisplay.InitializeMap( player.character, player.transform );
@@ -33,9 +33,9 @@ public class CharacterManagerEditor : Editor
 
 		if( GUILayout.Button( "DestroyCharacter" ) )
 		{
-			if( characterManager.playerCharacter != null )
+			if( characterManager.player != null )
 			{
-				DestroyImmediate( characterManager.playerCharacter.gameObject );
+				DestroyImmediate( characterManager.player.gameObject );
 			}
 		}
 	}
