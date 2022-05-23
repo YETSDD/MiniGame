@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class BattleManager : MonoBehaviour
 {
-
-
 	public BehaviourControllerBase currentController;
 
 	private void ShowCharater( CharacterControllerBase source )

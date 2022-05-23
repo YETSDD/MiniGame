@@ -27,8 +27,8 @@ public class AIController : BehaviourControllerBase
 		//self.OnRoundPrepare();
 		//Act();
 		//self.OnRoundAct();
-		//Settle();
-		//self.OnRoundSettle();
+		//End();
+		//self.OnRoundEnd();
 	}
 
 	public override void Prepare()
@@ -44,9 +44,9 @@ public class AIController : BehaviourControllerBase
 		UseSkill();
 	}
 
-	public override void Settle()
+	public override void End()
 	{
-		Debug.Log( "Settle" );
+		Debug.Log( "End" );
 	}
 
 	protected virtual void SelectSkill()

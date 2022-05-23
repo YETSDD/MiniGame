@@ -4,12 +4,28 @@ using UnityEngine;
 
 public class CharacterManager : MonoBehaviour
 {
-#if UNITY_EDITOR
+	public static CharacterManager instance;
+
 	public CharacterConfig playerCharacterConfig;
-#endif
 
 	public CharacterControllerBase characterPrefab;
 
-	public CharacterControllerBase playerCharacter;
+	public CharacterControllerBase player;
 
+	public CharacterControllerBase monster;
+
+	private void Awake()
+	{
+		instance = this;
+	}
+
+	public void GeneratePlayer()
+	{
+		player = Utility.Generator.GeneratePlayer( characterPrefab, this.transform, playerCharacterConfig );
+	}
+
+	public void GenenrateMonster()
+	{
+		//TODO: Generate by level
+	}
 }

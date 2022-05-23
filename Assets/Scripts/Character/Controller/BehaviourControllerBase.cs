@@ -14,7 +14,7 @@ public class BehaviourControllerBase : MonoBehaviour
 	{
 		states.Add( CharacterStateType.Prepare, new PrepareState( this ) );
 		states.Add( CharacterStateType.Act, new ActState( this ) );
-		states.Add( CharacterStateType.Settle, new SettleState( this ) );
+		states.Add( CharacterStateType.End, new EndState( this ) );
 		states.Add( CharacterStateType.Wait, new WaitState( this ) );
 		currentState = states[CharacterStateType.Wait];
 	}
@@ -30,30 +30,18 @@ public class BehaviourControllerBase : MonoBehaviour
 		{
 			throw new System.Exception( "Self Not Initialized" );
 		}
-
-		//Prepare();
-		//self.OnRoundPrepare();
-		//Act();
-		//self.OnRoundAct();
-		//Settle();
-		//self.OnRoundSettle();
 	}
 
 	public virtual void Prepare()
 	{
 	}
 
-	/// <summary>
-	/// 释放技能
-	/// </summary>
+
 	public virtual void Act()
 	{
 	}
 
-	/// <summary>
-	/// 特殊动作
-	/// </summary>
-	public virtual void Settle()
+	public virtual void End()
 	{
 		Debug.Log( "这里是一些特殊动作" );
 	}

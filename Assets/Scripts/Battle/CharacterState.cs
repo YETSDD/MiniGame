@@ -28,7 +28,7 @@ public enum CharacterStateType
 {
 	Prepare,
 	Act,
-	Settle,
+	End,
 	Wait
 }
 
@@ -74,7 +74,7 @@ public class ActState : CharacterState
 	public override void OnUpdate()
 	{//TODO: Animation
 		base.OnUpdate();
-		behaviourController.TransisteState( CharacterStateType.Settle );
+		behaviourController.TransisteState( CharacterStateType.End );
 	}
 
 	public override void OnExit()
@@ -83,17 +83,17 @@ public class ActState : CharacterState
 	}
 }
 
-public class SettleState : CharacterState
+public class EndState : CharacterState
 {
-	public SettleState( BehaviourControllerBase controller ) : base( controller )
+	public EndState( BehaviourControllerBase controller ) : base( controller )
 	{
 	}
 
 	public override void OnEnter()
 	{
 		base.OnEnter();
-		behaviourController.Settle();
-		behaviourController.self.OnRoundSettle();
+		behaviourController.End();
+		behaviourController.self.OnRoundEnd();
 	}
 
 	public override void OnUpdate()

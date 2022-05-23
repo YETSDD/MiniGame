@@ -33,9 +33,9 @@ public class CharacterControllerBase : MonoBehaviour
 		HandleBuffs( CharacterStateType.Act );
 	}
 
-	public void OnRoundSettle()
+	public void OnRoundEnd()
 	{
-		HandleBuffs( CharacterStateType.Settle );
+		HandleBuffs( CharacterStateType.End );
 	}
 
 	private void HandleBuffs( CharacterStateType stage )

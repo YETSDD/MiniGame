@@ -9,7 +9,7 @@ public class SkillBase : MonoBehaviour
 
 	public float amount;
 
-	public virtual void ReleaseSkillToCharacter( CharacterControllerBase target )
+	public virtual void UseSkill( CharacterControllerBase target )
 	{
 		if( amount == float.NaN )
 		{

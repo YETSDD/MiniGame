@@ -34,10 +34,7 @@ namespace Utility
 
 		public static CharacterControllerBase GenerateMonster( CharacterControllerBase characterPrefab, Transform parent, CharacterConfig config )
 		{
-			CharacterControllerBase result = GameObject.Instantiate( characterPrefab, parent );
-
-			result.character = new Character( config.width, config.height );
-			result.character.InitializeByConfig( config );
+			CharacterControllerBase result = GenerateCharacterDataByConfig( characterPrefab, parent, config );
 			//TODO: random skill set and AI
 
 			return result;
@@ -45,10 +42,7 @@ namespace Utility
 
 		public static CharacterControllerBase GeneratePlayer( CharacterControllerBase characterPrefab, Transform parent, CharacterConfig config )
 		{
-			CharacterControllerBase result = GameObject.Instantiate( characterPrefab, parent );
-
-			result.character = new Character( config.width, config.height );
-			result.character.InitializeByConfig( config );
+			CharacterControllerBase result = GenerateCharacterDataByConfig( characterPrefab, parent, config );
 			//TODO: choose skill set
 
 			return result;
