@@ -36,7 +36,7 @@ public class Impact : SkillBase
 		Vector2Int damageSize = new Vector2Int( damageWidth, damageHeight );
 		RectInt damageRange = new RectInt( damagePosition, damageSize );
 
-		float[,] rectHealthPointChangeMap = damage.GenerateRectHealthPointChangeMap( damageRange, damageAmount );
-		target.ChangeHealthPoint( rectHealthPointChangeMap );
+		damage.GenerateRectHealthPointChangeMap( damageRange, damageAmount );
+		target.ChangeHealthPoint( damage.healthPointChangeMap );
 	}
 }
