@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Utility
@@ -48,7 +49,7 @@ namespace Utility
 			return arrayToSerialize;
 		}
 
-		public static T GetRandomElement<T>(this List<T> list )
+		public static T GetRandomElement<T>( this List<T> list )
 		{
 			if( list.Count == 0 )
 			{
@@ -57,6 +58,58 @@ namespace Utility
 
 			int index = Random.Range( 0, list.Count );
 			return list[index];
+		}
+
+		public static List<T> GetRandomElements<T>( this List<T> list, int amount )
+		{
+			if( list.Count == 0 )
+			{
+				throw new System.Exception( "Empty List" );
+			}
+
+			if( list.Count < amount )
+			{
+				throw new System.Exception( "Amount Out of Range" );
+			}
+
+			HashSet<T> result = new HashSet<T>();
+			while( result.Count < amount )
+			{
+				result.Add( list[Random.Range( 0, list.Count )] );
+			}
+
+			return new List<T>( result );
+		}
+
+		public static List<KeyValuePair<T1, T2>> GetRandomElements<T1, T2>( this Dictionary<T1, List<T2>> dictionary, int amount )
+		{
+			if( dictionary.Count == 0 )
+			{
+				throw new System.Exception( "Empty Dictionary" );
+			}
+
+			int totalAmount = 0;
+			foreach( List<T2> list in dictionary.Values )
+			{
+				totalAmount += list.Count;
+			}
+			if( totalAmount < amount )
+			{
+				throw new System.Exception( "Amount Out of Range" );
+			}
+
+			HashSet<KeyValuePair<T1, T2>> result = new HashSet<KeyValuePair<T1, T2>>();
+			List<T1> keys = Enumerable.ToList( dictionary.Keys );
+
+			while( result.Count < amount )
+			{
+				int randomPairIndex = Random.Range( 0, keys.Count );
+				List<T2> list = dictionary[keys[randomPairIndex]];
+				result.Add( new KeyValuePair<T1, T2>( keys[randomPairIndex], list[Random.Range( 0, list.Count )] ) );
+			}
+
+			return new List<KeyValuePair<T1, T2>>( result );
+
 		}
 	}
 }

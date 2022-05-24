@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Slash : SkillBase
 {
-	public int startX, startY;
+	public int startX;
 
-	public int endX, endY;
+	public int startY;
+
+	public int endX;
+
+	public int endY;
 
 	public override void UseSkill( CharacterControllerBase target )
 	{

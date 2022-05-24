@@ -14,7 +14,7 @@ public class PanelBase : MonoBehaviour
 		gameObject.SetActive( false );
 	}
 
-	private void Awake()
+	protected virtual void Awake()
 	{
 		Hide();
 	}

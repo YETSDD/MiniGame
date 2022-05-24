@@ -11,12 +11,23 @@ public class GameManager : MonoBehaviour
 		instance = this;
 	}
 
+	private void Start()
+	{
+		StartPanel.instance.Show();
+	}
+
 	public void StartGame()
 	{
 		Debug.Log( "Game Start" );
 		CharacterManager.instance.GeneratePlayer();
 		StartPanel.instance.Hide();
-		SelectPanel.instance.Show();
+		SelectPanel.instance.BeforeBattle();
+	}
+
+	public void SelectOver()
+	{
+		BattleManager.instance.InitializePlayerController();
+		BattlePanel.instance.Show();
 	}
 
 	public void Setup()

@@ -10,7 +10,7 @@ public class BehaviourControllerBase : MonoBehaviour
 
 	public Dictionary<CharacterStateType, CharacterState> states = new Dictionary<CharacterStateType, CharacterState>();
 
-	private void Awake()
+	protected virtual void Awake()
 	{
 		states.Add( CharacterStateType.Prepare, new PrepareState( this ) );
 		states.Add( CharacterStateType.Act, new ActState( this ) );

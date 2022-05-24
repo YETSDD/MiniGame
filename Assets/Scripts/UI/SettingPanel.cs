@@ -6,8 +6,9 @@ public class SettingPanel : PanelBase
 {
 	public static SettingPanel instance;
 
-	private void Awake()
+	protected override void Awake()
 	{
+		base.Awake();
 		instance = this;
 	}
 

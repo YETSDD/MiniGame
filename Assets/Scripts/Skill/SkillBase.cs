@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class SkillBase : MonoBehaviour
 {
+	public string shownName;
+
 	public SkillLimit limit;
 
 	public float amount;
+
+	public Image image;
 
 	public virtual void UseSkill( CharacterControllerBase target )
 	{

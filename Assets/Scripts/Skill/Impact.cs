@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Impact : SkillBase
 {
-	public int cornerX, cornerY;
+	public int cornerX;
 
-	public int damageWidth, damageHeight;
+	public int cornerY;
+
+	public int damageWidth;
+
+	public int damageHeight;
 
 	public override void UseSkill( CharacterControllerBase target )
 	{

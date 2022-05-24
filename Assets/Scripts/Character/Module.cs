@@ -9,7 +9,7 @@ public class Module
 
 	public List<BuffBase> buffs;
 
-	public SkillSet skillSet;
+	public SkillSet skillSet { get; private set; }
 
 	public List<SkillBase> availableSkills = new List<SkillBase>();
 
@@ -29,6 +29,12 @@ public class Module
 		EvaluateAvailableSkills();
 	}
 
+	public void SetSkillSet( SkillSet skillSet )
+	{
+		this.skillSet = skillSet;
+		EvaluateAvailableSkills();
+	}
+
 	public void SetRandomSkillSet()
 	{
 		this.skillSet = Utility.Extensions.GetRandomElement( config.skillSetPool );
@@ -40,6 +46,9 @@ public class Module
 		{
 			throw new System.Exception( "Empty Skill Set" );
 		}
+
+		availableSkills.Clear();
+		unavailableSkills.Clear();
 
 		foreach( SkillBase skill in skillSet.ownSkills )
 		{

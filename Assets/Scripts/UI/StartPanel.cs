@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[System.Serializable]
 public class StartPanel : PanelBase
 {
 	public static StartPanel instance;
@@ -13,8 +14,9 @@ public class StartPanel : PanelBase
 
 	public Button ExitGame;
 
-	private void Awake()
+	protected override void Awake()
 	{
+		base.Awake();
 		instance = this;
 		InitializeButtons();
 	}

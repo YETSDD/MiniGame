@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu( fileName = "character", menuName = "CharacterData/Character" )]
+[CreateAssetMenu( fileName = "character", menuName = "Character/Character" )]
 public class CharacterConfig : ScriptableObject, ISerializationCallbackReceiver
 {
 	public List<ModuleConfig> modules;
 
-	public PixelData[] bodyMap_1D;
+	[SerializeField]
+	private PixelData[] _bodyMap_1D;
 
 	public PixelData[,] bodyMap;
 
@@ -38,12 +39,12 @@ public class CharacterConfig : ScriptableObject, ISerializationCallbackReceiver
 
 	void ISerializationCallbackReceiver.OnBeforeSerialize()
 	{
-		bodyMap_1D = new PixelData[width * height];
+		_bodyMap_1D = new PixelData[width * height];
 		for( int x = 0; x < width; x++ )
 		{
 			for( int y = 0; y < height; y++ )
 			{
-				bodyMap_1D[x * width + y] = bodyMap[x, y];
+				_bodyMap_1D[x * width + y] = bodyMap[x, y];
 			}
 		}
 	}
@@ -55,7 +56,7 @@ public class CharacterConfig : ScriptableObject, ISerializationCallbackReceiver
 		{
 			for( int y = 0; y < height; y++ )
 			{
-				bodyMap[x, y] = bodyMap_1D[x * width + y];
+				bodyMap[x, y] = _bodyMap_1D[x * width + y];
 			}
 		}
 	}

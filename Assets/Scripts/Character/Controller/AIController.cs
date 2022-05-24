@@ -22,13 +22,6 @@ public class AIController : BehaviourControllerBase
 		{
 			throw new System.Exception( "Target of Monster Not Selected" );
 		}
-
-		//Prepare();
-		//self.OnRoundPrepare();
-		//Act();
-		//self.OnRoundAct();
-		//End();
-		//self.OnRoundEnd();
 	}
 
 	public override void Prepare()
@@ -75,4 +68,10 @@ public class AIController : BehaviourControllerBase
 	{
 		yield return new WaitForSeconds( 1.0f );
 	}
+}
+
+
+public enum AIType
+{
+	Slime
 }

@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class PlayerController : BehaviourControllerBase
 {
-    public PlayerController instance;
+	public PlayerController instance;
 
-	public CharacterConfig defaultPlayerConfig;
-
-	private void Awake()
+	protected override void Awake()
 	{
+		base.Awake();
 		instance = this;
 	}
 
 	private void Start()
 	{
-		
+
 	}
 
 
