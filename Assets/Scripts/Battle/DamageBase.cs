@@ -14,6 +14,7 @@ public class DamageBase
 	{
 		_mapWidth = width;
 		_mapHeight = height;
+		healthPointChangeMap = new float[_mapWidth, _mapHeight];
 	}
 
 	#region Uniform Damage
