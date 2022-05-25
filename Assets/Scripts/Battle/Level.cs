@@ -5,13 +5,13 @@ using UnityEngine;
 [CreateAssetMenu( fileName = "level", menuName = "Level/Level" )]
 public class Level : ScriptableObject, ISerializationCallbackReceiver
 {
-	public List<(CharacterConfig, AIController)> monsters = new List<(CharacterConfig, AIController)>();
+	public List<(CharacterConfig, AIType)> monsters = new List<(CharacterConfig, AIType)>();
 
 	[SerializeField]
 	private List<CharacterConfig> _configs = new List<CharacterConfig>();
 
 	[SerializeField]
-	private List<AIController> _controllers = new List<AIController>();
+	private List<AIType> _controllers = new List<AIType>();
 
 
 
@@ -30,7 +30,7 @@ public class Level : ScriptableObject, ISerializationCallbackReceiver
 		_configs.Clear();
 		_controllers.Clear();
 
-		foreach( (CharacterConfig, AIController) pair in monsters )
+		foreach( (CharacterConfig, AIType) pair in monsters )
 		{
 			_configs.Add( pair.Item1 );
 			_controllers.Add( pair.Item2 );

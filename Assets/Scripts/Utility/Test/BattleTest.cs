@@ -42,12 +42,12 @@ public class BattleTest : MonoBehaviour
 		ShowCharater( leftCharacter );
 		ShowCharater( rightCharacter );
 
-		AIController left = leftCharacter.gameObject.AddComponent<AIController>();
+		BasicAIController left = leftCharacter.gameObject.AddComponent<BasicAIController>();
 		leftBehaviourController = left;
 		left.self = leftCharacter;
 		left.target = rightCharacter;
 
-		AIController right = rightCharacter.gameObject.AddComponent<AIController>();
+		BasicAIController right = rightCharacter.gameObject.AddComponent<BasicAIController>();
 		rightBehaviourController = right;
 		right.self = rightCharacter;
 		right.target = leftCharacter;

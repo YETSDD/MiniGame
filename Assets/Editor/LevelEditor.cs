@@ -12,13 +12,13 @@ public class LevelEditor : Editor
 
 		LevelChanger levelChanger = (LevelChanger)target;
 		List<CharacterConfig> levelConfigs = levelChanger.configs;
-		List<AIController> levelControllers = levelChanger.controllers;
+		List<AIType> levelControllers = levelChanger.controllers;
 
 		if( GUILayout.Button( "LoadLevel" ) )
 		{
 			levelConfigs.Clear();
 			levelControllers.Clear();
-			foreach( (CharacterConfig, AIController) pair in levelChanger.level.monsters )
+			foreach( (CharacterConfig, AIType) pair in levelChanger.level.monsters )
 			{
 				levelConfigs.Add( pair.Item1 );
 				levelControllers.Add( pair.Item2 );

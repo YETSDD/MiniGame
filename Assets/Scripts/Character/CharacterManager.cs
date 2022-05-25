@@ -14,6 +14,10 @@ public class CharacterManager : MonoBehaviour
 
 	public CharacterControllerBase monster;
 
+	public Transform playerParent;
+
+	public Transform monsterParent;
+
 	private void Awake()
 	{
 		instance = this;
@@ -21,11 +25,17 @@ public class CharacterManager : MonoBehaviour
 
 	public void GeneratePlayer()
 	{
-		player = Utility.Generator.GeneratePlayer( characterPrefab, this.transform, playerCharacterConfig );
+		player = Utility.Generator.GeneratePlayer( characterPrefab, playerParent, playerCharacterConfig );
+		CharacterDisplay playerCharacterDisplay = player.characterDisplay;
+		playerCharacterDisplay.InitializeMap( player.character, player.transform );
+		playerCharacterDisplay.UpdateMap( player.character );
 	}
 
-	public void GenenrateMonster()
+	public void GenenrateMonster( CharacterConfig config )
 	{
-		//TODO: Generate by level
+		monster = Utility.Generator.GenerateMonster( characterPrefab, monsterParent, config );
+		CharacterDisplay monsterCharacterDisplay = monster.characterDisplay;
+		monsterCharacterDisplay.InitializeMap( monster.character, monster.transform );
+		monsterCharacterDisplay.UpdateMap( monster.character );
 	}
 }

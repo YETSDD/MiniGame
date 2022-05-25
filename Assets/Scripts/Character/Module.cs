@@ -42,7 +42,7 @@ public class Module
 
 	public void EvaluateAvailableSkills()
 	{
-		if( skillSet == null )
+		if( skillSet == null || skillSet.ownSkills.Count == 0 )
 		{
 			throw new System.Exception( "Empty Skill Set" );
 		}

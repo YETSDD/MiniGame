@@ -26,6 +26,12 @@ public class Heal : SkillBase
 		}
 	}
 
+	public override void Set( CharacterControllerBase target, Vector2Int start, Vector2Int end, float amount )
+	{
+		base.Set( target, start, end, amount );
+		//TODO: self heal
+	}
+
 	private void HealCharacter( CharacterControllerBase target )
 	{
 		int width = target.character.width;

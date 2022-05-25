@@ -10,13 +10,13 @@ public class CharacterDisplay : MonoBehaviour
 
 	public const float gridWidth = 1.1f;
 
-	private GridData[,] _grids;
+	public GridData[,] grids;
 
 	public void InitializeMap( Character source, Transform root )
 	{
 		int width = source.width;
 		int height = source.height;
-		_grids = new GridData[width, height];
+		grids = new GridData[width, height];
 
 		for( int x = 0; x < width; x++ )
 		{
@@ -25,7 +25,7 @@ public class CharacterDisplay : MonoBehaviour
 				GridData grid = Instantiate( gridPrefab, root );
 				grid.transform.localPosition = new Vector3( x * gridWidth, y * gridLength, 0 );
 
-				_grids[x, y] = grid;
+				grids[x, y] = grid;
 			}
 		}
 	}
@@ -52,7 +52,7 @@ public class CharacterDisplay : MonoBehaviour
 
 	public void UpdateMap( Character source, DisplayMode mode = DisplayMode.ElementColor )
 	{
-		if( _grids == null )
+		if( grids == null )
 		{
 			throw new System.Exception( "_grids Not Initialized" );
 		}
@@ -67,7 +67,7 @@ public class CharacterDisplay : MonoBehaviour
 				float healthPoint = source.bodyMap[x, y].currentHealthPoint;
 				Color color = GetPixelColor( healthPoint, mode );
 
-				_grids[x, y].color = color;
+				grids[x, y].color = color;
 			}
 		}
 	}

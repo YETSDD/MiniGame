@@ -35,6 +35,9 @@ public class CharacterConfig : ScriptableObject, ISerializationCallbackReceiver
 				bodyMap[x, y] = new PixelData();
 			}
 		}
+
+		this.width = width;
+		this.height = height;
 	}
 
 	void ISerializationCallbackReceiver.OnBeforeSerialize()
@@ -56,6 +59,9 @@ public class CharacterConfig : ScriptableObject, ISerializationCallbackReceiver
 		{
 			for( int y = 0; y < height; y++ )
 			{
+				if( _bodyMap_1D[x * width + y] == null )
+					throw new System.Exception( "1D map error" );
+
 				bodyMap[x, y] = _bodyMap_1D[x * width + y];
 			}
 		}

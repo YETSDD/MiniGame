@@ -68,7 +68,7 @@ public class Character
 	{
 		LoadModuleFromConfig( config );
 		LoadMapDataFromConfig( config );
-		InitializeAvailableSkills();
+		UpdateAvailableSkills();
 	}
 
 	private void LoadModuleFromConfig( CharacterConfig config )
@@ -99,7 +99,7 @@ public class Character
 		}
 	}
 
-	private void InitializeAvailableSkills()
+	public void UpdateAvailableSkills()
 	{
 		allAvailableSkills.Clear();
 		if( basicSkill != null )
@@ -109,6 +109,7 @@ public class Character
 
 		foreach( Module module in modules )
 		{
+			module.EvaluateAvailableSkills();
 			allAvailableSkills.AddRange( module.availableSkills );
 		}
 	}

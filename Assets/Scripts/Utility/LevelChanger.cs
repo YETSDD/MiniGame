@@ -9,7 +9,7 @@ public class LevelChanger : MonoBehaviour
 
 	public List<CharacterConfig> configs = new List<CharacterConfig>();
 
-	public List<AIController> controllers = new List<AIController> ();
+	public List<AIType> controllers = new List<AIType> ();
 
 
 }

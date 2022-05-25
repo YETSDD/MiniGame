@@ -17,7 +17,7 @@ public class CharacterControllerBase : MonoBehaviour
 	private void Awake()
 	{
 		OnCharacterDataChanged = UpdateDisplay;
-		OnCharacterDataChanged += UpdateAvailableSkills;
+		OnCharacterDataChanged += character.UpdateAvailableSkills;
 		characterDisplay = GetComponent<CharacterDisplay>();
 	}
 
@@ -75,21 +75,21 @@ public class CharacterControllerBase : MonoBehaviour
 		OnCharacterDataChanged.Invoke();
 	}
 
-	private void UpdateAvailableSkills()
-	{
-		List<SkillBase> availableSkills = character.allAvailableSkills;
-		availableSkills.Clear();
+	//private void UpdateAvailableSkills()
+	//{
+	//	List<SkillBase> availableSkills = character.allAvailableSkills;
+	//	availableSkills.Clear();
 
-		if( character.basicSkill != null )
-		{
-			availableSkills.Add( character.basicSkill );
-		}
+	//	if( character.basicSkill != null )
+	//	{
+	//		availableSkills.Add( character.basicSkill );
+	//	}
 
-		foreach( Module module in character.modules )
-		{
-			availableSkills.AddRange( module.availableSkills );
-		}
-	}
+	//	foreach( Module module in character.modules )
+	//	{
+	//		availableSkills.AddRange( module.availableSkills );
+	//	}
+	//}
 
 
 

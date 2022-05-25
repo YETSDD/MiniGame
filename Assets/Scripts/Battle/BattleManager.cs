@@ -8,9 +8,11 @@ public class BattleManager : MonoBehaviour
 
 	public BehaviourControllerBase currentController;
 
-	public BehaviourControllerBase playerController;
+	public PlayerController playerController;
 
-	public BehaviourControllerBase monsterController;
+	public BasicAIController monsterController;
+
+
 
 	private void Awake()
 	{
@@ -22,11 +24,47 @@ public class BattleManager : MonoBehaviour
 		playerController = this.gameObject.AddComponent<PlayerController>();
 	}
 
-	private void ShowCharater( CharacterControllerBase source )
+	public void InitializeAIController( AIType type )
 	{
-		CharacterDisplay playerCharacterDisplay = source.characterDisplay;
-		playerCharacterDisplay.InitializeMap( source.character, source.transform );
-		playerCharacterDisplay.UpdateMap( source.character );
+		switch( type )
+		{
+			case AIType.Basic:
+				monsterController = this.gameObject.AddComponent<BasicAIController>();
+				break;
+			case AIType.Slime:
+				monsterController = this.gameObject.AddComponent<SlimeController>();
+				break;
+			default:
+				break;
+		}
+	}
+
+	public void StartBattle()
+	{
+
+	}
+
+	public void SetPlayerSkillToRelease( SkillBase skill )
+	{
+		playerController.skillToRelease = skill;
+	}
+
+	public void SwitchController()
+	{
+		if( currentController == playerController )
+		{
+			currentController = monsterController;
+			currentController.TransisteState( CharacterStateType.Prepare );
+		}
+		else if( currentController == monsterController )
+		{
+			currentController = playerController;
+			currentController.TransisteState( CharacterStateType.Prepare );
+		}
+		else
+		{
+			throw new System.Exception( "Currnet Controller Not Selected" );
+		}
 	}
 }
 

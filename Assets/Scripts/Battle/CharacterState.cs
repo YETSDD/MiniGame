@@ -49,7 +49,8 @@ public class PrepareState : CharacterState
 	public override void OnUpdate()
 	{
 		base.OnUpdate();
-		behaviourController.TransisteState( CharacterStateType.Act );
+
+		//behaviourController.TransisteState( CharacterStateType.Act );
 	}
 
 	public override void OnExit()
@@ -74,7 +75,7 @@ public class ActState : CharacterState
 	public override void OnUpdate()
 	{//TODO: Animation
 		base.OnUpdate();
-		behaviourController.TransisteState( CharacterStateType.End );
+		//behaviourController.TransisteState( CharacterStateType.End );
 	}
 
 	public override void OnExit()
@@ -99,7 +100,7 @@ public class EndState : CharacterState
 	public override void OnUpdate()
 	{
 		base.OnUpdate();
-		behaviourController.TransisteState( CharacterStateType.Wait );
+		//behaviourController.TransisteState( CharacterStateType.Wait );
 	}
 
 	public override void OnExit()

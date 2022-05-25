@@ -30,9 +30,23 @@ public class GameManager : MonoBehaviour
 		BattlePanel.instance.Show();
 	}
 
+	public void MonsterDie()
+	{
+		SelectPanel.instance.BetweenBattle();
+
+	}
+
 	public void Setup()
 	{
 		SettingPanel.instance.Show();
+	}
+
+	public void PlayerDie()
+	{
+	}
+
+	public void Win()
+	{
 	}
 
 	public void ExitGame()

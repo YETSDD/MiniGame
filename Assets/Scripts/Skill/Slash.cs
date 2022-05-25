@@ -19,6 +19,14 @@ public class Slash : SkillBase
 		DealLineDamageToCharacter( target, amount );
 	}
 
+	public override void Set( CharacterControllerBase target, Vector2Int start, Vector2Int end, float amount )
+	{
+		base.Set( target, start, end, amount );
+		startX = start.x;
+		startY = start.y;
+		endX = end.x;
+		endY = end.y;
+	}
 	private void DealLineDamageToCharacter( CharacterControllerBase target, float damageAmount )
 	{
 		Vector2Int startPixel = new Vector2Int( startX, startY );

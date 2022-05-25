@@ -15,12 +15,12 @@ MonoBehaviour:
   modules:
   - {fileID: 11400000, guid: fe1140d5bf00b7d478796ffac46000a5, type: 2}
   - {fileID: 11400000, guid: e5668d438b76822428de0a6ae10e17d5, type: 2}
-  bodyMap_1D:
-  - currentHealthPoint: 10
+  _bodyMap_1D:
+  - currentHealthPoint: 20
     elementType: 0
     moduleRef: {fileID: 11400000, guid: e5668d438b76822428de0a6ae10e17d5, type: 2}
     damageFactor: 0
-  - currentHealthPoint: 10
+  - currentHealthPoint: 20
     elementType: 0
     moduleRef: {fileID: 11400000, guid: e5668d438b76822428de0a6ae10e17d5, type: 2}
     damageFactor: 0
@@ -28,9 +28,10 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 11400000, guid: fe1140d5bf00b7d478796ffac46000a5, type: 2}
     damageFactor: 0
-  - currentHealthPoint: 10
+  - currentHealthPoint: 20
     elementType: 0
     moduleRef: {fileID: 11400000, guid: e5668d438b76822428de0a6ae10e17d5, type: 2}
     damageFactor: 0
   width: 2
   height: 2
+  talentSkillPool: []

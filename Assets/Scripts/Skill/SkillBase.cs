@@ -9,9 +9,13 @@ public class SkillBase : MonoBehaviour
 
 	public SkillLimit limit;
 
+	public SkillIndicatorType indicatorType;
+
 	public float amount;
 
 	public Image image;
+
+	public float defaultAmount = 10.0f;
 
 	public virtual void UseSkill( CharacterControllerBase target )
 	{
@@ -25,6 +29,11 @@ public class SkillBase : MonoBehaviour
 	{
 		this.amount = amount;
 	}
+
+	public virtual void Set( CharacterControllerBase target, Vector2Int start, Vector2Int end, float amount )
+	{
+		this.amount = amount;
+	}
 }
 
 [System.Serializable]
@@ -33,4 +42,12 @@ public struct SkillLimit
 	public float remainHealthPoint;
 
 	public int activePixels;
+}
+
+public enum SkillIndicatorType
+{
+	Point,
+	Line,
+	Rect,
+	Circle
 }

@@ -72,9 +72,19 @@ public class BehaviourControllerBase : MonoBehaviour
 		}
 		currentState.OnUpdate();
 	}
+	public virtual void PrepareOver()
+	{
+		TransisteState( CharacterStateType.Act );
+	}
 
-	public void RoundOver()
-	{//TODO: BattleManager
-		BattleTest.instance.SwitchController();
+	public virtual void ActOver()
+	{
+		TransisteState( CharacterStateType.End );
+	}
+
+	public virtual void RoundOver()
+	{
+		TransisteState( CharacterStateType.Wait );
+		BattleManager.instance.SwitchController();
 	}
 }

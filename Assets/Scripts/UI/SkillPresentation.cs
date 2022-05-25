@@ -18,8 +18,9 @@ public class SkillPresentation : MonoBehaviour
 		this.skill = skillImage;
 	}
 
-	public void SetButton( bool avtive )
+	public void SetButton( bool active )
 	{
-		select.enabled = avtive;
+		select.enabled = active;
 	}
 }
+	

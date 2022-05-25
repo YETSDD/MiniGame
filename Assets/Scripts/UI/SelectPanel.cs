@@ -18,8 +18,6 @@ public class SelectPanel : PanelBase
 
 	public List<KeyValuePair<Module, SkillSet>> skillSetsToChoose = new List<KeyValuePair<Module, SkillSet>>();
 
-	//public List<SelectableObject> selectableObjects = new List<SelectableObject>();
-
 	public Transform layout;
 
 	public KeyValuePair<Module, SkillSet> chosenSkillSet;
@@ -34,6 +32,7 @@ public class SelectPanel : PanelBase
 		instance = this;
 		for( int i = 0; i < chooseAmount; i++ )
 		{
+			//TODO: Encapsulate
 			int index = i;
 			skillSetChoice[i].onClick.AddListener( () => { SetupSkillSet( index ); } );
 		}
@@ -61,6 +60,12 @@ public class SelectPanel : PanelBase
 		chances = chanceAmountBeforeBattle;
 	}
 
+	public void BetweenBattle()
+	{
+		Show();
+		ChooseThreeSkillSets();
+		chances = 1;
+	}
 
 
 	private void ChooseThreeSkillSets()
@@ -90,7 +95,7 @@ public class SelectPanel : PanelBase
 			ModuleConfig moduleConfig = skillSetsToChoose[i].Key.config;
 			SkillSet skillSet = skillSetsToChoose[i].Value;
 			selectableObject.Set( moduleConfig.moduleName, skillSet.shownName, skillSet.ownSkills );
-			
+
 			//selectableObjects.Add( selectableObject );
 		}
 	}
@@ -105,6 +110,7 @@ public class SelectPanel : PanelBase
 	{
 		Debug.Log( "Confirm" );
 		chosenSkillSet.Key.SetSkillSet( chosenSkillSet.Value );
+		CharacterManager.instance.player.character.UpdateAvailableSkills();
 		chances--;
 		if( chances > 0 )
 		{

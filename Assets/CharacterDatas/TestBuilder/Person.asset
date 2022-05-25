@@ -19,31 +19,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2a807a19b77bb9e4aae6b2148620f001, type: 2}
   - {fileID: 11400000, guid: 03e139e1a5f477f4c80fa689a874e186, type: 2}
   - {fileID: 11400000, guid: 3b58737fa619c5542bfabc35a0e15e93, type: 2}
-  bodyMap_1D:
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: f7d035177dde3704d904d5f103a9e6e6, type: 2}
-    damageFactor: 1
+  _bodyMap_1D:
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
@@ -82,14 +58,6 @@ MonoBehaviour:
     damageFactor: 1
   - currentHealthPoint: 0
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: f7d035177dde3704d904d5f103a9e6e6, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: f7d035177dde3704d904d5f103a9e6e6, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
   - currentHealthPoint: 0
@@ -114,187 +82,7 @@ MonoBehaviour:
     damageFactor: 1
   - currentHealthPoint: 0
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 3c803afb326d301429645517947bafbd, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 3c803afb326d301429645517947bafbd, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
     moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 3c803afb326d301429645517947bafbd, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 3c803afb326d301429645517947bafbd, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 3b58737fa619c5542bfabc35a0e15e93, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 3b58737fa619c5542bfabc35a0e15e93, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 3b58737fa619c5542bfabc35a0e15e93, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 3b58737fa619c5542bfabc35a0e15e93, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 3b58737fa619c5542bfabc35a0e15e93, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 3b58737fa619c5542bfabc35a0e15e93, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
     damageFactor: 1
   - currentHealthPoint: 0
     elementType: 0
@@ -324,17 +112,9 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 10
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 03e139e1a5f477f4c80fa689a874e186, type: 2}
-    damageFactor: 1
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
     damageFactor: 1
   - currentHealthPoint: 0
     elementType: 0
@@ -362,19 +142,11 @@ MonoBehaviour:
     damageFactor: 1
   - currentHealthPoint: 0
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 03e139e1a5f477f4c80fa689a874e186, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 03e139e1a5f477f4c80fa689a874e186, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
   - currentHealthPoint: 0
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
+    moduleRef: {fileID: 0}
     damageFactor: 1
   - currentHealthPoint: 0
     elementType: 0
@@ -402,7 +174,235 @@ MonoBehaviour:
     damageFactor: 1
   - currentHealthPoint: 0
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 03e139e1a5f477f4c80fa689a874e186, type: 2}
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
+    damageFactor: 1
+  - currentHealthPoint: 0
+    elementType: 0
+    moduleRef: {fileID: 0}
     damageFactor: 1
   - currentHealthPoint: 0
     elementType: 0
@@ -422,3 +422,4 @@ MonoBehaviour:
     damageFactor: 1
   width: 10
   height: 10
+  talentSkillPool: []

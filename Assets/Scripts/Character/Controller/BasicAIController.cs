@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Utility;
 
-public class AIController : BehaviourControllerBase
+public class BasicAIController : BehaviourControllerBase
 {
 	public CharacterControllerBase target;
 
@@ -28,6 +28,7 @@ public class AIController : BehaviourControllerBase
 	{
 		Debug.Log( "Prepare" );
 		SelectSkill();
+		PrepareOver();
 	}
 
 	public override void Act()
@@ -35,33 +36,30 @@ public class AIController : BehaviourControllerBase
 		Debug.Log( "Act" );
 		StartCoroutine( PlayAnimation() );
 		UseSkill();
+		ActOver();
 	}
 
 	public override void End()
 	{
 		Debug.Log( "End" );
+		RoundOver();
 	}
 
 	protected virtual void SelectSkill()
 	{
 		RandomSelect();
+		_skillToRelease.RandomSet( target, defaultSkillPower );
 	}
 
 	protected virtual void UseSkill()
 	{
-		RandomUse();
+		_skillToRelease.UseSkill( target );
 	}
 
 	private void RandomSelect()
 	{
 		//TODO: default empty skill
 		_skillToRelease = self.character.allAvailableSkills.GetRandomElement();
-	}
-
-	private void RandomUse()
-	{
-		_skillToRelease.RandomSet( target, defaultSkillPower );
-		_skillToRelease.UseSkill( target );
 	}
 
 	public virtual IEnumerator PlayAnimation()
@@ -73,5 +71,6 @@ public class AIController : BehaviourControllerBase
 
 public enum AIType
 {
+	Basic,
 	Slime
 }

@@ -12,6 +12,10 @@ public class Impact : SkillBase
 
 	public int damageHeight;
 
+	public const int defaultDamageWidth = 5;
+
+	public const int defaultDamageHeight = 5;
+
 	public override void UseSkill( CharacterControllerBase target )
 	{
 		base.UseSkill( target );
@@ -29,6 +33,15 @@ public class Impact : SkillBase
 		damageHeight = Random.Range( 0, height );
 	}
 
+	public override void Set( CharacterControllerBase target, Vector2Int start, Vector2Int end, float amount )
+	{
+		base.Set( target, start, end, amount );
+		cornerX = start.x - defaultDamageHeight / 2;
+		cornerY = start.y - defaultDamageHeight / 2;
+		damageWidth = defaultDamageWidth;
+		damageHeight = defaultDamageHeight;
+
+	}
 	public void DealRectDamageToCharacter( CharacterControllerBase target, float damageAmount )
 	{
 		DamageBase damage = new DamageBase( target.character.width, target.character.height );
