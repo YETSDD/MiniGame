@@ -10,15 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5973756241562ad43bf29dccd0241f4d, type: 3}
-  m_Name: Person
+  m_Name: Dragon
   m_EditorClassIdentifier: 
   modules:
-  - {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-  - {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-  - {fileID: 11400000, guid: f7d035177dde3704d904d5f103a9e6e6, type: 2}
-  - {fileID: 11400000, guid: 2a807a19b77bb9e4aae6b2148620f001, type: 2}
-  - {fileID: 11400000, guid: 03e139e1a5f477f4c80fa689a874e186, type: 2}
-  - {fileID: 11400000, guid: 3b58737fa619c5542bfabc35a0e15e93, type: 2}
+  - {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+  - {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+  - {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+  - {fileID: 11400000, guid: 71eacd273751bf04c83a8c25a7f2d619, type: 2}
   _bodyMap_1D:
   - currentHealthPoint: 0
     elementType: 0
@@ -104,14 +102,22 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 0
+  - currentHealthPoint: 60
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
@@ -216,6 +222,26 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
@@ -308,10 +334,34 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
@@ -404,10 +454,34 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
@@ -476,17 +550,17 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 0
+  - currentHealthPoint: 50
     elementType: 0
-    moduleRef: {fileID: 0}
+    moduleRef: {fileID: 11400000, guid: 71eacd273751bf04c83a8c25a7f2d619, type: 2}
     damageFactor: 1
-  - currentHealthPoint: 0
+  - currentHealthPoint: 50
     elementType: 0
-    moduleRef: {fileID: 0}
+    moduleRef: {fileID: 11400000, guid: 71eacd273751bf04c83a8c25a7f2d619, type: 2}
     damageFactor: 1
-  - currentHealthPoint: 0
+  - currentHealthPoint: 50
     elementType: 0
-    moduleRef: {fileID: 0}
+    moduleRef: {fileID: 11400000, guid: 71eacd273751bf04c83a8c25a7f2d619, type: 2}
     damageFactor: 1
   - currentHealthPoint: 0
     elementType: 0
@@ -500,10 +574,34 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
@@ -572,17 +670,17 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 0
+  - currentHealthPoint: 50
     elementType: 0
-    moduleRef: {fileID: 0}
+    moduleRef: {fileID: 11400000, guid: 71eacd273751bf04c83a8c25a7f2d619, type: 2}
     damageFactor: 1
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 0
+  - currentHealthPoint: 50
     elementType: 0
-    moduleRef: {fileID: 0}
+    moduleRef: {fileID: 11400000, guid: 71eacd273751bf04c83a8c25a7f2d619, type: 2}
     damageFactor: 1
   - currentHealthPoint: 0
     elementType: 0
@@ -592,6 +690,38 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
@@ -668,9 +798,9 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 0
+  - currentHealthPoint: 50
     elementType: 0
-    moduleRef: {fileID: 0}
+    moduleRef: {fileID: 11400000, guid: 71eacd273751bf04c83a8c25a7f2d619, type: 2}
     damageFactor: 1
   - currentHealthPoint: 0
     elementType: 0
@@ -680,10 +810,38 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
@@ -708,13 +866,13 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
+  - currentHealthPoint: 80
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 100
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
     damageFactor: 1
   - currentHealthPoint: 0
     elementType: 0
@@ -748,6 +906,62 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
@@ -772,6 +986,10 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
+  - currentHealthPoint: 80
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
@@ -804,6 +1022,62 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
@@ -832,22 +1106,74 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
+  - currentHealthPoint: 80
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 60
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
+    damageFactor: 1.2
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
@@ -899,18 +1225,6 @@ MonoBehaviour:
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 100
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
     damageFactor: 1
   - currentHealthPoint: 0
     elementType: 0
@@ -928,42 +1242,54 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 100
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
+    elementType: 0
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
@@ -1020,70 +1346,70 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 100
+  - currentHealthPoint: 0
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
+    moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 100
+  - currentHealthPoint: 0
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
+    moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 100
+  - currentHealthPoint: 0
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
+    moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 100
+  - currentHealthPoint: 0
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
+    moduleRef: {fileID: 0}
     damageFactor: 1
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 100
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
@@ -1140,73 +1466,73 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 100
+  - currentHealthPoint: 0
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
+    moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 100
+  - currentHealthPoint: 0
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
+    moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 100
+  - currentHealthPoint: 0
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
+    moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 100
+  - currentHealthPoint: 0
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
+    moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 100
+  - currentHealthPoint: 0
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
+    moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 100
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 0
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
+    moduleRef: {fileID: 0}
     damageFactor: 1
   - currentHealthPoint: 0
     elementType: 0
@@ -1260,73 +1586,73 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 100
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 0
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
+    moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 100
+  - currentHealthPoint: 0
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
+    moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 100
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 0
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
+    moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 100
+  - currentHealthPoint: 0
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
+    moduleRef: {fileID: 0}
     damageFactor: 1
   - currentHealthPoint: 0
     elementType: 0
@@ -1380,106 +1706,62 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 100
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 0
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
+    moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 100
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
   - currentHealthPoint: 100
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
@@ -1499,46 +1781,10 @@ MonoBehaviour:
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 100
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
     damageFactor: 1
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 100
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
     damageFactor: 1
   - currentHealthPoint: 0
     elementType: 0
@@ -1551,18 +1797,6 @@ MonoBehaviour:
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 100
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 100
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
     damageFactor: 1
   - currentHealthPoint: 0
     elementType: 0
@@ -1592,114 +1826,62 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 0
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
+  - currentHealthPoint: 80
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 9c88f5a64a988474e9f47d01b36b1e4e, type: 2}
+    damageFactor: 1.1
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 100
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
@@ -1793,221 +1975,37 @@ MonoBehaviour:
     moduleRef: {fileID: 0}
     damageFactor: 1
   - currentHealthPoint: 100
-    elementType: 0
-    moduleRef: {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
-    elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
@@ -2104,34 +2102,34 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 0
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
@@ -2236,26 +2234,26 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 0
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
@@ -2364,26 +2362,26 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 0}
     damageFactor: 1
-  - currentHealthPoint: 0
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
-  - currentHealthPoint: 0
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
+  - currentHealthPoint: 100
     elementType: 0
-    moduleRef: {fileID: 0}
-    damageFactor: 1
+    moduleRef: {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
+    damageFactor: 0.8
   - currentHealthPoint: 0
     elementType: 0
     moduleRef: {fileID: 0}
