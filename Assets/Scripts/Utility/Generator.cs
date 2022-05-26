@@ -26,8 +26,7 @@ namespace Utility
 		{
 			CharacterControllerBase result = GameObject.Instantiate( characterPrefab, parent );
 
-			result.character = new Character( config.width, config.height );
-			result.character.InitializeByConfig( config );
+			result.character = new Character( config );
 
 			return result;
 		}

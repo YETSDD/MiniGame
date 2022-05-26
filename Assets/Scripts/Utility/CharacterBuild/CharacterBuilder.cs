@@ -17,8 +17,6 @@ public class CharacterBuilder : MonoBehaviour
 
 	public ModuleConfig currentModule;
 
-	public GameObject[] selectedGameObjects;
-
 	public List<ModuleConfig> modules = new List<ModuleConfig>();
 
 	public List<GameObject> gameObjectsOfPixel = new List<GameObject>();
@@ -28,6 +26,9 @@ public class CharacterBuilder : MonoBehaviour
 
 	public void LoadDataFromConfig()
 	{
+
+		gameObjectsOfPixel = new List<GameObject>();
+		_mapBetweenGameObjectAndPixelData = new Dictionary<GameObject, PixelData>();
 		if( characterConfig != null )
 		{
 			if( characterConfig.isInitialized )
@@ -76,14 +77,15 @@ public class CharacterBuilder : MonoBehaviour
 			throw new System.Exception( "CurrentModule Not Selected" );
 		}
 
-		selectedGameObjects = Selection.gameObjects;
+		GameObject[] selectedGameObjects = Selection.gameObjects;
 		currentModule.ownPixels.Clear();
 
 		for( int i = 0; i < selectedGameObjects.Length; i++ )
 		{
 			selectedGameObjects[i].GetComponent<PixelObject>().pixelData.moduleRef = currentModule;
 
-			currentModule.ownPixels.Add( _mapBetweenGameObjectAndPixelData[selectedGameObjects[i]] );
+			PixelData pixel = _mapBetweenGameObjectAndPixelData[selectedGameObjects[i]];
+			currentModule.ownPixels.Add( pixel );
 		}
 	}
 
@@ -104,16 +106,27 @@ public class CharacterBuilder : MonoBehaviour
 
 	public void SaveConfig()
 	{
-		foreach( GameObject gameObject in gameObjectsOfPixel )
+		for( int i = 0; i < gameObjectsOfPixel.Count; i++ )
 		{
+			GameObject gameObject = gameObjectsOfPixel[i];
 			PixelData pixelData = gameObject.GetComponent<PixelObject>().pixelData;
+			if( pixelData.moduleRef == null )
+			{
+				pixelData.currentHealthPoint = 0;
+			}
 			_mapBetweenGameObjectAndPixelData[gameObject].LoadPixelData( pixelData );
 		}
+		EditorUtility.SetDirty( characterConfig );
 	}
 
 	public void ClearCache()
 	{
-		_mapBetweenGameObjectAndPixelData.Clear();
+		//_mapBetweenGameObjectAndPixelData.Clear();
+
+		for( int i = _mapBetweenGameObjectAndPixelData.Count; i > 0; i-- )
+		{
+			_mapBetweenGameObjectAndPixelData.Remove( gameObjectsOfPixel[i - 1] );
+		}
 
 		while( gameObjectsOfPixel.Count > 0 )
 		{
@@ -121,7 +134,6 @@ public class CharacterBuilder : MonoBehaviour
 			gameObjectsOfPixel.RemoveAt( gameObjectsOfPixel.Count - 1 );
 			Destroy( gameObject );
 		}
-
 		gameObjectsOfPixel.Clear();
 	}
 }

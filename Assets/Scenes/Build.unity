@@ -210,7 +210,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 214255500}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: -20.19, y: 3, z: -11.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -246,22 +246,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0ffb64865f9e574b9ed82854aacea6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 10
-  height: 10
-  characterConfig: {fileID: 11400000, guid: 395e6cf6ad15aba4f877bf98d2b5b013, type: 2}
+  width: 0
+  height: 0
+  characterConfig: {fileID: 0}
   pixelPrefab: {fileID: 8922477529360109501, guid: e835239ddd2277d42b7886bb8b01471a, type: 3}
   currentModule: {fileID: 0}
-  selectedGameObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  modules:
-  - {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
-  - {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}
-  - {fileID: 11400000, guid: f7d035177dde3704d904d5f103a9e6e6, type: 2}
-  - {fileID: 11400000, guid: 2a807a19b77bb9e4aae6b2148620f001, type: 2}
-  - {fileID: 11400000, guid: 03e139e1a5f477f4c80fa689a874e186, type: 2}
-  - {fileID: 11400000, guid: 3b58737fa619c5542bfabc35a0e15e93, type: 2}
+  modules: []
   gameObjectsOfPixel: []
 --- !u!4 &819715115
 Transform:

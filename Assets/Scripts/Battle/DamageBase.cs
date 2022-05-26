@@ -27,16 +27,36 @@ public class DamageBase
 			{
 				if( x >= 0 && x < _mapWidth && y >= 0 && y < _mapHeight )
 				{
-					healthPointChangeMap[x, y] = -damageAmount;
+					healthPointChangeMap[x, y] = -damageAmount * 10.0f;
 				}
 			}
 		}
 	}
 
-	public float[,] GenerateLineHealthPointChangeMap( Vector2Int start, Vector2Int end, float damageAmount )
+	/// <summary>
+	/// 使用DDA增量法计算有效格子
+	/// </summary>
+	/// <param name="start"></param>
+	/// <param name="end"></param>
+	/// <param name="damageAmount"></param>
+	public void GenerateLineHealthPointChangeMap( Vector2Int start, Vector2Int end, float damageAmount )
 	{
-		//TODO: Calculate effected pixels
-		throw new System.Exception( "Not Implement" );
+		float increX, increY; //x，y方向的增量
+		float x, y;
+		int steps;   //循环次数，即画的点数
+		steps = Mathf.Max( Mathf.Abs( end.x - start.x ), Mathf.Abs( end.y - start.y ) );//选较大者作为步进方向
+		increX = (float)( end.x - start.x ) / steps;//x方向增量
+		increY = (float)( end.y - start.y ) / steps;//y方向增量
+		x = start.x;
+		y = start.y;
+
+		for( int i = 1; i <= steps; i++ )
+		{
+			healthPointChangeMap[(int)x, (int)y] = -damageAmount * 100.0f;
+			x += increX;
+			y += increY;
+		}
+
 	}
 
 	#endregion

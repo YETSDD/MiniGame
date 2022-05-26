@@ -11,6 +11,8 @@ public class Module
 
 	public SkillSet skillSet { get; private set; }
 
+	public List<SkillBase> skillInstances = new List<SkillBase>();
+
 	public List<SkillBase> availableSkills = new List<SkillBase>();
 
 	public List<SkillBase> unavailableSkills = new List<SkillBase>();
@@ -35,22 +37,40 @@ public class Module
 		EvaluateAvailableSkills();
 	}
 
-	public void SetRandomSkillSet()
+	public void BindSkillToModule()
 	{
+		foreach( SkillBase skill in skillInstances )
+		{
+			skill.sourceModule = this;
+		}
+	}
+
+	public void SetRandomSkillSet()
+	{//TODO: to use
 		this.skillSet = Utility.Extensions.GetRandomElement( config.skillSetPool );
+		EvaluateAvailableSkills();
 	}
 
 	public void EvaluateAvailableSkills()
 	{
+
 		if( skillSet == null || skillSet.ownSkills.Count == 0 )
 		{
 			throw new System.Exception( "Empty Skill Set" );
 		}
 
+		ClearSkills();
+		foreach( SkillBase skill in skillSet.ownSkills )
+		{
+			SkillBase instance = GameObject.Instantiate( skill, CharacterManager.instance.transform );
+			skillInstances.Add( instance );
+		}
+
+
 		availableSkills.Clear();
 		unavailableSkills.Clear();
 
-		foreach( SkillBase skill in skillSet.ownSkills )
+		foreach( SkillBase skill in skillInstances )
 		{
 			if( JudgeIfActive( skill ) )
 			{
@@ -61,6 +81,18 @@ public class Module
 				unavailableSkills.Add( skill );
 			}
 		}
+		BindSkillToModule();
+	}
+
+	public void ClearSkills()
+	{
+		for( int i = skillInstances.Count - 1; i >= 0; i-- )
+		{
+			SkillBase skill = skillInstances[i];
+			skillInstances.RemoveAt( i );
+			GameObject.Destroy( skill.gameObject );
+		}
+
 	}
 
 	public bool JudgeIfActive( SkillBase skill )

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: level
   m_EditorClassIdentifier: 
   _configs:
-  - {fileID: 11400000, guid: 395e6cf6ad15aba4f877bf98d2b5b013, type: 2}
-  - {fileID: 11400000, guid: 395e6cf6ad15aba4f877bf98d2b5b013, type: 2}
   - {fileID: 11400000, guid: 553a1738be2d23844b3dd6631158b4d6, type: 2}
-  _controllers: 000000000000000000000000
+  - {fileID: 11400000, guid: 395e6cf6ad15aba4f877bf98d2b5b013, type: 2}
+  - {fileID: 11400000, guid: 395e6cf6ad15aba4f877bf98d2b5b013, type: 2}
+  _controllers: 010000000000000000000000

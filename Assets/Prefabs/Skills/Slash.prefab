@@ -48,8 +48,11 @@ MonoBehaviour:
   limit:
     remainHealthPoint: 0
     activePixels: 0
+  indicatorType: 0
   amount: 0
   image: {fileID: 0}
+  soundEventName: PlaySlash
+  defaultAmount: 10
   startX: 0
   startY: 0
   endX: 0

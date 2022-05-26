@@ -48,8 +48,11 @@ MonoBehaviour:
   limit:
     remainHealthPoint: 0
     activePixels: 0
+  indicatorType: 0
   amount: 0
   image: {fileID: 0}
+  soundEventName: PlayImpact
+  defaultAmount: 10
   cornerX: 0
   cornerY: 0
   damageWidth: 0

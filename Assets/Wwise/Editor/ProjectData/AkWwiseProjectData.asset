@@ -390,8 +390,8 @@ MonoBehaviour:
         guid: 0089fc5983fdce41bc9f6c3324d5a8ea
       Path: Events\Default Work Unit\PlayImpact
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.486077
+      minDuration: 1.486077
     - name: PlaySlash
       guid: 04d19c4d672fba49b82c519ddf00587d
       id: 16625878
@@ -407,8 +407,8 @@ MonoBehaviour:
         guid: 04d19c4d672fba49b82c519ddf00587d
       Path: Events\Default Work Unit\PlaySlash
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.486077
+      minDuration: 1.486077
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -660,7 +660,7 @@ MonoBehaviour:
     m_lastTime: -8585484064648731561
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0700000008000000
+  ExpandedWaapiItemIds: 0600000007000000080000000c0000000d00000016000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

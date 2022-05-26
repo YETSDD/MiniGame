@@ -31,11 +31,16 @@ public class BattlePanel : PanelBase
 		instance = this;
 	}
 
+	public void Initialize()
+	{
+		InitializeMap();
+	}
+
+
 	public override void Show()
 	{
 		base.Show();
 		UpdateSkillList();
-		InitializeMap();
 	}
 
 	public override void Hide()
@@ -58,10 +63,18 @@ public class BattlePanel : PanelBase
 		BattleManager.instance.StartBattle();
 	}
 
-	public void FinishLevel( int index )
+	public bool FinishLevel()
 	{
+		if( currentLevel == level.monsters.Count - 1 )
+		{
+			moveToNextLevel.onClick.RemoveAllListeners();
+			GameManager.instance.FianlWin();
+			return true;
+		}
 		currentLevel++;
 		mapMask.SetActive( false );
+		Hide();
+		return false;
 	}
 
 	public void UpdateSkillList()
@@ -75,7 +88,7 @@ public class BattlePanel : PanelBase
 			SkillPresentation skillPresentation = Instantiate( skillPrefab, skillLayout );
 			skillPresentation.Set( skill.shownName, skill.image );
 			skillPresentation.SetButton( true );
-			SkillBase currentSkill = skill;
+			SkillBase currentSkill = skill;//WARNING
 			skillPresentation.select.onClick.AddListener( () => OnClickSkillButton( currentSkill ) );
 		}
 	}
@@ -109,10 +122,27 @@ public class BattlePanel : PanelBase
 			case SkillIndicatorType.Circle:
 				break;
 		}
+
 		Vector2Int start = interaction.startGridPosition;
 		Vector2Int end = interaction.endGridPosition;
+		CharacterControllerBase player = CharacterManager.instance.player;
 		CharacterControllerBase monster = CharacterManager.instance.monster;
 		skill.Set( monster, start, end, skill.defaultAmount );
-		skill.UseSkill( monster );
+		skill.UseSkill( player, monster );
+
+		DisableSkillIndicator();
+
+		BattleManager.instance.playerController.PrepareOver();
+		BattleManager.instance.playerController.ActOver();
+		BattleManager.instance.playerController.EndOver();
+	}
+
+	public void DisableSkillIndicator()
+	{
+		interaction.onClick.RemoveListener( UseSkill );
+	}
+	public void OnMonsterRound()
+	{
+		//TODO: disable buttons
 	}
 }

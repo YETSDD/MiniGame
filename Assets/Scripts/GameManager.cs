@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
 		CharacterManager.instance.GeneratePlayer();
 		StartPanel.instance.Hide();
 		SelectPanel.instance.BeforeBattle();
+		BattlePanel.instance.Initialize();
 	}
 
 	public void SelectOver()
@@ -32,21 +33,32 @@ public class GameManager : MonoBehaviour
 
 	public void MonsterDie()
 	{
-		SelectPanel.instance.BetweenBattle();
+		Debug.Log( "Monster Die" );
+		BattleManager.instance.Win();
+	}
 
+	public void PlayerDie()
+	{
+		Debug.Log( "Player Die" );
+		BattleManager.instance.ResetBattle();
+		CharacterManager.instance.BattleFinish();
+		BattlePanel.instance.Hide();
+		SelectPanel.instance.Hide();
+		ResultPanel.instance.Lose();
+	}
+
+	public void FianlWin()
+	{
+		BattleManager.instance.ResetBattle();
+		CharacterManager.instance.BattleFinish();
+		BattlePanel.instance.Hide();
+		SelectPanel.instance.Hide();
+		ResultPanel.instance.Win();
 	}
 
 	public void Setup()
 	{
 		SettingPanel.instance.Show();
-	}
-
-	public void PlayerDie()
-	{
-	}
-
-	public void Win()
-	{
 	}
 
 	public void ExitGame()

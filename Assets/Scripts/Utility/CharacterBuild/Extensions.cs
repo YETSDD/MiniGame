@@ -22,7 +22,7 @@ namespace Utility
 			{
 				for( int y = 0; y < height; y++ )
 				{
-					result[x, y] = array[x * width + y];
+					result[x, y] = array[x * height + y];
 				}
 			}
 			return result;
@@ -39,7 +39,7 @@ namespace Utility
 			{
 				for( int y = 0; y < height; y++ )
 				{
-					array_1D[x * width + y] = array_2D[x, y];
+					array_1D[x * height + y] = array_2D[x, y];
 				}
 			}
 

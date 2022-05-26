@@ -9,9 +9,9 @@ public class Heal : SkillBase
 	[HideInInspector]
 	public Module targetModule;
 
-	public override void UseSkill( CharacterControllerBase target )
+	public override void UseSkill( CharacterControllerBase source, CharacterControllerBase target )
 	{
-		base.UseSkill( target );
+		base.UseSkill( source, target );
 
 		switch( range )
 		{

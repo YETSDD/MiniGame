@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[System.Serializable]
 public class SkillBase : MonoBehaviour
 {
 	public string shownName;
@@ -15,14 +16,25 @@ public class SkillBase : MonoBehaviour
 
 	public Image image;
 
+	public string soundEventName;
+
+	public Module sourceModule;
+
 	public float defaultAmount = 10.0f;
 
-	public virtual void UseSkill( CharacterControllerBase target )
+	public virtual void UseSkill( CharacterControllerBase source, CharacterControllerBase target )
 	{
 		if( amount == float.NaN )
 		{
 			throw new System.Exception( "Amount Not Initialized" );
 		}
+
+		if( soundEventName != null )
+		{
+			SoundManager.instance.PlaySoundEffect( soundEventName );
+		}
+
+		Debug.Log( " Module:" + sourceModule.config.moduleName );
 	}
 
 	public virtual void RandomSet( CharacterControllerBase target, float amount )

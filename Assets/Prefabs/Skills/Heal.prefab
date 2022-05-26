@@ -46,14 +46,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shownName: "\u6CBB\u7597"
   limit:
-    remainHealthPoint: 0
-    activePixels: 0
+    remainHealthPoint: 1
+    activePixels: 1
+  indicatorType: 0
   amount: 0
   image: {fileID: 0}
+  soundEventName: 
+  sourceModule:
+    config: {fileID: 0}
+    buffs: []
+    skillInstances: []
+    availableSkills: []
+    unavailableSkills: []
+  defaultAmount: 10
   range: 1
   targetModule:
     config: {fileID: 0}
     buffs: []
-    skillSet: {fileID: 0}
+    skillInstances: []
     availableSkills: []
     unavailableSkills: []

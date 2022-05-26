@@ -41,8 +41,8 @@ public class BasicAIController : BehaviourControllerBase
 
 	public override void End()
 	{
-		Debug.Log( "End" );
-		RoundOver();
+		Debug.Log( "AI End" );
+		EndOver();
 	}
 
 	protected virtual void SelectSkill()
@@ -53,7 +53,15 @@ public class BasicAIController : BehaviourControllerBase
 
 	protected virtual void UseSkill()
 	{
-		_skillToRelease.UseSkill( target );
+		Debug.Log( "AI use: " + _skillToRelease.shownName );
+		if( _skillToRelease is Heal )
+		{
+			_skillToRelease.UseSkill( self, self );
+		}
+		else
+		{
+			_skillToRelease.UseSkill( self, target );
+		}
 	}
 
 	private void RandomSelect()

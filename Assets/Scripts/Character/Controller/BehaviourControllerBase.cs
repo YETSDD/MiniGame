@@ -82,9 +82,13 @@ public class BehaviourControllerBase : MonoBehaviour
 		TransisteState( CharacterStateType.End );
 	}
 
-	public virtual void RoundOver()
+	public virtual void EndOver()
 	{
 		TransisteState( CharacterStateType.Wait );
+	}
+
+	public virtual void RoundOver()
+	{
 		BattleManager.instance.SwitchController();
 	}
 }

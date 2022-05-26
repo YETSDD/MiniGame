@@ -110,7 +110,7 @@ public class SelectPanel : PanelBase
 	{
 		Debug.Log( "Confirm" );
 		chosenSkillSet.Key.SetSkillSet( chosenSkillSet.Value );
-		CharacterManager.instance.player.character.UpdateAvailableSkills();
+		CharacterManager.instance.player.UpdateAvailableSkills();
 		chances--;
 		if( chances > 0 )
 		{

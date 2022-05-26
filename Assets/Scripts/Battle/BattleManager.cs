@@ -13,15 +13,33 @@ public class BattleManager : MonoBehaviour
 	public BasicAIController monsterController;
 
 
-
 	private void Awake()
 	{
 		instance = this;
 	}
 
+	public void ResetBattle()
+	{
+		CharacterManager.instance.RemoveMonster();
+		if( monsterController )
+		{
+			Destroy( monsterController );
+		}
+		CharacterManager.instance.RemovePlayer();
+		if( playerController )
+		{
+			Destroy( playerController );
+		}
+		currentController = null;
+	}
+
 	public void InitializePlayerController()
 	{
-		playerController = this.gameObject.AddComponent<PlayerController>();
+		if( playerController == null )
+		{
+			playerController = this.gameObject.AddComponent<PlayerController>();
+			playerController.self = CharacterManager.instance.player;
+		}
 	}
 
 	public void InitializeAIController( AIType type )
@@ -37,11 +55,14 @@ public class BattleManager : MonoBehaviour
 			default:
 				break;
 		}
+		monsterController.self = CharacterManager.instance.monster;
+		monsterController.target = CharacterManager.instance.player;
 	}
 
 	public void StartBattle()
 	{
-
+		currentController = playerController;
+		currentController.TransisteState( CharacterStateType.Prepare );
 	}
 
 	public void SetPlayerSkillToRelease( SkillBase skill )
@@ -51,9 +72,15 @@ public class BattleManager : MonoBehaviour
 
 	public void SwitchController()
 	{
+		if( JudgeIfBattleOver() )
+		{
+			return;
+		}
+
 		if( currentController == playerController )
 		{
 			currentController = monsterController;
+			Debug.Log( "Switch to monster" );
 			currentController.TransisteState( CharacterStateType.Prepare );
 		}
 		else if( currentController == monsterController )
@@ -64,6 +91,32 @@ public class BattleManager : MonoBehaviour
 		else
 		{
 			throw new System.Exception( "Currnet Controller Not Selected" );
+		}
+	}
+
+	public bool JudgeIfBattleOver()
+	{
+		if( !CharacterManager.instance.player.isAlive )
+		{
+			GameManager.instance.PlayerDie();
+			return true;
+		}
+		if( !CharacterManager.instance.monster.isAlive )
+		{
+			GameManager.instance.MonsterDie();
+			return true;
+		}
+		return false;
+	}
+
+	public void Win()
+	{
+		CharacterManager.instance.RemoveMonster();
+		Destroy( monsterController );
+		playerController.currentState = playerController.states[CharacterStateType.Wait];
+		if( !BattlePanel.instance.FinishLevel() )
+		{
+			SelectPanel.instance.BetweenBattle();
 		}
 	}
 }

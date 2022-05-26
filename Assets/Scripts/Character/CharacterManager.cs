@@ -33,9 +33,38 @@ public class CharacterManager : MonoBehaviour
 
 	public void GenenrateMonster( CharacterConfig config )
 	{
+		Debug.Log( "Generate" );
 		monster = Utility.Generator.GenerateMonster( characterPrefab, monsterParent, config );
 		CharacterDisplay monsterCharacterDisplay = monster.characterDisplay;
 		monsterCharacterDisplay.InitializeMap( monster.character, monster.transform );
 		monsterCharacterDisplay.UpdateMap( monster.character );
+	}
+
+	public void RemovePlayer()
+	{
+		if( player )
+		{
+			Destroy( player.gameObject );
+		}
+	}
+
+	public void RemoveMonster()
+	{
+		if( monster )
+		{
+			Destroy( monster.gameObject );
+		}
+	}
+
+	public void BattleFinish()
+	{
+		if( player )
+		{
+			RemovePlayer();
+		}
+		if( monster )
+		{
+			RemoveMonster();
+		}
 	}
 }

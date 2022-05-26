@@ -12,9 +12,9 @@ public class Slash : SkillBase
 
 	public int endY;
 
-	public override void UseSkill( CharacterControllerBase target )
+	public override void UseSkill( CharacterControllerBase source, CharacterControllerBase target )
 	{
-		base.UseSkill( target );
+		base.UseSkill( source, target );
 
 		DealLineDamageToCharacter( target, amount );
 	}
@@ -33,6 +33,7 @@ public class Slash : SkillBase
 		Vector2Int endPixel = new Vector2Int( endX, endY );
 		DamageBase damage = new DamageBase( target.character.width, target.character.height );
 
-		target.ChangeHealthPoint( damage.GenerateLineHealthPointChangeMap( startPixel, endPixel, damageAmount ) );
+		damage.GenerateLineHealthPointChangeMap( startPixel, endPixel, damageAmount );
+		target.ChangeHealthPoint( damage.healthPointChangeMap );
 	}
 }

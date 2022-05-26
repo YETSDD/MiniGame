@@ -47,7 +47,7 @@ public class CharacterConfig : ScriptableObject, ISerializationCallbackReceiver
 		{
 			for( int y = 0; y < height; y++ )
 			{
-				_bodyMap_1D[x * width + y] = bodyMap[x, y];
+				_bodyMap_1D[x * height + y] = bodyMap[x, y];
 			}
 		}
 	}
@@ -59,10 +59,10 @@ public class CharacterConfig : ScriptableObject, ISerializationCallbackReceiver
 		{
 			for( int y = 0; y < height; y++ )
 			{
-				if( _bodyMap_1D[x * width + y] == null )
+				if( _bodyMap_1D[x * height + y] == null )
 					throw new System.Exception( "1D map error" );
 
-				bodyMap[x, y] = _bodyMap_1D[x * width + y];
+				bodyMap[x, y] = _bodyMap_1D[x * height + y];
 			}
 		}
 	}

@@ -1,18 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
-public class BattleManagerEditor : MonoBehaviour
+[CustomEditor( typeof( BattleManager ) )]
+public class BattleManagerEditor : Editor
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	public override void OnInspectorGUI()
+	{
+		base.OnInspectorGUI();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+		BattleManager battleManager = (BattleManager)target;
+
+		if( GUILayout.Button( "Win" ) )
+		{
+			CharacterManager.instance.monster.isAlive = false;
+			GameManager.instance.MonsterDie();
+		}
+
+		if( GUILayout.Button( "Lose" ) ) {
+			CharacterManager.instance.player.isAlive = false;
+			GameManager.instance.PlayerDie();
+		}
+	}
 }

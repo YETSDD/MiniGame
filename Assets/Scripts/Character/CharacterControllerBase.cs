@@ -14,11 +14,23 @@ public class CharacterControllerBase : MonoBehaviour
 
 	public CharacterDelegate OnCharacterDataChanged;
 
+	public const float minAlivePixelPercentage = 0.2f;
+
+	public bool isAlive = true;
+
 	private void Awake()
 	{
 		OnCharacterDataChanged = UpdateDisplay;
-		OnCharacterDataChanged += character.UpdateAvailableSkills;
+		OnCharacterDataChanged += UpdateAvailableSkills;
+		OnCharacterDataChanged += UpdateAliveState;
 		characterDisplay = GetComponent<CharacterDisplay>();
+	}
+
+	private void OnDestroy()
+	{
+		OnCharacterDataChanged -= UpdateDisplay;
+		OnCharacterDataChanged -= UpdateAvailableSkills;
+		OnCharacterDataChanged -= UpdateAliveState;
 	}
 
 	#region Logic Controller
@@ -75,21 +87,54 @@ public class CharacterControllerBase : MonoBehaviour
 		OnCharacterDataChanged.Invoke();
 	}
 
-	//private void UpdateAvailableSkills()
-	//{
-	//	List<SkillBase> availableSkills = character.allAvailableSkills;
-	//	availableSkills.Clear();
+	public void UpdateAvailableSkills()
+	{
+		List<SkillBase> availableSkills = character.allAvailableSkills;
+		availableSkills.Clear();
 
-	//	if( character.basicSkill != null )
-	//	{
-	//		availableSkills.Add( character.basicSkill );
-	//	}
+		if( character.basicSkill != null )
+		{
+			availableSkills.Add( character.basicSkill );
+		}
 
-	//	foreach( Module module in character.modules )
-	//	{
-	//		availableSkills.AddRange( module.availableSkills );
-	//	}
-	//}
+		foreach( Module module in character.modules )
+		{
+			availableSkills.AddRange( module.availableSkills );
+		}
+	}
+
+	public void UpdateAliveState()
+	{
+		isAlive = JudgeIfAlive();
+	}
+
+	public bool JudgeIfAlive()
+	{
+		int alivePixelCount = 0;
+		int deadPixelCount = 0;
+		foreach( PixelData pixel in character.bodyMap )
+		{
+			if( pixel.moduleRef == null )
+			{
+				continue;
+			}
+
+			if( pixel.currentHealthPoint > 0 )
+			{
+				alivePixelCount++;
+			}
+			else
+			{
+				deadPixelCount++;
+			}
+		}
+		if( alivePixelCount == 0 && deadPixelCount == 0 )
+		{
+			return false;
+		}
+		float alivePercentage = (float)alivePixelCount / (float)( alivePixelCount + deadPixelCount );
+		return alivePercentage >= minAlivePixelPercentage;
+	}
 
 
 

@@ -8,11 +8,11 @@ public class StartPanel : PanelBase
 {
 	public static StartPanel instance;
 
-	public Button StartGame;
+	public Button startGame;
 
-	public Button Settings;
+	public Button settings;
 
-	public Button ExitGame;
+	public Button exitGame;
 
 	protected override void Awake()
 	{
@@ -23,9 +23,9 @@ public class StartPanel : PanelBase
 
 	public void InitializeButtons()
 	{
-		StartGame.onClick.AddListener( OnClickStartGame );
-		Settings.onClick.AddListener( OnClickSettings );
-		ExitGame.onClick.AddListener( OnClickExitGame );
+		startGame.onClick.AddListener( OnClickStartGame );
+		settings.onClick.AddListener( OnClickSettings );
+		exitGame.onClick.AddListener( OnClickExitGame );
 	}
 
 	public void OnClickStartGame()

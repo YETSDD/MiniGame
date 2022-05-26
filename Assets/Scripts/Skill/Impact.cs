@@ -16,9 +16,9 @@ public class Impact : SkillBase
 
 	public const int defaultDamageHeight = 5;
 
-	public override void UseSkill( CharacterControllerBase target )
+	public override void UseSkill( CharacterControllerBase source, CharacterControllerBase target )
 	{
-		base.UseSkill( target );
+		base.UseSkill( source, target );
 		DealRectDamageToCharacter( target, amount );
 	}
 

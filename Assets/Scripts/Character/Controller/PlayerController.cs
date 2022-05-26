@@ -23,16 +23,16 @@ public class PlayerController : BehaviourControllerBase
 
 	public override void Prepare()
 	{
-		Debug.Log( "Prepare" );
+		Debug.Log( "Player Prepare" );
 	}
 
 	public override void Act()
 	{
-		Debug.Log( "Act" );
+		Debug.Log( "Player Act" );
 	}
 
 	public override void End()
 	{
-		Debug.Log( "End" );
+		Debug.Log( "Player End" );
 	}
 }
