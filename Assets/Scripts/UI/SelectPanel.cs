@@ -26,6 +26,8 @@ public class SelectPanel : PanelBase
 
 	public int chances = 0;
 
+	public Image[] selectBoxs = new Image[chooseAmount];
+
 	protected override void Awake()
 	{
 		base.Awake();
@@ -37,6 +39,7 @@ public class SelectPanel : PanelBase
 			skillSetChoice[i].onClick.AddListener( () => { SetupSkillSet( index ); } );
 		}
 		confirm.onClick.AddListener( OnClickConfirm );
+		DisableSelectBox();
 	}
 
 	public override void Show()
@@ -94,21 +97,29 @@ public class SelectPanel : PanelBase
 			ModuleConfig moduleConfig = skillSetsToChoose[i].Key.config;
 			SkillSet skillSet = skillSetsToChoose[i].Value;
 			selectableObject.Set( moduleConfig.moduleName, skillSet.shownName, skillSet.ownSkills );
-
-			//selectableObjects.Add( selectableObject );
 		}
 	}
 
 	private void SetupSkillSet( int index )
 	{
 		chosenSkillSet = skillSetsToChoose[index];
-		//TODO: Select Box
+		DisableSelectBox();
+		selectBoxs[index].enabled = true;
 		Debug.Log( "Choose Button " + index );
+	}
+
+	private void DisableSelectBox()
+	{
+		foreach( Image image in selectBoxs )
+		{
+			image.enabled = false;
+		}
 	}
 
 	public void OnClickConfirm()
 	{
 		Debug.Log( "Confirm" );
+		DisableSelectBox();
 		chosenSkillSet.Key.SetSkillSet( chosenSkillSet.Value );
 		CharacterManager.instance.player.UpdateAvailableSkills();
 		chances--;
