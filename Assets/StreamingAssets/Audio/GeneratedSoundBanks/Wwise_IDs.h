@@ -13,8 +13,16 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAYCROSS = 941281393U;
+        static const AkUniqueID PLAYFIRE = 271290123U;
+        static const AkUniqueID PLAYHEAL = 2108076625U;
         static const AkUniqueID PLAYIMPACT = 3660193989U;
+        static const AkUniqueID PLAYKICK = 3490755565U;
+        static const AkUniqueID PLAYMULTIIMPACT = 3033407856U;
+        static const AkUniqueID PLAYPUNCTURE = 3102872513U;
+        static const AkUniqueID PLAYSACRIFICE = 3363617466U;
         static const AkUniqueID PLAYSLASH = 16625878U;
+        static const AkUniqueID PLAYSTEAL = 2960226744U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS
@@ -36,7 +44,7 @@ namespace AK
     namespace BANKS
     {
         static const AkUniqueID INIT = 1355168291U;
-        static const AkUniqueID NEW_SOUNDBANK = 4072029455U;
+        static const AkUniqueID FIGHTSOUNDBANK = 2699690128U;
     } // namespace BANKS
 
     namespace BUSSES

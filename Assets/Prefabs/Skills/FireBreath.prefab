@@ -51,7 +51,7 @@ MonoBehaviour:
   indicatorType: 0
   amount: 0
   image: {fileID: 0}
-  soundEventName: 
+  soundEventName: PlayFire
   sourceModule:
     config: {fileID: 0}
     buffs: []

@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcb5e6d76c870f34186b8f0b2fcdb640, type: 3}
+  m_Script: {fileID: 11500000, guid: 02778f5bff05ba14c8f05ff4e8d4ded6, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
@@ -345,11 +345,11 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 5b0033a92b9b404c97c4d174acf4ceb6
     GuidInternal: 
-    m_lastTime: -8585484048048604296
+    m_lastTime: -8585479629975155424
     List:
-    - name: New_SoundBank
+    - name: FightSoundBank
       guid: 6ec7332f1c4e984abb8c1fe27eacbd3b
-      id: 4072029455
+      id: 2699690128
       PathAndIcons:
       - ElementName: SoundBanks
         ObjectType: 5
@@ -357,10 +357,10 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 5b0033a92b9b404c97c4d174acf4ceb6
-      - ElementName: New_SoundBank
+      - ElementName: FightSoundBank
         ObjectType: 7
         guid: 6ec7332f1c4e984abb8c1fe27eacbd3b
-      Path: SoundBanks\Default Work Unit\New_SoundBank
+      Path: SoundBanks\Default Work Unit\FightSoundBank
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -373,8 +373,59 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: eb6e282ca1cc5142b23590b3f9b639ff
     GuidInternal: 
-    m_lastTime: -8585484048048704348
+    m_lastTime: -8585479643808248102
     List:
+    - name: PlayCross
+      guid: e3346424edd57642b473bf819bc59dab
+      id: 941281393
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: eb6e282ca1cc5142b23590b3f9b639ff
+      - ElementName: PlayCross
+        ObjectType: 3
+        guid: e3346424edd57642b473bf819bc59dab
+      Path: Events\Default Work Unit\PlayCross
+      maxAttenuation: 0
+      maxDuration: 1.686077
+      minDuration: 1.686077
+    - name: PlayFire
+      guid: db26483df048da4c82cfb8ccc9234214
+      id: 271290123
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: eb6e282ca1cc5142b23590b3f9b639ff
+      - ElementName: PlayFire
+        ObjectType: 3
+        guid: db26483df048da4c82cfb8ccc9234214
+      Path: Events\Default Work Unit\PlayFire
+      maxAttenuation: 0
+      maxDuration: 1.727687
+      minDuration: 1.727687
+    - name: PlayHeal
+      guid: f262777ca2695e4193bb1a46f589f4e4
+      id: 2108076625
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: eb6e282ca1cc5142b23590b3f9b639ff
+      - ElementName: PlayHeal
+        ObjectType: 3
+        guid: f262777ca2695e4193bb1a46f589f4e4
+      Path: Events\Default Work Unit\PlayHeal
+      maxAttenuation: 0
+      maxDuration: 1.334667
+      minDuration: 1.334667
     - name: PlayImpact
       guid: 0089fc5983fdce41bc9f6c3324d5a8ea
       id: 3660193989
@@ -392,6 +443,74 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.486077
       minDuration: 1.486077
+    - name: PlayKick
+      guid: 0f450ffe15390b4485a7ec6234d9bebf
+      id: 3490755565
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: eb6e282ca1cc5142b23590b3f9b639ff
+      - ElementName: PlayKick
+        ObjectType: 3
+        guid: 0f450ffe15390b4485a7ec6234d9bebf
+      Path: Events\Default Work Unit\PlayKick
+      maxAttenuation: 0
+      maxDuration: 1.5
+      minDuration: 1.5
+    - name: PlayMultiImpact
+      guid: 00a5a0d654ca734ca738ba9e30b2878a
+      id: 3033407856
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: eb6e282ca1cc5142b23590b3f9b639ff
+      - ElementName: PlayMultiImpact
+        ObjectType: 3
+        guid: 00a5a0d654ca734ca738ba9e30b2878a
+      Path: Events\Default Work Unit\PlayMultiImpact
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
+    - name: PlayPuncture
+      guid: 6d1e2c513ec00e45a1aebbf7f2acf79b
+      id: 3102872513
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: eb6e282ca1cc5142b23590b3f9b639ff
+      - ElementName: PlayPuncture
+        ObjectType: 3
+        guid: 6d1e2c513ec00e45a1aebbf7f2acf79b
+      Path: Events\Default Work Unit\PlayPuncture
+      maxAttenuation: 0
+      maxDuration: 0.874979
+      minDuration: 0.874979
+    - name: PlaySacrifice
+      guid: f47054360dee8d4cb7a84043e45d75f5
+      id: 3363617466
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: eb6e282ca1cc5142b23590b3f9b639ff
+      - ElementName: PlaySacrifice
+        ObjectType: 3
+        guid: f47054360dee8d4cb7a84043e45d75f5
+      Path: Events\Default Work Unit\PlaySacrifice
+      maxAttenuation: 0
+      maxDuration: 1
+      minDuration: 1
     - name: PlaySlash
       guid: 04d19c4d672fba49b82c519ddf00587d
       id: 16625878
@@ -409,6 +528,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.486077
       minDuration: 1.486077
+    - name: PlaySteal
+      guid: 1c4efa85874af446b772debb6f5d150e
+      id: 2960226744
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: eb6e282ca1cc5142b23590b3f9b639ff
+      - ElementName: PlaySteal
+        ObjectType: 3
+        guid: 1c4efa85874af446b772debb6f5d150e
+      Path: Events\Default Work Unit\PlaySteal
+      maxAttenuation: 0
+      maxDuration: 0.580091
+      minDuration: 0.580091
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -660,7 +796,7 @@ MonoBehaviour:
     m_lastTime: -8585484064648731561
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0600000007000000080000000c0000000d00000016000000
+  ExpandedWaapiItemIds: 07000000080000001e000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

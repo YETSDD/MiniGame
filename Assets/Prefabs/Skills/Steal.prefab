@@ -51,7 +51,7 @@ MonoBehaviour:
   indicatorType: 1
   amount: 0
   image: {fileID: 0}
-  soundEventName: 
+  soundEventName: PlaySteal
   sourceModule:
     config: {fileID: 0}
     buffs: []

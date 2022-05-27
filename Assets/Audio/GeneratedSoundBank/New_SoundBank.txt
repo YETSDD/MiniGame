@@ -1,8 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	16625878	PlaySlash			\Default Work Unit\PlaySlash	
-	3660193989	PlayImpact			\Default Work Unit\PlayImpact	
-
-In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	158825603	soundscrate-bloody-knife-stab-02	D:\WwiseProjects\MiniGame\.cache\Windows\SFX\soundscrate-bloody-knife-stab-02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\soundscrate-bloody-knife-stab-02		262288
-	826762945	soundscrate-brutal-hit-03	D:\WwiseProjects\MiniGame\.cache\Windows\SFX\soundscrate-brutal-hit-03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\soundscrate-brutal-hit-03		262288
-

@@ -139,7 +139,7 @@ public class BattlePanel : PanelBase
 
 	public void DisableSkillIndicator()
 	{
-		interaction.onClick.RemoveListener( UseSkill );
+		interaction.onClick.RemoveAllListeners();
 	}
 
 	public void OnPlayerRound()

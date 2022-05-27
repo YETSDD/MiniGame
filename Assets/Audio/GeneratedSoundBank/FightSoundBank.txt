@@ -1,0 +1,23 @@
+Event	ID	Name			Wwise Object Path	Notes
+	16625878	PlaySlash			\Default Work Unit\PlaySlash	
+	271290123	PlayFire			\Default Work Unit\PlayFire	
+	941281393	PlayCross			\Default Work Unit\PlayCross	
+	2108076625	PlayHeal			\Default Work Unit\PlayHeal	
+	2960226744	PlaySteal			\Default Work Unit\PlaySteal	
+	3033407856	PlayMultiImpact			\Default Work Unit\PlayMultiImpact	
+	3102872513	PlayPuncture			\Default Work Unit\PlayPuncture	
+	3363617466	PlaySacrifice			\Default Work Unit\PlaySacrifice	
+	3490755565	PlayKick			\Default Work Unit\PlayKick	
+	3660193989	PlayImpact			\Default Work Unit\PlayImpact	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	35333722	soundscrate-fighting-impact-punch	D:\WwiseProjects\MiniGame\.cache\Windows\SFX\soundscrate-fighting-impact-punch_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\soundscrate-fighting-impact-punch		168172
+	80714438	soundscrate-fighting-swipe-punch-1	D:\WwiseProjects\MiniGame\.cache\Windows\SFX\soundscrate-fighting-swipe-punch-1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\soundscrate-fighting-swipe-punch-1		192176
+	158825603	soundscrate-bloody-knife-stab-02	D:\WwiseProjects\MiniGame\.cache\Windows\SFX\soundscrate-bloody-knife-stab-02_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\soundscrate-bloody-knife-stab-02		262288
+	324397405	flyswatter2	D:\WwiseProjects\MiniGame\.cache\Windows\SFX\flyswatter2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\flyswatter2		102392
+	391212011	soundscrate-fighting-swoosh-kick-1	D:\WwiseProjects\MiniGame\.cache\Windows\SFX\soundscrate-fighting-swoosh-kick-1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\soundscrate-fighting-swoosh-kick-1		288144
+	733345641	soundscrate-fighting-double-air-movement-2	D:\WwiseProjects\MiniGame\.cache\Windows\SFX\soundscrate-fighting-double-air-movement-2_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\soundscrate-fighting-double-air-movement-2		192144
+	826762945	soundscrate-brutal-hit-03	D:\WwiseProjects\MiniGame\.cache\Windows\SFX\soundscrate-brutal-hit-03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\soundscrate-brutal-hit-03		262288
+	914313074	soundscrate-metal-swing-4	D:\WwiseProjects\MiniGame\.cache\Windows\SFX\soundscrate-metal-swing-4_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\soundscrate-metal-swing-4		256320
+	1030209650	foom_0	D:\WwiseProjects\MiniGame\.cache\Windows\SFX\foom_0_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\foom_0		304892
+

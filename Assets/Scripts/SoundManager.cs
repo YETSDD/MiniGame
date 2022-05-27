@@ -8,7 +8,7 @@ public class SoundManager : MonoBehaviour
 
 	public AkInitializer akInitializer;
 
-	public const string soundBankName = "New_SoundBank";
+	public const string soundBankName = "FightSoundBank";
 
 	private void Awake()
 	{
@@ -19,7 +19,9 @@ public class SoundManager : MonoBehaviour
 			AkWwiseInitializationSettings settings = settingObj as AkWwiseInitializationSettings;
 			akInitializer.InitializationSettings = settings;
 		}
+		AkBankManager.UnloadBank( soundBankName );
 		AkBankManager.LoadBank( soundBankName, true, true );
+		
 	}
 
 	public void PlaySoundEffect( string eventName )
