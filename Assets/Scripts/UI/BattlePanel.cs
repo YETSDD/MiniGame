@@ -51,6 +51,7 @@ public class BattlePanel : PanelBase
 	private void InitializeMap()
 	{
 		currentLevel = 0;
+		moveToNextLevel.onClick.RemoveAllListeners();
 		moveToNextLevel.onClick.AddListener( StartLevel );
 		mapMask.SetActive( false );
 	}
@@ -88,7 +89,7 @@ public class BattlePanel : PanelBase
 			SkillPresentation skillPresentation = Instantiate( skillPrefab, skillLayout );
 			skillPresentation.Set( skill.shownName, skill.image );
 			skillPresentation.SetButton( true );
-			SkillBase currentSkill = skill;//WARNING
+			SkillBase currentSkill = skill;
 			skillPresentation.select.onClick.AddListener( () => OnClickSkillButton( currentSkill ) );
 		}
 	}

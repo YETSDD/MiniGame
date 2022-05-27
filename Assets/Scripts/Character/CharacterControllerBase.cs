@@ -65,26 +65,29 @@ public class CharacterControllerBase : MonoBehaviour
 		//TODO: handle part buff
 	}
 
-	public void ChangeHealthPoint( float[,] healthPointChangeMap )
+	public float ChangeHealthPoint( float[,] healthPointChangeMap )
 	{
+		float totalHealthPointChange = 0;
 		if( character == null )
 		{
-			return;
+			return 0;
 		}
 
 		if( healthPointChangeMap.GetLength( 0 ) != character.bodyMap.GetLength( 0 ) || healthPointChangeMap.GetLength( 1 ) != character.bodyMap.GetLength( 1 ) )
 		{
-			return;
+			return 0;
 		}
 
 		for( int i = 0; i < healthPointChangeMap.GetLength( 0 ); i++ )
 		{
 			for( int j = 0; j < healthPointChangeMap.GetLength( 1 ); j++ )
 			{
-				character.bodyMap[i, j].ChangeHealthPoint( healthPointChangeMap[i, j] );
+				totalHealthPointChange += character.bodyMap[i, j].ChangeHealthPoint( healthPointChangeMap[i, j] );
 			}
 		}
 		OnCharacterDataChanged.Invoke();
+
+		return totalHealthPointChange;
 	}
 
 	public void UpdateAvailableSkills()

@@ -28,7 +28,7 @@ public class PixelData
 		this.moduleRef = module;
 	}
 
-	public void ChangeHealthPoint( float amount )
+	public float ChangeHealthPoint( float amount )
 	{
 		float factor = amount < 0 ? damageFactor : 1.0f;
 
@@ -37,6 +37,7 @@ public class PixelData
 		{
 			currentHealthPoint = 0;
 		}
+		return amount * factor;
 	}
 
 	public void LoadPixelData( PixelData pixelData )

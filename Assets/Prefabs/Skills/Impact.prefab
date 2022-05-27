@@ -48,10 +48,16 @@ MonoBehaviour:
   limit:
     remainHealthPoint: 0
     activePixels: 0
-  indicatorType: 0
+  indicatorType: 2
   amount: 0
   image: {fileID: 0}
   soundEventName: PlayImpact
+  sourceModule:
+    config: {fileID: 0}
+    buffs: []
+    skillInstances: []
+    availableSkills: []
+    unavailableSkills: []
   defaultAmount: 10
   cornerX: 0
   cornerY: 0
