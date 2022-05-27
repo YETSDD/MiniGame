@@ -58,7 +58,7 @@ MonoBehaviour:
     skillInstances: []
     availableSkills: []
     unavailableSkills: []
-  defaultAmount: 50
+  defaultAmount: 20
   cornerX: 0
   cornerY: 0
   damageWidth: 0
