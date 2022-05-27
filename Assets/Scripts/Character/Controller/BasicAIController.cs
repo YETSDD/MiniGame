@@ -34,7 +34,7 @@ public class BasicAIController : BehaviourControllerBase
 	public override void Act()
 	{
 		Debug.Log( "AI Act" );
-		StartCoroutine( PlayAnimation() );
+		//StartCoroutine( PlayAnimation() );
 		UseSkill();
 		ActOver();
 	}
@@ -62,6 +62,7 @@ public class BasicAIController : BehaviourControllerBase
 			_skillToRelease.UseSkill( self, target );
 		}
 		Debug.Log( "AI use: " + _skillToRelease.shownName );
+		BattlePanel.instance.textBox.text += "怪物用 " + _skillToRelease.sourceModule.config.moduleName + " 释放了 " + _skillToRelease.shownName + "\n";
 	}
 
 	private void RandomSelect()

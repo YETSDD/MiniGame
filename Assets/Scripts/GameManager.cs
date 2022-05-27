@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
 	public static GameManager instance;
 
+	public Camera interactionTarget;
+
 	private void Awake()
 	{
 		instance = this;

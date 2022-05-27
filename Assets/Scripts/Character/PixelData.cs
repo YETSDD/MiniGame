@@ -30,7 +30,7 @@ public class PixelData
 
 	public float ChangeHealthPoint( float amount )
 	{
-		float factor = amount < 0 ? damageFactor : 1.0f;
+		float factor = amount < 0 ? damageFactor * 10.0f : 1.0f;//WARNING
 
 		currentHealthPoint += amount * factor;
 		if( currentHealthPoint < 0 )

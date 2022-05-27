@@ -70,6 +70,7 @@ public class CharacterDisplay : MonoBehaviour
 				grids[x, y].color = color;
 			}
 		}
+		
 	}
 }
 

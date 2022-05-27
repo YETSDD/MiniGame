@@ -34,7 +34,7 @@ public class SkillBase : MonoBehaviour
 			SoundManager.instance.PlaySoundEffect( soundEventName );
 		}
 
-		Debug.Log( " Module:" + sourceModule.config.moduleName );
+		Debug.Log( "Ä£¿é: " + sourceModule.config.moduleName );
 	}
 
 	public virtual void RandomSet( CharacterControllerBase target, float amount )

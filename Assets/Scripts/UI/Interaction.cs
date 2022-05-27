@@ -22,6 +22,14 @@ public class Interaction : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
 	public Vector2Int endGridPosition;
 
+	public RectTransform rectTransform;
+
+	public Camera currentCamera;
+
+	private void Start()
+	{
+		currentCamera = GameManager.instance.interactionTarget;
+	}
 	public void OnPointerDown( PointerEventData eventData )
 	{
 		GetStartPosistion();
@@ -47,14 +55,12 @@ public class Interaction : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
 	public Vector2Int GetGridPosition( Vector2 screenPostion )
 	{
-		RectTransform rectTransform = GetComponent<RectTransform>();
 		Vector2 localPosition;
-		if( RectTransformUtility.ScreenPointToLocalPointInRectangle( rectTransform, screenPostion, Camera.current, out localPosition ) )
+		if( RectTransformUtility.ScreenPointToLocalPointInRectangle( rectTransform, screenPostion, currentCamera, out localPosition ) )
 		{
 			int gridX = gridWidthCount - 1 + (int)( ( localPosition.x - rectTransform.rect.width / 2 ) / ( rectTransform.rect.width / gridWidthCount ) );
 			int gridY = gridHeightCount - 1 + (int)( ( localPosition.y - rectTransform.rect.height / 2 ) / ( rectTransform.rect.height / gridHeightCount ) );
 
-			Debug.Log( "grid: " + gridX + "," + gridY );
 			return new Vector2Int( gridX, gridY );
 		}
 		throw new System.Exception( "Cannot Switch to GridPosition" );

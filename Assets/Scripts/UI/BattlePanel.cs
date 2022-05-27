@@ -25,6 +25,8 @@ public class BattlePanel : PanelBase
 
 	public Interaction interaction;
 
+	public TextMeshProUGUI textBox;
+
 	protected override void Awake()
 	{
 		base.Awake();
@@ -96,7 +98,7 @@ public class BattlePanel : PanelBase
 
 	public void OnClickSkillButton( SkillBase skill )
 	{
-		Debug.Log( "Click Skill: " + skill.shownName );
+		BattlePanel.instance.textBox.text = "选中: " + skill.shownName + "\n";
 		BattleManager.instance.SetPlayerSkillToRelease( skill );
 		EnableSkillIndicator( skill );
 	}
@@ -105,6 +107,7 @@ public class BattlePanel : PanelBase
 
 	public void EnableSkillIndicator( SkillBase skill )
 	{
+		interaction.onClick.RemoveAllListeners();
 		interaction.onClick.AddListener( UseSkill );
 	}
 
@@ -129,7 +132,7 @@ public class BattlePanel : PanelBase
 		CharacterControllerBase monster = CharacterManager.instance.monster;
 		skill.Set( monster, start, end, skill.defaultAmount );
 		skill.UseSkill( player, monster );
-
+		BattlePanel.instance.textBox.text += "用 " + skill.sourceModule.config.moduleName + " 对怪物使用伤害为" + skill.defaultAmount + " 的 " + skill.shownName + "\n";
 		DisableSkillIndicator();
 
 		BattleManager.instance.playerController.PrepareOver();

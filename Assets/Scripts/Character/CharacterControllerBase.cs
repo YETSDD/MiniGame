@@ -139,8 +139,6 @@ public class CharacterControllerBase : MonoBehaviour
 		return alivePercentage >= minAlivePixelPercentage;
 	}
 
-
-
 	#endregion
 
 	#region View
