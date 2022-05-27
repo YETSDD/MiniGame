@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moduleName: "\u9F99\u8EAB"
   ownPixels: []
-  defaultSkillSet: {fileID: 0}
-  skillSetPool: []
+  defaultSkillSet: {fileID: 11400000, guid: edaa29f831ec6bb44bc9c33a3025ced3, type: 2}
+  skillSetPool:
+  - {fileID: 11400000, guid: edaa29f831ec6bb44bc9c33a3025ced3, type: 2}

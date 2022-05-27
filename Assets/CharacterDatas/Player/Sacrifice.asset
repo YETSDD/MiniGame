@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1fdb9b6dca24f494ea14024c9bf321fb, type: 3}
-  m_Name: BladeFoot
+  m_Name: Sacrifice
   m_EditorClassIdentifier: 
-  shownName: "\u5203\u8DB3"
+  shownName: "\u727A\u7272"
   ownSkills:
-  - {fileID: 115975175472334971, guid: 43634ff171b34314dad9ed8ebf7185fc, type: 3}
+  - {fileID: 6864763715863645893, guid: cccae3d3c7929fa4a9cf797783697059, type: 3}
+  - {fileID: 2397184489217546664, guid: f7ebfde0dee607244ad0c72aa1bf20d9, type: 3}

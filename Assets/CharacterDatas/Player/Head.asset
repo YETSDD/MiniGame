@@ -145,3 +145,4 @@ MonoBehaviour:
   defaultSkillSet: {fileID: 11400000, guid: edaa29f831ec6bb44bc9c33a3025ced3, type: 2}
   skillSetPool:
   - {fileID: 11400000, guid: 9c3c587b4700e864babc3abdce4f43db, type: 2}
+  - {fileID: 11400000, guid: e8366faa6e44cf344b19448e1b2a5870, type: 2}

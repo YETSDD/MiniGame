@@ -38,7 +38,7 @@ public class SlimeController : BasicAIController
 			}
 
 		}
-		if( core != null && core.currentHealthPoint > 0 )
+		if( core != null && core.currentHealthPoint > 0 && self.isAlive )
 		{
 			SwitchData( core, toChoose.GetRandomElement() );
 		}
