@@ -1,10 +1,11 @@
+#if UNITY_EDITOR
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SkillEffectTest : MonoBehaviour
 {
-#if UNITY_EDITOR
+
 	#region EditorParams
 
 	public int cornerX, cornerY;
@@ -15,7 +16,7 @@ public class SkillEffectTest : MonoBehaviour
 
 	public float basicDamageAmount;
 	#endregion
-#endif
+
 
 	public void DealRectDamageToCharacter( CharacterControllerBase target, float damageAmount )
 	{
@@ -28,3 +29,4 @@ public class SkillEffectTest : MonoBehaviour
 		target.ChangeHealthPoint( damage.healthPointChangeMap );
 	}
 }
+#endif

@@ -15,3 +15,4 @@ MonoBehaviour:
   shownName: "\u523A\u51FB"
   ownSkills:
   - {fileID: 5612514563975528697, guid: 8386ee67bc39f994baedad60a7694422, type: 3}
+  - {fileID: 7607801214434188957, guid: 45301e7ea2c54e94b99607fc7dcec9a6, type: 3}

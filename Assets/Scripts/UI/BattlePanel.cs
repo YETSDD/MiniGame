@@ -110,7 +110,6 @@ public class BattlePanel : PanelBase
 
 	private void UseSkill()
 	{
-		Debug.Log( "UseSkill" );
 		SkillBase skill = BattleManager.instance.playerController.skillToRelease;
 		switch( skill.indicatorType )
 		{
@@ -142,6 +141,12 @@ public class BattlePanel : PanelBase
 	{
 		interaction.onClick.RemoveListener( UseSkill );
 	}
+
+	public void OnPlayerRound()
+	{
+
+	}
+
 	public void OnMonsterRound()
 	{
 		//TODO: disable buttons

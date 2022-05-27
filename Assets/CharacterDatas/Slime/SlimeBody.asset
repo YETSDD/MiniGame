@@ -26,7 +26,7 @@ MonoBehaviour:
     elementType: 0
     moduleRef: {fileID: 11400000}
     damageFactor: 0
-  defaultSkillSet: {fileID: 11400000, guid: 62b610c6b3865644db4462d1c4abec1b, type: 2}
+  defaultSkillSet: {fileID: 11400000, guid: 33a3a075d88ac144f8792b543c7f684f, type: 2}
   skillSetPool:
   - {fileID: 11400000, guid: 62b610c6b3865644db4462d1c4abec1b, type: 2}
-  - {fileID: 11400000, guid: f6bed58973328f844b1393eefe7a1534, type: 2}
+  - {fileID: 11400000, guid: 33a3a075d88ac144f8792b543c7f684f, type: 2}

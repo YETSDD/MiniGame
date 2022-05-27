@@ -33,7 +33,6 @@ public class CharacterManager : MonoBehaviour
 
 	public void GenenrateMonster( CharacterConfig config )
 	{
-		Debug.Log( "Generate" );
 		monster = Utility.Generator.GenerateMonster( characterPrefab, monsterParent, config );
 		CharacterDisplay monsterCharacterDisplay = monster.characterDisplay;
 		monsterCharacterDisplay.InitializeMap( monster.character, monster.transform );

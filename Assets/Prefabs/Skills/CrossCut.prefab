@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shownName: "\u5341\u5B57\u65A9"
   limit:
-    remainHealthPoint: 10
+    remainHealthPoint: 100
     activePixels: 5
   indicatorType: 1
   amount: 0

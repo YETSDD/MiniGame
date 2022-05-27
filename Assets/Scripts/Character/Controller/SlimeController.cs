@@ -17,7 +17,6 @@ public class SlimeController : BasicAIController
 	public override void End()
 	{
 		base.End();
-		//TODO: Change core 
 		var map = self.character.bodyMap;
 		List<PixelData> toChoose = new List<PixelData>();
 		List<PixelData> backGround = new List<PixelData>();

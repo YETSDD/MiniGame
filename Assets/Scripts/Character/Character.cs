@@ -113,4 +113,12 @@ public class Character
 			allAvailableSkills.AddRange( module.availableSkills );
 		}
 	}
+
+	public void RandomSetAllModules()
+	{
+		foreach( Module module in modules )
+		{
+			module.SetRandomSkillSet();
+		}
+	}
 }

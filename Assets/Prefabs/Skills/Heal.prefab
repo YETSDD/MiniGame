@@ -47,7 +47,7 @@ MonoBehaviour:
   shownName: "\u6CBB\u7597"
   limit:
     remainHealthPoint: 1
-    activePixels: 0
+    activePixels: 1
   indicatorType: 0
   amount: 0
   image: {fileID: 0}

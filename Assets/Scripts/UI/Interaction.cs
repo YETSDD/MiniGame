@@ -36,14 +36,12 @@ public class Interaction : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 	public void GetStartPosistion()
 	{
 		start = Pointer.current.position.ReadValue();
-		Debug.Log( "x: " + start.x + "y: " + start.y );
 		startGridPosition = GetGridPosition( start );
 	}
 
 	public void GetEndPosistion()
 	{
 		end = Pointer.current.position.ReadValue();
-		Debug.Log( "x: " + end.x + "y: " + end.y );
 		endGridPosition = GetGridPosition( end );
 	}
 
@@ -53,7 +51,6 @@ public class Interaction : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 		Vector2 localPosition;
 		if( RectTransformUtility.ScreenPointToLocalPointInRectangle( rectTransform, screenPostion, Camera.current, out localPosition ) )
 		{
-			Debug.Log( "local x:" + localPosition.x + "y:" + localPosition.y );
 			int gridX = gridWidthCount - 1 + (int)( ( localPosition.x - rectTransform.rect.width / 2 ) / ( rectTransform.rect.width / gridWidthCount ) );
 			int gridY = gridHeightCount - 1 + (int)( ( localPosition.y - rectTransform.rect.height / 2 ) / ( rectTransform.rect.height / gridHeightCount ) );
 

@@ -26,14 +26,14 @@ public class BasicAIController : BehaviourControllerBase
 
 	public override void Prepare()
 	{
-		Debug.Log( "Prepare" );
+		Debug.Log( "AI Prepare" );
 		SelectSkill();
 		PrepareOver();
 	}
 
 	public override void Act()
 	{
-		Debug.Log( "Act" );
+		Debug.Log( "AI Act" );
 		StartCoroutine( PlayAnimation() );
 		UseSkill();
 		ActOver();
@@ -53,7 +53,6 @@ public class BasicAIController : BehaviourControllerBase
 
 	protected virtual void UseSkill()
 	{
-		Debug.Log( "AI use: " + _skillToRelease.shownName );
 		if( _skillToRelease is Heal )
 		{
 			_skillToRelease.UseSkill( self, self );
@@ -62,6 +61,7 @@ public class BasicAIController : BehaviourControllerBase
 		{
 			_skillToRelease.UseSkill( self, target );
 		}
+		Debug.Log( "AI use: " + _skillToRelease.shownName );
 	}
 
 	private void RandomSelect()

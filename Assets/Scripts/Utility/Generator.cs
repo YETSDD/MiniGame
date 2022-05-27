@@ -17,8 +17,6 @@ namespace Utility
 			result.character = new Character( Random.Range( minWidth, maxWidth ), Random.Range( minHeight, maxHeight ) );
 			result.character.GenerateRandomMapData( minHealthPoint, maxHealthPoint );
 
-			Debug.Log( "size:" + result.character.width + "," + result.character.height );
-
 			return result;
 		}
 
@@ -27,6 +25,7 @@ namespace Utility
 			CharacterControllerBase result = GameObject.Instantiate( characterPrefab, parent );
 
 			result.character = new Character( config );
+			
 
 			return result;
 		}
@@ -34,7 +33,7 @@ namespace Utility
 		public static CharacterControllerBase GenerateMonster( CharacterControllerBase characterPrefab, Transform parent, CharacterConfig config )
 		{
 			CharacterControllerBase result = GenerateCharacterDataByConfig( characterPrefab, parent, config );
-			//TODO: random skill set and AI
+			result.character.RandomSetAllModules();
 
 			return result;
 		}
@@ -42,7 +41,6 @@ namespace Utility
 		public static CharacterControllerBase GeneratePlayer( CharacterControllerBase characterPrefab, Transform parent, CharacterConfig config )
 		{
 			CharacterControllerBase result = GenerateCharacterDataByConfig( characterPrefab, parent, config );
-			//TODO: choose skill set
 
 			return result;
 		}

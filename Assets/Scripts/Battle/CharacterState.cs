@@ -75,7 +75,6 @@ public class ActState : CharacterState
 	public override void OnUpdate()
 	{//TODO: Animation
 		base.OnUpdate();
-		//behaviourController.TransisteState( CharacterStateType.End );
 	}
 
 	public override void OnExit()

@@ -12,7 +12,6 @@ public class BattleManager : MonoBehaviour
 
 	public BasicAIController monsterController;
 
-
 	private void Awake()
 	{
 		instance = this;
@@ -80,12 +79,13 @@ public class BattleManager : MonoBehaviour
 		if( currentController == playerController )
 		{
 			currentController = monsterController;
-			Debug.Log( "Switch to monster" );
+			BattlePanel.instance.OnMonsterRound();
 			currentController.TransisteState( CharacterStateType.Prepare );
 		}
 		else if( currentController == monsterController )
 		{
 			currentController = playerController;
+			BattlePanel.instance.OnPlayerRound();
 			currentController.TransisteState( CharacterStateType.Prepare );
 		}
 		else

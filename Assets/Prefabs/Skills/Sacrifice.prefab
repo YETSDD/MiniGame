@@ -46,8 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shownName: "\u820D\u8EAB\u653B\u51FB"
   limit:
-    remainHealthPoint: 0
-    activePixels: 0
+    remainHealthPoint: 1000
+    activePixels: 10
   indicatorType: 0
   amount: 0
   image: {fileID: 0}

@@ -50,7 +50,6 @@ public class SelectPanel : PanelBase
 	{
 		base.Hide();
 		Time.timeScale = 1;
-		Debug.Log( "Hide Select" );
 	}
 
 	public void BeforeBattle()
@@ -103,6 +102,7 @@ public class SelectPanel : PanelBase
 	private void SetupSkillSet( int index )
 	{
 		chosenSkillSet = skillSetsToChoose[index];
+		//TODO: Select Box
 		Debug.Log( "Choose Button " + index );
 	}
 

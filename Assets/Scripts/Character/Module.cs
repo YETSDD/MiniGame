@@ -37,23 +37,14 @@ public class Module
 		EvaluateAvailableSkills();
 	}
 
-	public void BindSkillToModule()
-	{
-		foreach( SkillBase skill in skillInstances )
-		{
-			skill.sourceModule = this;
-		}
-	}
-
 	public void SetRandomSkillSet()
-	{//TODO: to use
+	{
 		this.skillSet = Utility.Extensions.GetRandomElement( config.skillSetPool );
 		EvaluateAvailableSkills();
 	}
 
 	public void EvaluateAvailableSkills()
 	{
-
 		if( skillSet == null || skillSet.ownSkills.Count == 0 )
 		{
 			throw new System.Exception( "Empty Skill Set" );
@@ -84,6 +75,13 @@ public class Module
 		BindSkillToModule();
 	}
 
+	public void BindSkillToModule()
+	{
+		foreach( SkillBase skill in skillInstances )
+		{
+			skill.sourceModule = this;
+		}
+	}
 	public void ClearSkills()
 	{
 		for( int i = skillInstances.Count - 1; i >= 0; i-- )

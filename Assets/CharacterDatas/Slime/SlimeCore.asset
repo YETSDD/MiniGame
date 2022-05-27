@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: SlimeCore
   m_EditorClassIdentifier: 
   moduleName: "\u53F2\u83B1\u59C6\u6838\u5FC3"
-  ownPixels: []
+  ownPixels:
+  - currentHealthPoint: 75
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.4
   defaultSkillSet: {fileID: 11400000, guid: 72039d49fa82cff4181863d751cbebf9, type: 2}
   skillSetPool:
   - {fileID: 11400000, guid: 72039d49fa82cff4181863d751cbebf9, type: 2}
