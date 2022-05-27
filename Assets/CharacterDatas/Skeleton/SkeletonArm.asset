@@ -12,7 +12,184 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c971a2e067d7a349ac12c91437090da, type: 3}
   m_Name: SkeletonArm
   m_EditorClassIdentifier: 
-  moduleName: 
-  ownPixels: []
-  defaultSkillSet: {fileID: 0}
-  skillSetPool: []
+  moduleName: ArmedArm
+  ownPixels:
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  - currentHealthPoint: 100
+    elementType: 0
+    moduleRef: {fileID: 11400000}
+    damageFactor: 0.85
+  defaultSkillSet: {fileID: 11400000, guid: fbb1bf3efab22144aa9eb7c802c9d2f7, type: 2}
+  skillSetPool:
+  - {fileID: 11400000, guid: fbb1bf3efab22144aa9eb7c802c9d2f7, type: 2}

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c971a2e067d7a349ac12c91437090da, type: 3}
   m_Name: SkeletonHead
   m_EditorClassIdentifier: 
-  moduleName: 
+  moduleName: "\u9AB7\u9AC5\u5934"
   ownPixels: []
-  defaultSkillSet: {fileID: 0}
-  skillSetPool: []
+  defaultSkillSet: {fileID: 11400000, guid: 9c3c587b4700e864babc3abdce4f43db, type: 2}
+  skillSetPool:
+  - {fileID: 11400000, guid: 9c3c587b4700e864babc3abdce4f43db, type: 2}
