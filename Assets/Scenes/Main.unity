@@ -396,7 +396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10f967e0798f6d64295ac3b8431853fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCharacterConfig: {fileID: 11400000, guid: 395e6cf6ad15aba4f877bf98d2b5b013, type: 2}
+  playerCharacterConfig: {fileID: 11400000, guid: 9a693fe12e53aa64ead8f325c11ee321, type: 2}
   characterPrefab: {fileID: 3584558312020668172, guid: 88ecb7be6115b574da02f056caf321d6, type: 3}
   player: {fileID: 0}
   monster: {fileID: 0}

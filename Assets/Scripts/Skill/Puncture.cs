@@ -11,7 +11,7 @@ public class Puncture : SkillBase
 	public override void UseSkill( CharacterControllerBase source, CharacterControllerBase target )
 	{
 		base.UseSkill( source, target );
-		DealPointDamageToCharacter( source, amount );
+		DealPointDamageToCharacter( target, amount );
 	}
 
 	public override void RandomSet( CharacterControllerBase target, float amount )

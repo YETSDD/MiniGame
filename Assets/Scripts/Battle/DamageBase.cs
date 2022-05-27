@@ -37,8 +37,37 @@ public class DamageBase
 			{
 				if( x >= 0 && x < _mapWidth && y >= 0 && y < _mapHeight )
 				{
-					healthPointChangeMap[x, y] = -damageAmount;
+					TrySetHealthPointChangeMap( x, y, -damageAmount );
 				}
+			}
+		}
+	}
+
+	//-*-*-*--
+	//-*****--
+	//--***---
+	//--***---
+	//---*----
+	public void GenerateTriangleHealthPointChangeMap( Vector2Int damagePosition, Vector2Int damageRange, float damageAmount )
+	{
+		//TODO: Attenuation
+		float stepX = (float)damageRange.x / (float)( 2 * damageRange.y );
+
+		for( int deltaY = 0; deltaY < damageRange.y; deltaY++ )
+		{
+			for( int i = -deltaY; i <= deltaY; i++ )
+			{
+				int x = damagePosition.x + (int)( i * stepX );
+				TrySetHealthPointChangeMap( x, damagePosition.y + deltaY, -damageAmount );
+			}
+		}
+
+		for( int i = -damageRange.x / 2; i <= damageRange.x / 2; i++ )
+		{
+			if( i % 2 == 0 )
+			{
+				int x = damagePosition.x + i;
+				TrySetHealthPointChangeMap( x, damagePosition.y + damageRange.y, -damageAmount );
 			}
 		}
 	}
@@ -57,13 +86,34 @@ public class DamageBase
 		float x = start.x;
 		float y = start.y;
 
-		for( int i = 1; i <= steps; i++ )
+		for( int i = 0; i <= steps; i++ )
 		{
-			healthPointChangeMap[(int)x, (int)y] = -damageAmount;
+			TrySetHealthPointChangeMap( (int)x, (int)y, -damageAmount );
 			x += deltaX;
 			y += deltaY;
 		}
+	}
 
+	/// <summary>
+	/// º∆À„œﬂ∂Œ
+	/// </summary>
+	/// <param name="start"></param>
+	/// <param name="end"></param>
+	/// <param name="damageAmount"></param>
+	public void GenerateLimitedLineHealthPointChangeMap( Vector2Int start, Vector2Int end, float damageAmount, int size )
+	{
+		int steps = Mathf.Max( Mathf.Abs( end.x - start.x ), Mathf.Abs( end.y - start.y ) );
+		float deltaX = (float)( end.x - start.x ) / steps;
+		float deltaY = (float)( end.y - start.y ) / steps;
+		float x = start.x;
+		float y = start.y;
+
+		for( int i = 0; i <= Mathf.Min( steps, size ); i++ )
+		{
+			TrySetHealthPointChangeMap( (int)x, (int)y, -damageAmount );
+			x += deltaX;
+			y += deltaY;
+		}
 	}
 
 	public void GenerateCrossHealthPointCHangeMap( Vector2Int center, int size, float damageAmount )
@@ -77,8 +127,8 @@ public class DamageBase
 			//( 1-x, 1+x ) is to set averange damage amount to damageAmount
 			float factor = Mathf.Lerp( _minAttenuationCoefficient, 1.0f + _minAttenuationCoefficient, (float)( size / 2 - Mathf.Abs( i ) ) / (float)size );
 
-			if( i + center.x >= 0 && i + center.x < _mapWidth && center.y >= 0 && center.y < _mapHeight )
-				healthPointChangeMap[i + center.x, center.y] = -damageAmount * factor;
+			TrySetHealthPointChangeMap( i + center.x, center.y, -damageAmount * factor );
+			TrySetHealthPointChangeMap( center.x, i + center.y, -damageAmount * factor );
 		}
 	}
 
@@ -88,7 +138,7 @@ public class DamageBase
 		{
 			for( int deltaY = 0; deltaY + deltaX < size; deltaY++ )
 			{
-				healthPointChangeMap[corner.x - deltaX, corner.y - deltaY] = -damageAmount;
+				TrySetHealthPointChangeMap( corner.x - deltaX, corner.y - deltaY, -damageAmount );
 			}
 		}
 	}
@@ -99,10 +149,18 @@ public class DamageBase
 		{
 			for( int deltaY = 0; deltaY + deltaX < size; deltaY++ )
 			{
-				healthPointChangeMap[corner.x + deltaX, corner.y - deltaY] = -damageAmount;
+				TrySetHealthPointChangeMap( corner.x + deltaX, corner.y - deltaY, -damageAmount );
 			}
 		}
 
+	}
+
+	private void TrySetHealthPointChangeMap( int x, int y, float amount )
+	{
+		if( x >= 0 && x < _mapWidth && y >= 0 && y < _mapHeight )
+		{
+			healthPointChangeMap[x, y] += amount;
+		}
 	}
 	#endregion
 }

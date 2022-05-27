@@ -109,6 +109,6 @@ public class Module
 		}
 
 		SkillLimit limit = skill.limit;
-		return totalHealthPoint > limit.remainHealthPoint && activePixels > limit.activePixels;
+		return totalHealthPoint >= limit.remainHealthPoint && activePixels >= limit.activePixels;
 	}
 }

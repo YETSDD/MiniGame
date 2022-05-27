@@ -26,6 +26,11 @@ public class Heal : SkillBase
 		}
 	}
 
+	public override void RandomSet( CharacterControllerBase target, float amount )
+	{
+		base.RandomSet( target, amount );
+	}
+
 	public override void Set( CharacterControllerBase target, Vector2Int start, Vector2Int end, float amount )
 	{
 		base.Set( target, start, end, amount );

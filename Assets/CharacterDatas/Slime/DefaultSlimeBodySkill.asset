@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fdb9b6dca24f494ea14024c9bf321fb, type: 3}
   m_Name: DefaultSlimeBodySkill
   m_EditorClassIdentifier: 
-  shownName: "\u51B2\u649E\u4E4B"
+  shownName: "\u51B2\u649E"
   ownSkills:
   - {fileID: 2397184489217546664, guid: f7ebfde0dee607244ad0c72aa1bf20d9, type: 3}

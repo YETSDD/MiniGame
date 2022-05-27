@@ -23,7 +23,7 @@ public class Steal : SkillBase
 	public override void UseSkill( CharacterControllerBase source, CharacterControllerBase target )
 	{
 		base.UseSkill( source, target );
-		float totalDamageAmount = -DealDoubleTriangleDamageToCharacter( source, amount );
+		float totalDamageAmount = -DealDoubleTriangleDamageToCharacter( target, amount );
 		HealSelf( source, totalDamageAmount );
 	}
 
@@ -44,7 +44,7 @@ public class Steal : SkillBase
 		centerX = start.x;
 		centerY = start.y;
 		size = _defaultSize;
-		distance = (int)Vector2Int.Distance( start, end ) * 2;
+		distance = Mathf.Max( (int)Vector2Int.Distance( start, end ) * 2, _defaultDistance );
 	}
 
 	public float DealDoubleTriangleDamageToCharacter( CharacterControllerBase target, float damageAmount )

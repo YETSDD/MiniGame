@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c971a2e067d7a349ac12c91437090da, type: 3}
-  m_Name: Head
+  m_Script: {fileID: 11500000, guid: 1fdb9b6dca24f494ea14024c9bf321fb, type: 3}
+  m_Name: Paw
   m_EditorClassIdentifier: 
-  moduleName: 
+  shownName: "\u722A\u51FB"
+  ownSkills:
+  - {fileID: 1205069270724622024, guid: d04668d528b7fd9448cfb38df9577f3e, type: 3}

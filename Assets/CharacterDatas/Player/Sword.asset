@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c971a2e067d7a349ac12c91437090da, type: 3}
-  m_Name: LeftLeg
+  m_Script: {fileID: 11500000, guid: 1fdb9b6dca24f494ea14024c9bf321fb, type: 3}
+  m_Name: Sword
   m_EditorClassIdentifier: 
-  moduleName: 
+  shownName: "\u5207\u5272"
+  ownSkills:
+  - {fileID: 7607801214434188957, guid: 45301e7ea2c54e94b99607fc7dcec9a6, type: 3}

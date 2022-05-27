@@ -19,6 +19,17 @@ public class Slash : SkillBase
 		DealLineDamageToCharacter( target, amount );
 	}
 
+	public override void RandomSet( CharacterControllerBase target, float amount )
+	{
+		base.RandomSet( target, amount );
+		int width = target.character.width;
+		int height = target.character.height;
+		startX = Random.Range( 0, width );
+		startY = Random.Range( 0, height );
+		endX = Random.Range( 0, width );
+		endY = Random.Range( 0, height );
+	}
+
 	public override void Set( CharacterControllerBase target, Vector2Int start, Vector2Int end, float amount )
 	{
 		base.Set( target, start, end, amount );
@@ -27,6 +38,7 @@ public class Slash : SkillBase
 		endX = end.x;
 		endY = end.y;
 	}
+
 	private void DealLineDamageToCharacter( CharacterControllerBase target, float damageAmount )
 	{
 		Vector2Int startPixel = new Vector2Int( startX, startY );

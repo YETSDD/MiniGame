@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c971a2e067d7a349ac12c91437090da, type: 3}
   m_Name: DragonLeg
   m_EditorClassIdentifier: 
-  moduleName: 
+  moduleName: "\u9F99\u8DB3"
   ownPixels: []
   defaultSkillSet: {fileID: 0}
   skillSetPool: []
