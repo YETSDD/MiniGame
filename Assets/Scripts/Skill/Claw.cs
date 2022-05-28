@@ -28,7 +28,7 @@ public class Claw : SkillBase
 	{
 		base.UseSkill( source, target );
 
-		DealThreeLimitedLineDamageToCharacter( target, defaultAmount );
+		DealMultiplyLimitedLineDamageToCharacter( target, defaultAmount );
 	}
 
 	public override void RandomSet( CharacterControllerBase target, float amount )
@@ -57,31 +57,33 @@ public class Claw : SkillBase
 		count = _defaultCount;
 	}
 
-	private void DealThreeLimitedLineDamageToCharacter( CharacterControllerBase target, float damageAmount )
+	private void DealMultiplyLimitedLineDamageToCharacter( CharacterControllerBase target, float damageAmount )
 	{
 		DamageBase damage = new DamageBase( target.character.width, target.character.height );
 		if( endY == startY )
 		{
 			for( int i = 0; i < count; i++ )
 			{
-				int offsetY = ( i - count / 2 ) * spacing;
+				int offsetY = Mathf.CeilToInt( ( i - count / 2 ) * spacing );
 				Vector2Int startPixel = new Vector2Int( startX, startY + offsetY );
 				Vector2Int endPixel = new Vector2Int( endX, endY + offsetY );
 				damage.GenerateLimitedLineHealthPointChangeMap( startPixel, endPixel, damageAmount, size );
 			}
 		}
 
+		float k = -(float)( startX - endX ) / (float)( startY - endY );
+		int stepX = Mathf.CeilToInt( Mathf.Sqrt( spacing * spacing / ( k * k + 1 ) ) );
+		int stepY = (int)( stepX * k );
+
 		for( int i = 0; i < count; i++ )
 		{
-			float k = (float)( startX - endX ) / (float)( startY - endY );
-			int stepX = (int)Mathf.Sqrt( spacing * spacing / ( k * k + 1 ) );
-			int stepY = (int)( stepX * k );
+
 			int offsetX = ( i - count / 2 ) * stepX;
 			int offsetY = ( i - count / 2 ) * stepY;
 			Vector2Int startPixel = new Vector2Int( startX + offsetX, startY + offsetY );
 			Vector2Int endPixel = new Vector2Int( endX + offsetX, endY + offsetY );
 
-			damage.GenerateLimitedLineHealthPointChangeMap( startPixel, endPixel, damageAmount, size );
+			damage.GenerateLineHealthPointChangeMap( startPixel, endPixel, damageAmount);
 		}
 		target.ChangeHealthPoint( damage.healthPointChangeMap );
 	}
