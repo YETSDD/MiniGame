@@ -122,4 +122,17 @@ public class Character
 			module.SetRandomSkillSet();
 		}
 	}
+
+	public void OnDestroy()
+	{
+		foreach( Module module in modules )
+		{
+			for( int i = module.skillInstances.Count - 1; i >= 0; i-- )
+			{
+				SkillBase skill = module.skillInstances[i];
+				module.skillInstances.RemoveAt( i );
+				GameObject.Destroy( skill.gameObject );
+			}
+		}
+	}
 }

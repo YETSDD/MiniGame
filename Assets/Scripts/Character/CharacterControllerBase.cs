@@ -28,6 +28,7 @@ public class CharacterControllerBase : MonoBehaviour
 
 	private void OnDestroy()
 	{
+		character.OnDestroy();
 		OnCharacterDataChanged -= UpdateDisplay;
 		OnCharacterDataChanged -= UpdateAvailableSkills;
 		OnCharacterDataChanged -= UpdateAliveState;
