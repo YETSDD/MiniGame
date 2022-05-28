@@ -6,6 +6,8 @@ public class SoundManager : MonoBehaviour
 {
 	public static SoundManager instance;
 
+	public AkAudioListener audioListener;
+
 	public AkInitializer akInitializer;
 
 	public const string soundBankName = "FightSoundBank";
@@ -27,6 +29,7 @@ public class SoundManager : MonoBehaviour
 		AkBankManager.LoadBank( soundBankName, true, true );
 		AkBankManager.UnloadBank( backGroundMusicBank );
 		AkBankManager.LoadBank( backGroundMusicBank, true, true );
+		AkSoundEngine.SetVolumeThreshold( 100 );
 	}
 
 	public void PlaySoundEffect( string eventName )

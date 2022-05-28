@@ -173,4 +173,9 @@ public class BattlePanel : PanelBase
 		UpdateSkillList();
 		//TODO: disable buttons
 	}
+
+	public void GiveUp()
+	{
+		
+	}
 }

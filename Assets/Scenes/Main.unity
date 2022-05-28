@@ -421,6 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 438e945f4de4b234c9bc50a0e5dff1c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioListener: {fileID: 757573925}
   akInitializer: {fileID: 1273340593}
 --- !u!1 &754224855
 GameObject:

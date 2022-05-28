@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,14 @@ public class GameManager : MonoBehaviour
 	private void Awake()
 	{
 		instance = this;
+	}
+
+	private void Update()
+	{
+		if( Keyboard.current.escapeKey.wasReleasedThisFrame )
+		{
+			Setup();
+		}
 	}
 
 	private void Start()
@@ -61,6 +70,13 @@ public class GameManager : MonoBehaviour
 	public void Setup()
 	{
 		SettingPanel.instance.Show();
+	}
+
+	public void BackToStart()
+	{
+		StartPanel.instance.Show();
+		PlayerDie();
+		ResultPanel.instance.OnClickBack();
 	}
 
 	public void ExitGame()
