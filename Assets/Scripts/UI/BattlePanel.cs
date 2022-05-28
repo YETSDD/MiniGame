@@ -147,11 +147,12 @@ public class BattlePanel : PanelBase
 
 	public void OnPlayerRound()
 	{
-
+		UpdateSkillList();
 	}
 
 	public void OnMonsterRound()
 	{
+		UpdateSkillList();
 		//TODO: disable buttons
 	}
 }

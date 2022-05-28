@@ -77,7 +77,8 @@ public class Character
 		modules = new Module[length];
 		for( int i = 0; i < length; i++ )
 		{
-			modules[i] = new Module( config.modules[i] );
+			modules[i] = new Module( config.modules[i], this );
+
 		}
 	}
 

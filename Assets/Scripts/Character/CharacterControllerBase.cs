@@ -102,6 +102,7 @@ public class CharacterControllerBase : MonoBehaviour
 
 		foreach( Module module in character.modules )
 		{
+			module.EvaluateAvailableSkills();
 			availableSkills.AddRange( module.availableSkills );
 		}
 	}

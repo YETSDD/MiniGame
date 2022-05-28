@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
 public class Module
 {
+	public Character owner;
+
 	public ModuleConfig config;
 
 	public List<BuffBase> buffs;
@@ -17,10 +18,11 @@ public class Module
 
 	public List<SkillBase> unavailableSkills = new List<SkillBase>();
 
-	public Module( ModuleConfig config )
+	public Module( ModuleConfig config, Character owner )
 	{
 		this.config = config;
 		this.skillSet = config.defaultSkillSet;
+		this.owner = owner;
 		EvaluateAvailableSkills();
 	}
 
@@ -29,6 +31,11 @@ public class Module
 		this.config = config;
 		this.skillSet = skillSet;
 		EvaluateAvailableSkills();
+	}
+
+	public void SetOwner( Character character )
+	{
+		owner = character;
 	}
 
 	public void SetSkillSet( SkillSet skillSet )
@@ -97,12 +104,30 @@ public class Module
 	{
 		float totalHealthPoint = 0;
 		int activePixels = 0;
-		foreach( PixelData pixel in config.ownPixels )
+
+		if( owner.bodyMap == null )
 		{
-			totalHealthPoint += pixel.currentHealthPoint;
-			if( pixel.currentHealthPoint > 0 )
+			foreach( PixelData pixel in config.ownPixels )
 			{
-				activePixels++;
+				totalHealthPoint += pixel.currentHealthPoint;
+				if( pixel.currentHealthPoint > 0 )
+				{
+					activePixels++;
+				}
+			}
+		}
+		else
+		{
+			foreach( PixelData pixel in owner.bodyMap )
+			{
+				if( pixel.moduleRef == config )
+				{
+					totalHealthPoint += pixel.currentHealthPoint;
+					if( pixel.currentHealthPoint > 0 )
+					{
+						activePixels++;
+					}
+				}
 			}
 		}
 
