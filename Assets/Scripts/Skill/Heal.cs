@@ -50,7 +50,7 @@ public class Heal : SkillBase
 			{
 				if( pixels[x, y].moduleRef != null )
 				{
-					damage.healthPointChangeMap[x, y] = amount;
+					damage.healthPointChangeMap[x, y] += amount;
 				}
 			}
 		}
@@ -76,7 +76,7 @@ public class Heal : SkillBase
 			{
 				if( pixels[x, y].moduleRef == targetModule.config )
 				{
-					damage.healthPointChangeMap[x, y] = amount;
+					damage.healthPointChangeMap[x, y] += amount;
 				}
 			}
 		}

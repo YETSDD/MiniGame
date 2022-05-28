@@ -14,6 +14,13 @@ public class StartPanel : PanelBase
 
 	public Button exitGame;
 
+	public override void Show()
+	{
+		base.Show();
+		SoundManager.instance.PlayBackGroundMusic();
+	}
+
+
 	protected override void Awake()
 	{
 		base.Awake();

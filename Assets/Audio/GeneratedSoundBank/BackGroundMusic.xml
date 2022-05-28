@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>D:\WwiseProjects\MiniGame\</ProjectRoot>
+		<SourceFilesRoot>D:\WwiseProjects\MiniGame\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\UnityProject\MiniGame\Assets\Audio\GeneratedSoundBank\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>D:\WwiseProjects\MiniGame\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<SoundBanks>
+		<SoundBank Id="626769978" GUID="{D12A00CE-BFED-41AA-8996-751D6C9A62CC}" Language="SFX" Hash="2420732101">
+			<ObjectPath>\SoundBanks\Default Work Unit\BackGroundMusic</ObjectPath>
+			<ShortName>BackGroundMusic</ShortName>
+			<Path>BackGroundMusic.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2542411811" Name="PlayBGM" ObjectPath="\Events\BGM\PlayBGM" GUID="{C50DF9A2-427C-455E-BD61-B7435BB837A7}">
+					<IncludedMemoryFiles>
+						<File Id="562148733" Language="SFX">
+							<ShortName>through the shadows.wav</ShortName>
+							<Path>SFX\through the shadows_D79FB2B7.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+			</IncludedEvents>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

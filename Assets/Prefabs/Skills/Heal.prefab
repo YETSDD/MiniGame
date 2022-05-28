@@ -52,17 +52,5 @@ MonoBehaviour:
   amount: 0
   image: {fileID: 0}
   soundEventName: PlayHeal
-  sourceModule:
-    config: {fileID: 0}
-    buffs: []
-    skillInstances: []
-    availableSkills: []
-    unavailableSkills: []
-  defaultAmount: 10
+  defaultAmount: 5
   range: 1
-  targetModule:
-    config: {fileID: 0}
-    buffs: []
-    skillInstances: []
-    availableSkills: []
-    unavailableSkills: []

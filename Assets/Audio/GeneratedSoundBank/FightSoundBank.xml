@@ -13,7 +13,7 @@
 			<ShortName>FightSoundBank</ShortName>
 			<Path>FightSoundBank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="941281393" Name="PlayCross" ObjectPath="\Events\Default Work Unit\PlayCross" GUID="{246434E3-D5ED-4276-B473-BF819BC59DAB}" DurationType="OneShot" DurationMin="1.686077" DurationMax="1.686077">
+				<Event Id="941281393" Name="PlayCross" ObjectPath="\Events\Default Work Unit\PlayCross" GUID="{246434E3-D5ED-4276-B473-BF819BC59DAB}">
 					<IncludedMemoryFiles>
 						<File Id="158825603" Language="SFX">
 							<ShortName>soundscrate-bloody-knife-stab-02.wav</ShortName>
@@ -21,7 +21,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="271290123" Name="PlayFire" ObjectPath="\Events\Default Work Unit\PlayFire" GUID="{3D4826DB-48F0-4CDA-82CF-B8CCC9234214}" DurationType="OneShot" DurationMin="1.727687" DurationMax="1.727687">
+				<Event Id="271290123" Name="PlayFire" ObjectPath="\Events\Default Work Unit\PlayFire" GUID="{3D4826DB-48F0-4CDA-82CF-B8CCC9234214}">
 					<IncludedMemoryFiles>
 						<File Id="1030209650" Language="SFX">
 							<ShortName>foom_0.wav</ShortName>
@@ -29,7 +29,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2108076625" Name="PlayHeal" ObjectPath="\Events\Default Work Unit\PlayHeal" GUID="{7C7762F2-69A2-415E-93BB-1A46F589F4E4}" DurationType="OneShot" DurationMin="1.334667" DurationMax="1.334667">
+				<Event Id="2108076625" Name="PlayHeal" ObjectPath="\Events\Default Work Unit\PlayHeal" GUID="{7C7762F2-69A2-415E-93BB-1A46F589F4E4}">
 					<IncludedMemoryFiles>
 						<File Id="914313074" Language="SFX">
 							<ShortName>soundscrate-metal-swing-4.wav</ShortName>
@@ -37,7 +37,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3660193989" Name="PlayImpact" ObjectPath="\Events\Default Work Unit\PlayImpact" GUID="{59FC8900-FD83-41CE-BC9F-6C3324D5A8EA}" DurationType="OneShot" DurationMin="1.486077" DurationMax="1.486077">
+				<Event Id="3660193989" Name="PlayImpact" ObjectPath="\Events\Default Work Unit\PlayImpact" GUID="{59FC8900-FD83-41CE-BC9F-6C3324D5A8EA}">
 					<IncludedMemoryFiles>
 						<File Id="826762945" Language="SFX">
 							<ShortName>soundscrate-brutal-hit-03.wav</ShortName>
@@ -45,7 +45,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3490755565" Name="PlayKick" ObjectPath="\Events\Default Work Unit\PlayKick" GUID="{FE0F450F-3915-440B-85A7-EC6234D9BEBF}" DurationType="OneShot" DurationMin="1.5" DurationMax="1.5">
+				<Event Id="3490755565" Name="PlayKick" ObjectPath="\Events\Default Work Unit\PlayKick" GUID="{FE0F450F-3915-440B-85A7-EC6234D9BEBF}">
 					<IncludedMemoryFiles>
 						<File Id="391212011" Language="SFX">
 							<ShortName>soundscrate-fighting-swoosh-kick-1.wav</ShortName>
@@ -53,7 +53,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3033407856" Name="PlayMultiImpact" ObjectPath="\Events\Default Work Unit\PlayMultiImpact" GUID="{D6A0A500-CA54-4C73-A738-BA9E30B2878A}" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+				<Event Id="3033407856" Name="PlayMultiImpact" ObjectPath="\Events\Default Work Unit\PlayMultiImpact" GUID="{D6A0A500-CA54-4C73-A738-BA9E30B2878A}">
 					<IncludedMemoryFiles>
 						<File Id="733345641" Language="SFX">
 							<ShortName>soundscrate-fighting-double-air-movement-2.wav</ShortName>
@@ -61,7 +61,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3102872513" Name="PlayPuncture" ObjectPath="\Events\Default Work Unit\PlayPuncture" GUID="{512C1E6D-C03E-450E-A1AE-BBF7F2ACF79B}" DurationType="OneShot" DurationMin="0.874979" DurationMax="0.874979">
+				<Event Id="3102872513" Name="PlayPuncture" ObjectPath="\Events\Default Work Unit\PlayPuncture" GUID="{512C1E6D-C03E-450E-A1AE-BBF7F2ACF79B}">
 					<IncludedMemoryFiles>
 						<File Id="35333722" Language="SFX">
 							<ShortName>soundscrate-fighting-impact-punch.wav</ShortName>
@@ -69,7 +69,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3363617466" Name="PlaySacrifice" ObjectPath="\Events\Default Work Unit\PlaySacrifice" GUID="{365470F4-EE0D-4C8D-B7A8-4043E45D75F5}" DurationType="OneShot" DurationMin="1." DurationMax="1.">
+				<Event Id="3363617466" Name="PlaySacrifice" ObjectPath="\Events\Default Work Unit\PlaySacrifice" GUID="{365470F4-EE0D-4C8D-B7A8-4043E45D75F5}">
 					<IncludedMemoryFiles>
 						<File Id="80714438" Language="SFX">
 							<ShortName>soundscrate-fighting-swipe-punch-1.wav</ShortName>
@@ -77,7 +77,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="16625878" Name="PlaySlash" ObjectPath="\Events\Default Work Unit\PlaySlash" GUID="{4D9CD104-2F67-49BA-B82C-519DDF00587D}" DurationType="OneShot" DurationMin="1.486077" DurationMax="1.486077">
+				<Event Id="16625878" Name="PlaySlash" ObjectPath="\Events\Default Work Unit\PlaySlash" GUID="{4D9CD104-2F67-49BA-B82C-519DDF00587D}">
 					<IncludedMemoryFiles>
 						<File Id="158825603" Language="SFX">
 							<ShortName>soundscrate-bloody-knife-stab-02.wav</ShortName>
@@ -85,7 +85,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2960226744" Name="PlaySteal" ObjectPath="\Events\Default Work Unit\PlaySteal" GUID="{85FA4E1C-4A87-46F4-B772-DEBB6F5D150E}" DurationType="OneShot" DurationMin="0.580091" DurationMax="0.580091">
+				<Event Id="2960226744" Name="PlaySteal" ObjectPath="\Events\Default Work Unit\PlaySteal" GUID="{85FA4E1C-4A87-46F4-B772-DEBB6F5D150E}">
 					<IncludedMemoryFiles>
 						<File Id="324397405" Language="SFX">
 							<ShortName>flyswatter2.wav</ShortName>
