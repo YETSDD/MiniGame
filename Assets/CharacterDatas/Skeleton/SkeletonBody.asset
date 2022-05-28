@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c971a2e067d7a349ac12c91437090da, type: 3}
   m_Name: SkeletonBody
   m_EditorClassIdentifier: 
-  moduleName: "\u9AB7\u9AC5\u67B6\u5B50"
+  moduleName: "\u767D\u9AA8\u67B6\u5B50"
   ownPixels:
   - currentHealthPoint: 60
     elementType: 0

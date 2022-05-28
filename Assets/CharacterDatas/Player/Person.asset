@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5973756241562ad43bf29dccd0241f4d, type: 3}
   m_Name: Person
   m_EditorClassIdentifier: 
+  characterName: "\u73A9\u5BB6"
   modules:
   - {fileID: 11400000, guid: 7a66d1ac6a8edc04aba9d48607cb72f9, type: 2}
   - {fileID: 11400000, guid: 184b9ae75279bf9429178e1b7f4c1c31, type: 2}

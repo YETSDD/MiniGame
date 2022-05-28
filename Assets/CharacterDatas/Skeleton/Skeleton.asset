@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5973756241562ad43bf29dccd0241f4d, type: 3}
   m_Name: Skeleton
   m_EditorClassIdentifier: 
+  characterName: "\u9AA8\u7CBE"
   modules:
   - {fileID: 11400000, guid: c0e63183fdc09b348b266d308c1ae0d3, type: 2}
   - {fileID: 11400000, guid: 2a7be941f60541f4a960477336c0598d, type: 2}

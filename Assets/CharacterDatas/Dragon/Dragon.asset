@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5973756241562ad43bf29dccd0241f4d, type: 3}
   m_Name: Dragon
   m_EditorClassIdentifier: 
+  characterName: "\u6076\u9F99"
   modules:
   - {fileID: 11400000, guid: 0a49ce6c30632424cb2ea9419cf1001c, type: 2}
   - {fileID: 11400000, guid: 5f2e7bc322994074fb530cc17bc370f0, type: 2}
