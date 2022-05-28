@@ -7,6 +7,8 @@ using UnityEngine;
 [CreateAssetMenu( fileName = "character", menuName = "Character/Character" )]
 public class CharacterConfig : ScriptableObject, ISerializationCallbackReceiver
 {
+	public string characterName;
+
 	public List<ModuleConfig> modules;
 
 	[SerializeField]

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 
 public class CharacterManager : MonoBehaviour
@@ -37,6 +38,15 @@ public class CharacterManager : MonoBehaviour
 		CharacterDisplay monsterCharacterDisplay = monster.characterDisplay;
 		monsterCharacterDisplay.InitializeMap( monster.character, monster.transform );
 		monsterCharacterDisplay.UpdateMap( monster.character );
+
+		StringBuilder name = new StringBuilder();
+		foreach( Module module in monster.character.modules )
+		{
+			name.Append( module.skillSet.shownName );
+		}
+		name.Append( " ֮" );
+		name.Append( config.characterName );
+		BattlePanel.instance.enemyName.text = name.ToString();
 	}
 
 	public void RemovePlayer()

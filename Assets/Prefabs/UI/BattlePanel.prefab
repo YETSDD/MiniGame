@@ -1604,7 +1604,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u72C2\u66B4\u706B\u70ED \u4E4B \u53F2\u83B1\u59C6"
+  m_text: "\u602A\u7269\u540D\u5B57"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea9f17b830f89df46bf343ec17fba55c, type: 2}
   m_sharedMaterial: {fileID: 6926491282497616596, guid: ea9f17b830f89df46bf343ec17fba55c, type: 2}
@@ -1893,7 +1893,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: fdsafdsafdsf
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea9f17b830f89df46bf343ec17fba55c, type: 2}
   m_sharedMaterial: {fileID: 6926491282497616596, guid: ea9f17b830f89df46bf343ec17fba55c, type: 2}
@@ -1920,8 +1920,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1932,7 +1932,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 1
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
