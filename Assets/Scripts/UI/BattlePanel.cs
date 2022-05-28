@@ -27,6 +27,10 @@ public class BattlePanel : PanelBase
 
 	public TextMeshProUGUI textBox;
 
+	public Image[] lockedMask;
+
+	public Image[] deadMask;
+
 	protected override void Awake()
 	{
 		base.Awake();
@@ -37,7 +41,6 @@ public class BattlePanel : PanelBase
 	{
 		InitializeMap();
 	}
-
 
 	public override void Show()
 	{
@@ -56,6 +59,17 @@ public class BattlePanel : PanelBase
 		moveToNextLevel.onClick.RemoveAllListeners();
 		moveToNextLevel.onClick.AddListener( StartLevel );
 		mapMask.SetActive( false );
+
+		lockedMask[0].enabled = false;
+		for( int i = 1; i < lockedMask.Length; i++ )
+		{
+			lockedMask[i].enabled = true;
+		}
+
+		for( int i = 0; i < deadMask.Length; i++ )
+		{
+			deadMask[i].enabled = false;
+		}
 	}
 
 	public void StartLevel()
@@ -74,8 +88,12 @@ public class BattlePanel : PanelBase
 			GameManager.instance.FianlWin();
 			return true;
 		}
+
+		deadMask[currentLevel].enabled = true;
 		currentLevel++;
 		mapMask.SetActive( false );
+		lockedMask[currentLevel].enabled = false;
+
 		Hide();
 		return false;
 	}

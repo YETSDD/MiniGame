@@ -64,7 +64,6 @@ public class Module
 			skillInstances.Add( instance );
 		}
 
-
 		availableSkills.Clear();
 		unavailableSkills.Clear();
 

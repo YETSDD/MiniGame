@@ -77,7 +77,6 @@ public class Claw : SkillBase
 
 		for( int i = 0; i < count; i++ )
 		{
-
 			int offsetX = ( i - count / 2 ) * stepX;
 			int offsetY = ( i - count / 2 ) * stepY;
 			Vector2Int startPixel = new Vector2Int( startX + offsetX, startY + offsetY );
