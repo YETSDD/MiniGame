@@ -16,6 +16,8 @@ public class SoundManager : MonoBehaviour
 
 	public const string backGroundMusicEvent = "PlayBGM";
 
+	public GameObject backGroundMusicObject;
+
 	private void Awake()
 	{
 		instance = this;
@@ -29,7 +31,6 @@ public class SoundManager : MonoBehaviour
 		AkBankManager.LoadBank( soundBankName, true, true );
 		AkBankManager.UnloadBank( backGroundMusicBank );
 		AkBankManager.LoadBank( backGroundMusicBank, true, true );
-		AkSoundEngine.SetVolumeThreshold( 100 );
 	}
 
 	public void PlaySoundEffect( string eventName )
@@ -40,6 +41,7 @@ public class SoundManager : MonoBehaviour
 
 	public void PlayBackGroundMusic()
 	{
-		AkSoundEngine.PostEvent( backGroundMusicEvent, this.gameObject );
+		AkSoundEngine.PostEvent( backGroundMusicEvent, backGroundMusicObject );
+		AkSoundEngine.SetGameObjectOutputBusVolume( backGroundMusicObject, audioListener.gameObject, 0.15f );
 	}
 }

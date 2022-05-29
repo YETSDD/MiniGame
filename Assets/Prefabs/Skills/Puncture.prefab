@@ -50,14 +50,8 @@ MonoBehaviour:
     activePixels: 5
   indicatorType: 0
   amount: 0
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 9370b96720b38b74886a4ed5480a7ef7, type: 3}
   soundEventName: PlayPuncture
-  sourceModule:
-    config: {fileID: 0}
-    buffs: []
-    skillInstances: []
-    availableSkills: []
-    unavailableSkills: []
   defaultAmount: 50
   centerX: 0
   centerY: 0

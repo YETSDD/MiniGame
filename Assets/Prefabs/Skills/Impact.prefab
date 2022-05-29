@@ -50,14 +50,8 @@ MonoBehaviour:
     activePixels: 1
   indicatorType: 2
   amount: 0
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 130b0219fa7eaee418da81eb3a2e0d9c, type: 3}
   soundEventName: PlayImpact
-  sourceModule:
-    config: {fileID: 0}
-    buffs: []
-    skillInstances: []
-    availableSkills: []
-    unavailableSkills: []
   defaultAmount: 10
   cornerX: 0
   cornerY: 0

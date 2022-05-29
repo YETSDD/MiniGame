@@ -12,10 +12,10 @@ public class SkillPresentation : MonoBehaviour
 
 	public Button select;
 
-	public void Set( string skillName, Image skillImage )
+	public void Set( string skillName, Sprite skillImage )
 	{
 		this.skillName.text = skillName;
-		this.skill = skillImage;
+		this.skill.sprite = skillImage;
 	}
 
 	public void SetButton( bool active )

@@ -14,7 +14,7 @@ public class SkillBase : MonoBehaviour
 
 	public float amount;
 
-	public Image image;
+	public Sprite image;
 
 	public string soundEventName;
 

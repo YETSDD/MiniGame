@@ -20,6 +20,8 @@ public class CharacterConfig : ScriptableObject, ISerializationCallbackReceiver
 
 	public List<SkillBase> talentSkillPool;
 
+	public Color shownColor;
+
 	public bool isInitialized => bodyMap != null && modules != null;
 
 	public void SetBodyMap( int width, int height )

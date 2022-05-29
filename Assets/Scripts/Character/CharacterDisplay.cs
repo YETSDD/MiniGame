@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CharacterDisplay : MonoBehaviour
 {
-	public DisplayMode displayMode = DisplayMode.ElementColor;
+	public DisplayMode displayMode = DisplayMode.BlackAndWhite;
 
 	public GridData gridPrefab;
 
@@ -11,6 +11,9 @@ public class CharacterDisplay : MonoBehaviour
 	public const float gridWidth = 1.1f;
 
 	public GridData[,] grids;
+
+	[Range( 0, 1.0f )]
+	public float hue = 0f;
 
 	public void InitializeMap( Character source, Transform root )
 	{
@@ -32,12 +35,12 @@ public class CharacterDisplay : MonoBehaviour
 
 	private Color GetPixelColor( float healthPoint, DisplayMode mode )
 	{
-		float colorVal = Mathf.Lerp( 0, 1, healthPoint / 100.0f );
+		float colorVal = Mathf.Lerp( 0, 1, healthPoint / PixelData.maxHealthPoint );
 		Color color;
 		switch( mode )
 		{
 			case DisplayMode.BlackAndWhite:
-				color = Color.HSVToRGB( 0, 1, Mathf.Lerp( 0, 1, colorVal ) );
+				color = Color.HSVToRGB( hue, 0, Mathf.Lerp( 0, 1, colorVal ) );
 				break;
 			case DisplayMode.ElementColor://TODO: Different Element Color 
 				color = new Color( colorVal, 0, 0, 1 );
@@ -50,7 +53,7 @@ public class CharacterDisplay : MonoBehaviour
 		return color;
 	}
 
-	public void UpdateMap( Character source, DisplayMode mode = DisplayMode.ElementColor )
+	public void UpdateMap( Character source, DisplayMode mode = DisplayMode.BlackAndWhite )
 	{
 		if( grids == null )
 		{
@@ -70,7 +73,7 @@ public class CharacterDisplay : MonoBehaviour
 				grids[x, y].color = color;
 			}
 		}
-		
+
 	}
 }
 

@@ -131,7 +131,10 @@ public class Character
 			{
 				SkillBase skill = module.skillInstances[i];
 				module.skillInstances.RemoveAt( i );
-				GameObject.Destroy( skill.gameObject );
+				if( skill.isActiveAndEnabled )
+				{
+					GameObject.Destroy( skill.gameObject );
+				}
 			}
 		}
 	}

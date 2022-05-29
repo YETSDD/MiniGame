@@ -46,19 +46,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shownName: "\u722A\u51FB"
   limit:
-    remainHealthPoint: 50
-    activePixels: 1
+    remainHealthPoint: 300
+    activePixels: 3
   indicatorType: 1
   amount: 0
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 272ff0fe287bcdb4591feed0dd8fc9d4, type: 3}
   soundEventName: PlaySlash
-  sourceModule:
-    config: {fileID: 0}
-    buffs: []
-    skillInstances: []
-    availableSkills: []
-    unavailableSkills: []
-  defaultAmount: 50
+  defaultAmount: 30
   startX: 0
   startY: 0
   endX: 0

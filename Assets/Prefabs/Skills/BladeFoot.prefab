@@ -46,19 +46,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shownName: "\u8E22\u51FB"
   limit:
-    remainHealthPoint: 1
-    activePixels: 1
+    remainHealthPoint: 500
+    activePixels: 5
   indicatorType: 0
   amount: 0
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 2690a745191b12240a7c2a5184bcd86a, type: 3}
   soundEventName: PlayKick
-  sourceModule:
-    config: {fileID: 0}
-    buffs: []
-    skillInstances: []
-    availableSkills: []
-    unavailableSkills: []
-  defaultAmount: 10
+  defaultAmount: 20
   cornerX: 0
   cornerY: 0
   damageWidth: 0

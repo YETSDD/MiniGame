@@ -18,7 +18,7 @@ public class BladeFoot : SkillBase
 
 	private const int _defaultFingerCount = 3;
 
-	private const int _defaultFingerLength = 5;
+	private const int _defaultFingerLength = 1;
 
 	public override void UseSkill( CharacterControllerBase source, CharacterControllerBase target )
 	{
@@ -56,10 +56,10 @@ public class BladeFoot : SkillBase
 		damage.GenerateRectHealthPointChangeMap( damageRange, damageAmount );
 		for( int i = 0; i < _defaultFingerCount; i++ )
 		{
-			int offsetX = i * (int)( (float)damageWidth / (float)_defaultFingerCount );
+			int offsetX = Mathf.CeilToInt( i * ( (float)damageWidth / (float)_defaultFingerCount ) );
 			int offsetY = _defaultFingerLength;
-			Vector2Int start = new Vector2Int( cornerX + offsetX, cornerY );
-			Vector2Int end = new Vector2Int( cornerX + offsetX, cornerY + offsetY );
+			Vector2Int start = new Vector2Int( cornerX + offsetX, cornerY + damageHeight );
+			Vector2Int end = new Vector2Int( cornerX + offsetX, cornerY + damageHeight + offsetY );
 			damage.GenerateLimitedLineHealthPointChangeMap( start, end, amount, _defaultFingerLength );
 		}
 		target.ChangeHealthPoint( damage.healthPointChangeMap );

@@ -27,6 +27,8 @@ public class BattlePanel : PanelBase
 
 	public TextMeshProUGUI textBox;
 
+	public const string defaultName = "怪物名字";
+
 	public Image[] lockedMask;
 
 	public Image[] deadMask;
@@ -50,6 +52,7 @@ public class BattlePanel : PanelBase
 
 	public override void Hide()
 	{
+		enemyName.text = defaultName;
 		base.Hide();
 	}
 
@@ -116,7 +119,7 @@ public class BattlePanel : PanelBase
 
 	public void OnClickSkillButton( SkillBase skill )
 	{
-		BattlePanel.instance.textBox.text = "选中: " + skill.shownName + "\n";
+		BattlePanel.instance.textBox.text = "选中: " + skill.shownName + "\n\n";
 		BattleManager.instance.SetPlayerSkillToRelease( skill );
 		EnableSkillIndicator( skill );
 	}
@@ -150,7 +153,7 @@ public class BattlePanel : PanelBase
 		CharacterControllerBase monster = CharacterManager.instance.monster;
 		skill.Set( monster, start, end, skill.defaultAmount );
 		skill.UseSkill( player, monster );
-		BattlePanel.instance.textBox.text += "用 " + skill.sourceModule.config.moduleName + " 对怪物使用伤害为" + skill.defaultAmount + " 的 " + skill.shownName + "\n";
+		BattlePanel.instance.textBox.text = "玩家用 " + skill.sourceModule.config.moduleName + " 释放了 " + skill.shownName + "\n\n";
 		DisableSkillIndicator();
 
 		BattleManager.instance.playerController.PrepareOver();
@@ -176,6 +179,6 @@ public class BattlePanel : PanelBase
 
 	public void GiveUp()
 	{
-		
+
 	}
 }
